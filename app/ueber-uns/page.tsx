@@ -182,9 +182,9 @@ export default function UeberUns() {
               <Image
                 src="/patrizia.jpg"
                 alt="Patrizia Kröger"
-                width={80}
-                height={80}
-                className="rounded-full object-cover w-20 h-20"
+                width={160}
+                height={160}
+                className="rounded-full object-cover object-top w-40 h-40"
               />
               <div>
                 <div
