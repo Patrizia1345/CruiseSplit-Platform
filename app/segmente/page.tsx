@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 
 const PORTS = [
@@ -163,6 +164,17 @@ function FilterCheckbox({
 }
 
 export default function Segmente() {
+  const searchParams = useSearchParams();
+  const [accessDenied, setAccessDenied] = useState(false);
+
+  useEffect(() => {
+    if (searchParams.get("access") === "denied") {
+      setAccessDenied(true);
+      // Remove the query param from the URL without reloading
+      window.history.replaceState({}, "", "/segmente");
+    }
+  }, [searchParams]);
+
   const [from, setFrom] = useState("Barcelona");
   const [to, setTo] = useState("Athen");
   const [date, setDate] = useState("2025-05-12");
@@ -221,6 +233,23 @@ export default function Segmente() {
   return (
     <div className="flex flex-col min-h-full font-sans bg-gray-50">
       <Navbar />
+
+      {/* Access-denied banner */}
+      {accessDenied && (
+        <div className="bg-red-50 border-b border-red-100 px-8 py-3 flex items-center justify-between">
+          <p className="text-sm font-medium text-red-600 flex items-center gap-2">
+            <span>⛔</span>
+            Kein Zugriff — Dieser Bereich ist nur für Partner zugänglich.
+          </p>
+          <button
+            onClick={() => setAccessDenied(false)}
+            className="text-red-400 hover:text-red-600 text-lg leading-none"
+            aria-label="Schließen"
+          >
+            ×
+          </button>
+        </div>
+      )}
 
       {/* Search Bar */}
       <div style={{ backgroundColor: "#0A2342" }} className="px-8 py-8">

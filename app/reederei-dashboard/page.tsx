@@ -157,13 +157,32 @@ export default function ReedereIDashboard() {
   const [sessionChecked, setSessionChecked] = useState(false);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
+    async function checkAccess() {
+      const { data: { session } } = await supabase.auth.getSession();
+
       if (!session) {
         router.push("/auth/login");
-      } else {
-        setSessionChecked(true);
+        return;
       }
-    });
+
+      // Load role from profiles table; fall back to user_metadata
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", session.user.id)
+        .single();
+
+      const role = profile?.role ?? session.user.user_metadata?.user_type;
+
+      if (role !== "partner") {
+        router.push("/segmente?access=denied");
+        return;
+      }
+
+      setSessionChecked(true);
+    }
+
+    checkAccess();
   }, []);
 
   const today = new Date().toLocaleDateString("de-DE", {

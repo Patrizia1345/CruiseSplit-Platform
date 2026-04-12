@@ -1,16 +1,33 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { createClient } from "@/lib/supabase";
 
-const NAV_LINKS = [
+const STATIC_NAV_LINKS = [
   { label: "Segmente", href: "/segmente" },
-  { label: "Reedereien", href: "/reederei-dashboard" },
   { label: "Über uns", href: "/ueber-uns" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [isPartner, setIsPartner] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      if (user) {
+        setIsLoggedIn(true);
+        setIsPartner(user.user_metadata?.user_type === "partner");
+      }
+    });
+  }, []);
+
+  const navLinks = isPartner
+    ? [...STATIC_NAV_LINKS, { label: "Reedereien", href: "/reederei-dashboard" }]
+    : STATIC_NAV_LINKS;
 
   return (
     <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
@@ -25,17 +42,13 @@ export default function Navbar() {
 
       {/* Primary links */}
       <ul className="flex items-center gap-8 text-sm font-medium text-gray-700">
-        {NAV_LINKS.map(({ label, href }) => {
+        {navLinks.map(({ label, href }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
           return (
             <li key={href}>
               <Link
                 href={href}
-                className={`transition-colors ${
-                  active
-                    ? "font-semibold"
-                    : "hover:text-[#0EA5E9]"
-                }`}
+                className={`transition-colors ${active ? "font-semibold" : "hover:text-[#0EA5E9]"}`}
                 style={active ? { color: "#0EA5E9" } : {}}
               >
                 {label}
@@ -47,19 +60,25 @@ export default function Navbar() {
 
       {/* Auth links */}
       <div className="flex items-center gap-3">
-        <Link
-          href="/auth/login"
-          className="text-sm font-medium text-gray-600 hover:text-[#0EA5E9] transition-colors"
-        >
-          Login
-        </Link>
-        <Link
-          href="/auth/register"
-          className="px-4 py-2 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#0EA5E9" }}
-        >
-          Registrieren
-        </Link>
+        {isLoggedIn ? (
+          <span className="text-sm text-gray-400">Eingeloggt</span>
+        ) : (
+          <>
+            <Link
+              href="/auth/login"
+              className="text-sm font-medium text-gray-600 hover:text-[#0EA5E9] transition-colors"
+            >
+              Login
+            </Link>
+            <Link
+              href="/auth/register"
+              className="px-4 py-2 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
+              style={{ backgroundColor: "#0EA5E9" }}
+            >
+              Partner werden
+            </Link>
+          </>
+        )}
       </div>
     </nav>
   );
