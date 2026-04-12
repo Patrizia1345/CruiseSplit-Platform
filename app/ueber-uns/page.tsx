@@ -229,7 +229,9 @@ export default function UeberUns() {
           Gespräch. Schreib uns und wir melden uns innerhalb von 24 Stunden.
         </p>
         <a
-          href="mailto:patrizia.kroeger@gmx.com"
+          href="https://cruisesplit.netlify.app/#kontakt"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block px-8 py-3 rounded-full text-white font-semibold text-sm transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#0EA5E9" }}
         >
