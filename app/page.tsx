@@ -1,65 +1,85 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col min-h-full font-sans">
+      {/* Navbar */}
+      <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
+        <span className="text-2xl font-bold" style={{ color: "#0A2342" }}>
+          CruiseSplit
+        </span>
+        <ul className="flex gap-8 text-sm font-medium text-gray-700">
+          <li>
+            <a href="#" className="hover:text-[#0EA5E9] transition-colors">
+              Segmente
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-[#0EA5E9] transition-colors">
+              Reedereien
+            </a>
+          </li>
+          <li>
+            <a href="#" className="hover:text-[#0EA5E9] transition-colors">
+              Über uns
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Hero Section */}
+      <section
+        className="flex flex-col items-center justify-center text-center px-8 py-32 flex-1"
+        style={{ backgroundColor: "#0A2342" }}
+      >
+        <h1 className="text-5xl font-bold text-white mb-4 tracking-tight">
+          Kreuzfahrt neu gedacht
+        </h1>
+        <p className="text-lg text-gray-400 mb-10 max-w-xl">
+          Buche einzelne Kreuzfahrt-Segmente ab €249 für 2 Tage
+        </p>
+        <a
+          href="#"
+          className="px-8 py-3 rounded-full text-white font-semibold text-base transition-opacity hover:opacity-90"
+          style={{ backgroundColor: "#0EA5E9" }}
+        >
+          Segmente entdecken
+        </a>
+      </section>
+
+      {/* Cards Section */}
+      <section className="bg-gray-50 py-20 px-8">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="bg-white rounded-2xl shadow p-8">
+            <div className="text-3xl mb-4">⚓</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Flexibel reisen
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Wähle nur die Abschnitte, die zu deinem Zeitplan passen – ohne
+              eine komplette Reise buchen zu müssen.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow p-8">
+            <div className="text-3xl mb-4">💶</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Günstig einsteigen
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Erlebe Kreuzfahrten zu einem Bruchteil des Preises – perfekt für
+              Erstbucher und Kurzurlauber.
+            </p>
+          </div>
+          <div className="bg-white rounded-2xl shadow p-8">
+            <div className="text-3xl mb-4">🌍</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Neue Zielgruppen
+            </h3>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              CruiseSplit öffnet die Kreuzfahrtwelt für junge Reisende,
+              Berufstätige und alle, die Flexibilität schätzen.
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }
