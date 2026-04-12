@@ -27,7 +27,7 @@ export default function RegisterPage() {
     setLoading(true);
     setError(null);
 
-    const { error: signUpError } = await supabase.auth.signUp({
+    const { data, error: signUpError } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -47,6 +47,13 @@ export default function RegisterPage() {
       return;
     }
 
+    // Session exists → email confirmation disabled, redirect immediately
+    if (data.session) {
+      router.push(userType === "partner" ? "/reederei-dashboard" : "/segmente");
+      return;
+    }
+
+    // No session → email confirmation required, show confirmation screen
     setSuccess(true);
   }
 

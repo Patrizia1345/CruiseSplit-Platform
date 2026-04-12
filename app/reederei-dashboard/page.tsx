@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { createClient } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -149,7 +151,20 @@ function StatusBadge({ status }: { status: BookingStatus }) {
 // ─── Page ─────────────────────────────────────────────────────────────────────
 
 export default function ReedereIDashboard() {
+  const router = useRouter();
+  const supabase = createClient();
   const [activeNav, setActiveNav] = useState("uebersicht");
+  const [sessionChecked, setSessionChecked] = useState(false);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      if (!session) {
+        router.push("/auth/login");
+      } else {
+        setSessionChecked(true);
+      }
+    });
+  }, []);
 
   const today = new Date().toLocaleDateString("de-DE", {
     weekday: "long",
@@ -157,6 +172,20 @@ export default function ReedereIDashboard() {
     month: "long",
     day: "numeric",
   });
+
+  if (!sessionChecked) {
+    return (
+      <div className="flex h-screen items-center justify-center bg-gray-50 font-sans">
+        <div className="flex flex-col items-center gap-3">
+          <div
+            className="w-10 h-10 rounded-full border-4 border-t-transparent animate-spin"
+            style={{ borderColor: "#0EA5E9", borderTopColor: "transparent" }}
+          />
+          <p className="text-sm text-gray-400">Wird geladen…</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col h-screen bg-gray-50 font-sans overflow-hidden">

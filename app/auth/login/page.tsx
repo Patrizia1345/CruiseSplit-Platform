@@ -32,7 +32,7 @@ export default function LoginPage() {
 
     const userType = data.user?.user_metadata?.user_type;
     if (userType === "partner") {
-      router.push("/partner-pending");
+      router.push("/reederei-dashboard");
     } else {
       router.push("/segmente");
     }
