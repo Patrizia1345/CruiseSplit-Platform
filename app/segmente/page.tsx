@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 
@@ -163,7 +163,7 @@ function FilterCheckbox({
   );
 }
 
-export default function Segmente() {
+function SegmenteContent() {
   const searchParams = useSearchParams();
   const [accessDenied, setAccessDenied] = useState(false);
 
@@ -546,5 +546,13 @@ export default function Segmente() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function SegmentePage() {
+  return (
+    <Suspense fallback={<div className="flex min-h-screen items-center justify-center text-gray-400 text-sm">Laden…</div>}>
+      <SegmenteContent />
+    </Suspense>
   );
 }
