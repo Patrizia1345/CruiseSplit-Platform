@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Navbar from "@/components/Navbar";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -158,7 +159,9 @@ export default function ReedereIDashboard() {
   });
 
   return (
-    <div className="flex h-screen bg-gray-50 font-sans overflow-hidden">
+    <div className="flex flex-col h-screen bg-gray-50 font-sans overflow-hidden">
+      <Navbar />
+      <div className="flex flex-1 overflow-hidden">
       {/* ── Sidebar ── */}
       <aside
         className="w-60 shrink-0 flex flex-col h-full shadow-lg"
@@ -423,6 +426,7 @@ export default function ReedereIDashboard() {
             </div>
           </div>
         </main>
+      </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { createClient } from "@/lib/supabase";
 import Navbar from "@/components/Navbar";
 
@@ -63,13 +64,13 @@ export default function RegisterPage() {
               Bitte prüfe dein Postfach und klicke den Bestätigungslink, um
               dein Konto zu aktivieren.
             </p>
-            <a
+            <Link
               href="/auth/login"
               className="mt-6 inline-block text-sm font-semibold"
               style={{ color: "#0EA5E9" }}
             >
               Zum Login →
-            </a>
+            </Link>
           </div>
         </div>
       </div>
