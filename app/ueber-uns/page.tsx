@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 export default function UeberUns() {
@@ -176,36 +177,66 @@ export default function UeberUns() {
             Erfahrene Köpfe aus Travel-Tech, Schifffahrt und Start-ups
           </p>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {[
-              { role: "CEO", name: "Gründerin & CEO", area: "Strategy & Vision" },
-              { role: "CTO", name: "Co-Founder & CTO", area: "Product & Engineering" },
-              { role: "COO", name: "Co-Founder & COO", area: "Operations & Partnerships" },
-            ].map((member) => (
-              <div
-                key={member.role}
-                className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col items-center text-center gap-4"
-              >
-                {/* Avatar placeholder */}
-                <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl">
-                  👤
+            {/* CEO — Patrizia Kröger */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col items-center text-center gap-4">
+              <Image
+                src="/patrizia.jpg"
+                alt="Patrizia Kröger"
+                width={80}
+                height={80}
+                className="rounded-full object-cover w-20 h-20"
+              />
+              <div>
+                <div
+                  className="text-xs font-bold uppercase tracking-widest mb-1"
+                  style={{ color: "#0EA5E9" }}
+                >
+                  CEO
                 </div>
-                <div>
-                  <div
-                    className="text-xs font-bold uppercase tracking-widest mb-1"
-                    style={{ color: "#0EA5E9" }}
-                  >
-                    {member.role}
-                  </div>
-                  <div
-                    className="text-base font-bold"
-                    style={{ color: "#0A2342" }}
-                  >
-                    {member.name}
-                  </div>
-                  <div className="text-xs text-gray-400 mt-1">{member.area}</div>
+                <div className="text-base font-bold" style={{ color: "#0A2342" }}>
+                  Patrizia Kröger
                 </div>
+                <div className="text-xs text-gray-400 mt-1">CEO & Co-Founder</div>
               </div>
-            ))}
+            </div>
+
+            {/* CTO — Placeholder */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col items-center text-center gap-4">
+              <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl">
+                👤
+              </div>
+              <div>
+                <div
+                  className="text-xs font-bold uppercase tracking-widest mb-1"
+                  style={{ color: "#0EA5E9" }}
+                >
+                  CTO
+                </div>
+                <div className="text-base font-bold" style={{ color: "#0A2342" }}>
+                  Coming Soon
+                </div>
+                <div className="text-xs text-gray-400 mt-1">CTO & Co-Founder</div>
+              </div>
+            </div>
+
+            {/* COO — Placeholder */}
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8 flex flex-col items-center text-center gap-4">
+              <div className="w-20 h-20 rounded-full bg-gray-200 flex items-center justify-center text-gray-400 text-2xl">
+                👤
+              </div>
+              <div>
+                <div
+                  className="text-xs font-bold uppercase tracking-widest mb-1"
+                  style={{ color: "#0EA5E9" }}
+                >
+                  COO
+                </div>
+                <div className="text-base font-bold" style={{ color: "#0A2342" }}>
+                  Coming Soon
+                </div>
+                <div className="text-xs text-gray-400 mt-1">COO & Co-Founder</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
