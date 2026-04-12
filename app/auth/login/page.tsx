@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase";
+import Navbar from "@/components/Navbar";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -137,29 +138,3 @@ export default function LoginPage() {
   );
 }
 
-function Navbar() {
-  return (
-    <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
-      <a href="/" className="text-2xl font-bold" style={{ color: "#0A2342" }}>
-        CruiseSplit
-      </a>
-      <ul className="flex gap-8 text-sm font-medium text-gray-700">
-        <li>
-          <a href="/segmente" className="hover:text-[#0EA5E9] transition-colors">
-            Segmente
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-[#0EA5E9] transition-colors">
-            Reedereien
-          </a>
-        </li>
-        <li>
-          <a href="#" className="hover:text-[#0EA5E9] transition-colors">
-            Über uns
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
-}

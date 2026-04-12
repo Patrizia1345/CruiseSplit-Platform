@@ -1,12 +1,9 @@
+import Navbar from "@/components/Navbar";
+
 export default function PartnerPendingPage() {
   return (
     <div className="flex flex-col min-h-full font-sans bg-gray-50">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
-        <a href="/" className="text-2xl font-bold" style={{ color: "#0A2342" }}>
-          CruiseSplit
-        </a>
-      </nav>
+      <Navbar />
 
       {/* Content */}
       <div className="flex flex-1 items-center justify-center px-4 py-16">

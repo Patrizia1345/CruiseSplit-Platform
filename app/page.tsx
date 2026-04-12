@@ -1,29 +1,10 @@
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-full font-sans">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
-        <span className="text-2xl font-bold" style={{ color: "#0A2342" }}>
-          CruiseSplit
-        </span>
-        <ul className="flex gap-8 text-sm font-medium text-gray-700">
-          <li>
-            <a href="#" className="hover:text-[#0EA5E9] transition-colors">
-              Segmente
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-[#0EA5E9] transition-colors">
-              Reedereien
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:text-[#0EA5E9] transition-colors">
-              Über uns
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section
@@ -36,13 +17,13 @@ export default function Home() {
         <p className="text-lg text-gray-400 mb-10 max-w-xl">
           Buche einzelne Kreuzfahrt-Segmente ab €249 für 2 Tage
         </p>
-        <a
-          href="#"
+        <Link
+          href="/segmente"
           className="px-8 py-3 rounded-full text-white font-semibold text-base transition-opacity hover:opacity-90"
           style={{ backgroundColor: "#0EA5E9" }}
         >
           Segmente entdecken
-        </a>
+        </Link>
       </section>
 
       {/* Cards Section */}
