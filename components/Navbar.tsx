@@ -18,7 +18,9 @@ export default function Navbar() {
 
   useEffect(() => {
     const supabase = createClient();
-    supabase.auth.getUser().then(({ data: { user } }) => {
+    if (!supabase) return;
+    supabase.auth.getUser().then(({ data }: { data: { user: any } }) => {
+      const user = data?.user;
       if (user) {
         setIsLoggedIn(true);
         setIsPartner(user.user_metadata?.user_type === "partner");
@@ -28,6 +30,7 @@ export default function Navbar() {
 
   async function handleLogout() {
     const supabase = createClient();
+    if (!supabase) return;
     await supabase.auth.signOut();
     setIsLoggedIn(false);
     setIsPartner(false);
@@ -40,16 +43,9 @@ export default function Navbar() {
 
   return (
     <nav className="flex items-center justify-between px-8 py-4 bg-white shadow-sm">
-      {/* Logo */}
-      <Link
-        href="/"
-        className="text-2xl font-bold"
-        style={{ color: "#0A2342" }}
-      >
+      <Link href="/" className="text-2xl font-bold" style={{ color: "#0A2342" }}>
         CruiseSplit
       </Link>
-
-      {/* Primary links */}
       <ul className="flex items-center gap-8 text-sm font-medium text-gray-700">
         {navLinks.map(({ label, href }) => {
           const active = pathname === href || pathname.startsWith(href + "/");
@@ -66,8 +62,6 @@ export default function Navbar() {
           );
         })}
       </ul>
-
-      {/* Auth links */}
       <div className="flex items-center gap-3">
         {isLoggedIn ? (
           <button
@@ -79,10 +73,7 @@ export default function Navbar() {
           </button>
         ) : (
           <>
-            <Link
-              href="/auth/login"
-              className="text-sm font-medium text-gray-600 hover:text-[#0EA5E9] transition-colors"
-            >
+            <Link href="/auth/login" className="text-sm font-medium text-gray-600 hover:text-[#0EA5E9] transition-colors">
               Login
             </Link>
             <Link

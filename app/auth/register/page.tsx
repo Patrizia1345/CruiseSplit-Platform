@@ -1,5 +1,5 @@
 "use client";
-
+export const dynamic = "force-dynamic";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -10,7 +10,6 @@ type UserType = "private" | "partner";
 
 export default function RegisterPage() {
   const router = useRouter();
-  const supabase = createClient();
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -26,6 +25,8 @@ export default function RegisterPage() {
     e.preventDefault();
     setLoading(true);
     setError(null);
+
+    const supabase = createClient();
 
     const { data, error: signUpError } = await supabase.auth.signUp({
       email,
@@ -47,13 +48,11 @@ export default function RegisterPage() {
       return;
     }
 
-    // Session exists → email confirmation disabled, redirect immediately
     if (data.session) {
       router.push(userType === "partner" ? "/reederei-dashboard" : "/segmente");
       return;
     }
 
-    // No session → email confirmation required, show confirmation screen
     setSuccess(true);
   }
 
@@ -68,14 +67,9 @@ export default function RegisterPage() {
               Bestätigungs-E-Mail gesendet
             </h2>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Bitte prüfe dein Postfach und klicke den Bestätigungslink, um
-              dein Konto zu aktivieren.
+              Bitte prüfe dein Postfach und klicke den Bestätigungslink.
             </p>
-            <Link
-              href="/auth/login"
-              className="mt-6 inline-block text-sm font-semibold"
-              style={{ color: "#0EA5E9" }}
-            >
+            <Link href="/auth/login" className="mt-6 inline-block text-sm font-semibold" style={{ color: "#0EA5E9" }}>
               Zum Login →
             </Link>
           </div>
@@ -87,172 +81,65 @@ export default function RegisterPage() {
   return (
     <div className="flex flex-col min-h-full font-sans bg-gray-50">
       <Navbar />
-
       <div className="flex flex-1 items-center justify-center px-4 py-12">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 w-full max-w-md">
-          {/* Heading */}
           <div className="mb-8">
-            <h1 className="text-2xl font-bold" style={{ color: "#0A2342" }}>
-              Konto erstellen
-            </h1>
+            <h1 className="text-2xl font-bold" style={{ color: "#0A2342" }}>Konto erstellen</h1>
             <p className="text-sm text-gray-400 mt-1">
               Bereits registriert?{" "}
-              <a
-                href="/auth/login"
-                className="font-semibold hover:underline"
-                style={{ color: "#0EA5E9" }}
-              >
-                Einloggen
-              </a>
+              <a href="/auth/login" className="font-semibold hover:underline" style={{ color: "#0EA5E9" }}>Einloggen</a>
             </p>
           </div>
-
           <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-            {/* Name row */}
             <div className="grid grid-cols-2 gap-3">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  Vorname
-                </label>
-                <input
-                  required
-                  type="text"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  placeholder="Anna"
-                  className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300"
-                />
+                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Vorname</label>
+                <input required type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="Anna"
+                  className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300" />
               </div>
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  Nachname
-                </label>
-                <input
-                  required
-                  type="text"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  placeholder="Müller"
-                  className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300"
-                />
+                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Nachname</label>
+                <input required type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Müller"
+                  className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300" />
               </div>
             </div>
-
-            {/* E-Mail */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                E-Mail
-              </label>
-              <input
-                required
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="anna@example.com"
-                className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300"
-              />
+              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">E-Mail</label>
+              <input required type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="anna@example.com"
+                className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300" />
             </div>
-
-            {/* Passwort */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                Passwort
-              </label>
-              <input
-                required
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Mindestens 8 Zeichen"
-                minLength={8}
-                className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300"
-              />
+              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Passwort</label>
+              <input required type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Mindestens 8 Zeichen" minLength={8}
+                className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300" />
             </div>
-
-            {/* Kontoart */}
             <div className="flex flex-col gap-2">
-              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                Kontotyp
-              </span>
+              <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Kontotyp</span>
               <div className="grid grid-cols-2 gap-3">
-                {(
-                  [
-                    { value: "private", label: "Privatkunde", icon: "👤" },
-                    {
-                      value: "partner",
-                      label: "Partner",
-                      sublabel: "Reisebüro / Reederei",
-                      icon: "🏢",
-                    },
-                  ] as const
-                ).map((opt) => (
-                  <label
-                    key={opt.value}
-                    className={`flex flex-col gap-0.5 border rounded-xl px-4 py-3 cursor-pointer transition-all ${
-                      userType === opt.value
-                        ? "border-[#0EA5E9] bg-sky-50"
-                        : "border-gray-200 hover:border-[#0EA5E9]"
-                    }`}
-                  >
-                    <input
-                      type="radio"
-                      name="userType"
-                      value={opt.value}
-                      checked={userType === opt.value}
-                      onChange={() => setUserType(opt.value)}
-                      className="sr-only"
-                    />
+                {([
+                  { value: "private", label: "Privatkunde", icon: "👤" },
+                  { value: "partner", label: "Partner", sublabel: "Reisebüro / Reederei", icon: "🏢" },
+                ] as const).map((opt) => (
+                  <label key={opt.value} className={`flex flex-col gap-0.5 border rounded-xl px-4 py-3 cursor-pointer transition-all ${userType === opt.value ? "border-[#0EA5E9] bg-sky-50" : "border-gray-200 hover:border-[#0EA5E9]"}`}>
+                    <input type="radio" name="userType" value={opt.value} checked={userType === opt.value} onChange={() => setUserType(opt.value)} className="sr-only" />
                     <span className="text-lg">{opt.icon}</span>
-                    <span
-                      className="text-sm font-semibold"
-                      style={{
-                        color:
-                          userType === opt.value ? "#0EA5E9" : "#0A2342",
-                      }}
-                    >
-                      {opt.label}
-                    </span>
-                    {"sublabel" in opt && (
-                      <span className="text-xs text-gray-400">
-                        {opt.sublabel}
-                      </span>
-                    )}
+                    <span className="text-sm font-semibold" style={{ color: userType === opt.value ? "#0EA5E9" : "#0A2342" }}>{opt.label}</span>
+                    {"sublabel" in opt && <span className="text-xs text-gray-400">{opt.sublabel}</span>}
                   </label>
                 ))}
               </div>
             </div>
-
-            {/* Firmenname — nur für Partner */}
             {userType === "partner" && (
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  Firmenname
-                </label>
-                <input
-                  required
-                  type="text"
-                  value={company}
-                  onChange={(e) => setCompany(e.target.value)}
-                  placeholder="MSC Cruises GmbH"
-                  className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300"
-                />
+                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Firmenname</label>
+                <input required type="text" value={company} onChange={(e) => setCompany(e.target.value)} placeholder="MSC Cruises GmbH"
+                  className="border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50 placeholder:text-gray-300" />
               </div>
             )}
-
-            {/* Error */}
-            {error && (
-              <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">
-                {error}
-              </p>
-            )}
-
-            {/* Submit */}
-            <button
-              type="submit"
-              disabled={loading}
+            {error && <p className="text-sm text-red-500 bg-red-50 border border-red-100 rounded-xl px-4 py-3">{error}</p>}
+            <button type="submit" disabled={loading}
               className="w-full py-3 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90 disabled:opacity-60"
-              style={{ backgroundColor: "#0EA5E9" }}
-            >
+              style={{ backgroundColor: "#0EA5E9" }}>
               {loading ? "Wird erstellt…" : "Konto erstellen"}
             </button>
           </form>
@@ -261,4 +148,3 @@ export default function RegisterPage() {
     </div>
   );
 }
-
