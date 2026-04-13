@@ -153,12 +153,12 @@ function StatusBadge({ status }: { status: BookingStatus }) {
 
 export default function ReedereIDashboard() {
   const router = useRouter();
-  const supabase = createClient();
   const [activeNav, setActiveNav] = useState("uebersicht");
   const [sessionChecked, setSessionChecked] = useState(false);
 
   useEffect(() => {
     async function checkAccess() {
+      const supabase = createClient();
       const { data: { session } } = await supabase.auth.getSession();
 
       if (!session) {
