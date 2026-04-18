@@ -228,27 +228,27 @@ function BookingContent() {
                         <label className="text-xs text-gray-500 mb-1 block">Vorname *</label>
                         <input type="text" value={t.firstName} onChange={(e) => updateTraveller(i, "firstName", e.target.value)}
                           placeholder="Max"
-                          className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors[`firstName_${i}`] ? "border-red-400" : "border-gray-200"}`} />
+                          className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors[`firstName_${i}`] ? "border-red-400" : "border-gray-200"}`} />
                         {errors[`firstName_${i}`] && <p className="text-xs text-red-400 mt-1">{errors[`firstName_${i}`]}</p>}
                       </div>
                       <div>
                         <label className="text-xs text-gray-500 mb-1 block">Nachname *</label>
                         <input type="text" value={t.lastName} onChange={(e) => updateTraveller(i, "lastName", e.target.value)}
                           placeholder="Mustermann"
-                          className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors[`lastName_${i}`] ? "border-red-400" : "border-gray-200"}`} />
+                          className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors[`lastName_${i}`] ? "border-red-400" : "border-gray-200"}`} />
                         {errors[`lastName_${i}`] && <p className="text-xs text-red-400 mt-1">{errors[`lastName_${i}`]}</p>}
                       </div>
                       <div>
                         <label className="text-xs text-gray-500 mb-1 block">Geburtsdatum *</label>
                         <input type="date" value={t.birthDate} onChange={(e) => updateTraveller(i, "birthDate", e.target.value)}
-                          className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors[`birthDate_${i}`] ? "border-red-400" : "border-gray-200"}`} />
+                          className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors[`birthDate_${i}`] ? "border-red-400" : "border-gray-200"}`} />
                         {errors[`birthDate_${i}`] && <p className="text-xs text-red-400 mt-1">{errors[`birthDate_${i}`]}</p>}
                       </div>
                       <div>
                         <label className="text-xs text-gray-500 mb-1 block">Reisepass-Nr. (optional)</label>
                         <input type="text" value={t.passportNumber} onChange={(e) => updateTraveller(i, "passportNumber", e.target.value)}
                           placeholder="C01X00T47"
-                          className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]" />
+                          className="w-full border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9]" />
                       </div>
                     </div>
                   </div>
@@ -272,7 +272,7 @@ function BookingContent() {
                   <label className="text-xs text-gray-500 mb-1 block">E-Mail für Buchungsbestätigung *</label>
                   <input type="email" value={payment.email} onChange={(e) => setPayment((p) => ({ ...p, email: e.target.value }))}
                     placeholder="max@beispiel.de"
-                    className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors.email ? "border-red-400" : "border-gray-200"}`} />
+                    className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] ${errors.email ? "border-red-400" : "border-gray-200"}`} />
                   {errors.email && <p className="text-xs text-red-400 mt-1">{errors.email}</p>}
                 </div>
                 <div className="border border-gray-100 rounded-xl p-4 mb-4 bg-gray-50">
@@ -282,7 +282,7 @@ function BookingContent() {
                       <label className="text-xs text-gray-500 mb-1 block">Name auf der Karte *</label>
                       <input type="text" value={payment.cardName} onChange={(e) => setPayment((p) => ({ ...p, cardName: e.target.value }))}
                         placeholder="Max Mustermann"
-                        className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.cardName ? "border-red-400" : "border-gray-200"}`} />
+                        className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.cardName ? "border-red-400" : "border-gray-200"}`} />
                       {errors.cardName && <p className="text-xs text-red-400 mt-1">{errors.cardName}</p>}
                     </div>
                     <div>
@@ -290,7 +290,7 @@ function BookingContent() {
                       <input type="text" value={payment.cardNumber}
                         onChange={(e) => setPayment((p) => ({ ...p, cardNumber: formatCardNumber(e.target.value) }))}
                         placeholder="1234 5678 9012 3456" maxLength={19}
-                        className={`w-full border rounded-xl px-3 py-2.5 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.cardNumber ? "border-red-400" : "border-gray-200"}`} />
+                        className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 font-mono focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.cardNumber ? "border-red-400" : "border-gray-200"}`} />
                       {errors.cardNumber && <p className="text-xs text-red-400 mt-1">{errors.cardNumber}</p>}
                     </div>
                     <div className="grid grid-cols-2 gap-4">
@@ -299,7 +299,7 @@ function BookingContent() {
                         <input type="text" value={payment.expiry}
                           onChange={(e) => { let v = e.target.value.replace(/\D/g, "").slice(0, 4); if (v.length >= 3) v = v.slice(0, 2) + "/" + v.slice(2); setPayment((p) => ({ ...p, expiry: v })); }}
                           placeholder="MM/JJ" maxLength={5}
-                          className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.expiry ? "border-red-400" : "border-gray-200"}`} />
+                          className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.expiry ? "border-red-400" : "border-gray-200"}`} />
                         {errors.expiry && <p className="text-xs text-red-400 mt-1">{errors.expiry}</p>}
                       </div>
                       <div>
@@ -307,7 +307,7 @@ function BookingContent() {
                         <input type="text" value={payment.cvv}
                           onChange={(e) => setPayment((p) => ({ ...p, cvv: e.target.value.replace(/\D/g, "").slice(0, 4) }))}
                           placeholder="123" maxLength={4}
-                          className={`w-full border rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.cvv ? "border-red-400" : "border-gray-200"}`} />
+                          className={`w-full border rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white ${errors.cvv ? "border-red-400" : "border-gray-200"}`} />
                         {errors.cvv && <p className="text-xs text-red-400 mt-1">{errors.cvv}</p>}
                       </div>
                     </div>
