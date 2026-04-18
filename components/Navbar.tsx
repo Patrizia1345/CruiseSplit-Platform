@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase";
 
 const STATIC_NAV_LINKS = [
+  { label: "Routen", href: "/routen" },
   { label: "Segmente", href: "/segmente" },
   { label: "Über uns", href: "/ueber-uns" },
 ];
