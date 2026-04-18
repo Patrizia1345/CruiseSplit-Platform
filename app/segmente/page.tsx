@@ -2,7 +2,6 @@
 
 import { Suspense, useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import Image from "next/image";
 import Navbar from "@/components/Navbar";
 
 const PORTS = [
@@ -29,103 +28,130 @@ interface Segment {
 }
 
 const ALL_SEGMENTS: Segment[] = [
-  {
-    id: 1, leg: "Leg 1", from: "Barcelona", to: "Marseille",
-    departure: "08:00", arrival: "18:00", date: "12. Mai 2025", days: 2,
-    airline: "MSC Cruises",
-    cabins: { Innenkabine: 269, Außenkabine: 329, Balkonkabine: 419 },
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80",
-    highlights: ["Sagrada Família", "Las Ramblas", "Alter Hafen Marseille"],
-  },
-  {
-    id: 2, leg: "Leg 2", from: "Marseille", to: "Genua",
-    departure: "09:30", arrival: "20:00", date: "14. Mai 2025", days: 2,
-    airline: "Costa Cruises",
-    cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 },
-    image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=800&q=80",
-    highlights: ["Côte d'Azur", "Nizza Promenade", "Genua Altstadt"],
-  },
-  {
-    id: 3, leg: "Leg 3", from: "Genua", to: "Rom",
-    departure: "07:00", arrival: "19:30", date: "16. Mai 2025", days: 2,
-    airline: "MSC Cruises",
-    cabins: { Innenkabine: 279, Außenkabine: 349, Balkonkabine: 439 },
-    image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80",
-    highlights: ["Kolosseum", "Vatikan", "Cinque Terre"],
-  },
-  {
-    id: 4, leg: "Leg 4", from: "Rom", to: "Santorin",
-    departure: "10:00", arrival: "16:00", date: "18. Mai 2025", days: 3,
-    airline: "Norwegian Cruise Line",
-    cabins: { Innenkabine: 419, Außenkabine: 519, Balkonkabine: 649 },
-    image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80",
-    highlights: ["Oia Sonnenuntergang", "Caldera", "Neapel Küste"],
-  },
-  {
-    id: 5, leg: "Leg 5", from: "Santorin", to: "Athen",
-    departure: "11:00", arrival: "20:00", date: "21. Mai 2025", days: 2,
-    airline: "Costa Cruises",
-    cabins: { Innenkabine: 269, Außenkabine: 329, Balkonkabine: 419 },
-    image: "https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80",
-    highlights: ["Akropolis", "Plaka", "Mykonos"],
-  },
-  {
-    id: 6, leg: "Leg 6", from: "Athen", to: "Dubrovnik",
-    departure: "08:00", arrival: "21:00", date: "23. Mai 2025", days: 3,
-    airline: "MSC Cruises",
-    cabins: { Innenkabine: 389, Außenkabine: 479, Balkonkabine: 599 },
-    image: "https://images.unsplash.com/photo-1555990538-c4f0ebe673c2?w=800&q=80",
-    highlights: ["Altstadtmauern", "Game of Thrones Drehorte", "Korfu"],
-  },
-  {
-    id: 7, leg: "Leg 7", from: "Dubrovnik", to: "Split",
-    departure: "09:00", arrival: "15:00", date: "26. Mai 2025", days: 2,
-    airline: "Costa Cruises",
-    cabins: { Innenkabine: 219, Außenkabine: 279, Balkonkabine: 359 },
-    image: "https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?w=800&q=80",
-    highlights: ["Diokletianpalast", "Dalmatinische Inseln", "Hvar"],
-  },
-  {
-    id: 8, leg: "Leg 8", from: "Split", to: "Venedig",
-    departure: "10:00", arrival: "22:00", date: "28. Mai 2025", days: 2,
-    airline: "Norwegian Cruise Line",
-    cabins: { Innenkabine: 299, Außenkabine: 369, Balkonkabine: 469 },
-    image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=800&q=80",
-    highlights: ["Markusplatz", "Gondeln", "Rialtobrücke"],
-  },
-  {
-    id: 9, leg: "Leg 9", from: "Venedig", to: "Genua",
-    departure: "08:30", arrival: "20:00", date: "30. Mai 2025", days: 2,
-    airline: "MSC Cruises",
-    cabins: { Innenkabine: 259, Außenkabine: 319, Balkonkabine: 409 },
-    image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80",
-    highlights: ["Lagunenstadt", "Cinque Terre", "Ligurische Küste"],
-  },
-  {
-    id: 10, leg: "Leg 10", from: "Barcelona", to: "Palma de Mallorca",
-    departure: "09:00", arrival: "14:00", date: "15. Jun 2025", days: 2,
-    airline: "Costa Cruises",
-    cabins: { Innenkabine: 199, Außenkabine: 249, Balkonkabine: 329 },
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
-    highlights: ["Kathedrale La Seu", "Strand Es Trenc", "Soller Tal"],
-  },
-  {
-    id: 11, leg: "Leg 11", from: "Palma de Mallorca", to: "Valencia",
-    departure: "11:00", arrival: "19:00", date: "17. Jun 2025", days: 2,
-    airline: "Norwegian Cruise Line",
-    cabins: { Innenkabine: 229, Außenkabine: 289, Balkonkabine: 369 },
-    image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80",
-    highlights: ["Stadt der Künste", "Paella-Heimat", "Ibiza Stopp"],
-  },
-  {
-    id: 12, leg: "Leg 12", from: "Nizza", to: "Pisa (Livorno)",
-    departure: "10:00", arrival: "18:30", date: "20. Jun 2025", days: 2,
-    airline: "MSC Cruises",
-    cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 },
-    image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=800&q=80",
-    highlights: ["Promenade des Anglais", "Monaco", "Schiefer Turm von Pisa"],
-  },
+  { id: 1, leg: "Leg 1", from: "Barcelona", to: "Marseille", departure: "08:00", arrival: "18:00", date: "12. Mai 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 269, Außenkabine: 329, Balkonkabine: 419 }, image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80", highlights: ["Sagrada Família", "Las Ramblas", "Alter Hafen Marseille"] },
+  { id: 2, leg: "Leg 2", from: "Marseille", to: "Genua", departure: "09:30", arrival: "20:00", date: "14. Mai 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 }, image: "https://images.unsplash.com/photo-1499678329028-101435549a4e?w=800&q=80", highlights: ["Côte d'Azur", "Nizza Promenade", "Genua Altstadt"] },
+  { id: 3, leg: "Leg 3", from: "Genua", to: "Rom", departure: "07:00", arrival: "19:30", date: "16. Mai 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 279, Außenkabine: 349, Balkonkabine: 439 }, image: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80", highlights: ["Kolosseum", "Vatikan", "Cinque Terre"] },
+  { id: 4, leg: "Leg 4", from: "Rom", to: "Santorin", departure: "10:00", arrival: "16:00", date: "18. Mai 2025", days: 3, airline: "Norwegian Cruise Line", cabins: { Innenkabine: 419, Außenkabine: 519, Balkonkabine: 649 }, image: "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?w=800&q=80", highlights: ["Oia Sonnenuntergang", "Caldera", "Neapel Küste"] },
+  { id: 5, leg: "Leg 5", from: "Santorin", to: "Athen", departure: "11:00", arrival: "20:00", date: "21. Mai 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 269, Außenkabine: 329, Balkonkabine: 419 }, image: "https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80", highlights: ["Akropolis", "Plaka", "Mykonos"] },
+  { id: 6, leg: "Leg 6", from: "Athen", to: "Dubrovnik", departure: "08:00", arrival: "21:00", date: "23. Mai 2025", days: 3, airline: "MSC Cruises", cabins: { Innenkabine: 389, Außenkabine: 479, Balkonkabine: 599 }, image: "https://images.unsplash.com/photo-1555990538-c4f0ebe673c2?w=800&q=80", highlights: ["Altstadtmauern", "Game of Thrones", "Korfu"] },
+  { id: 7, leg: "Leg 7", from: "Dubrovnik", to: "Split", departure: "09:00", arrival: "15:00", date: "26. Mai 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 219, Außenkabine: 279, Balkonkabine: 359 }, image: "https://images.unsplash.com/photo-1601645191163-3fc0d5d64e35?w=800&q=80", highlights: ["Diokletianpalast", "Dalmatinische Inseln", "Hvar"] },
+  { id: 8, leg: "Leg 8", from: "Split", to: "Venedig", departure: "10:00", arrival: "22:00", date: "28. Mai 2025", days: 2, airline: "Norwegian Cruise Line", cabins: { Innenkabine: 299, Außenkabine: 369, Balkonkabine: 469 }, image: "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?w=800&q=80", highlights: ["Markusplatz", "Gondeln", "Rialtobrücke"] },
+  { id: 9, leg: "Leg 9", from: "Venedig", to: "Genua", departure: "08:30", arrival: "20:00", date: "30. Mai 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 259, Außenkabine: 319, Balkonkabine: 409 }, image: "https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80", highlights: ["Lagunenstadt", "Cinque Terre", "Ligurische Küste"] },
+  { id: 10, leg: "Leg 10", from: "Barcelona", to: "Palma de Mallorca", departure: "09:00", arrival: "14:00", date: "15. Jun 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 199, Außenkabine: 249, Balkonkabine: 329 }, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", highlights: ["Kathedrale La Seu", "Strand Es Trenc", "Soller Tal"] },
+  { id: 11, leg: "Leg 11", from: "Palma de Mallorca", to: "Valencia", departure: "11:00", arrival: "19:00", date: "17. Jun 2025", days: 2, airline: "Norwegian Cruise Line", cabins: { Innenkabine: 229, Außenkabine: 289, Balkonkabine: 369 }, image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80", highlights: ["Stadt der Künste", "Paella-Heimat", "Ibiza Stopp"] },
+  { id: 12, leg: "Leg 12", from: "Nizza", to: "Pisa (Livorno)", departure: "10:00", arrival: "18:30", date: "20. Jun 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 }, image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=800&q=80", highlights: ["Promenade des Anglais", "Monaco", "Schiefer Turm"] },
 ];
+
+// Approximate Mediterranean coordinates mapped to SVG canvas (800x400)
+const PORT_COORDS: Record<string, { x: number; y: number }> = {
+  "Barcelona":          { x: 130, y: 160 },
+  "Palma de Mallorca":  { x: 175, y: 185 },
+  "Valencia":           { x: 145, y: 195 },
+  "Marseille":          { x: 215, y: 148 },
+  "Nizza":              { x: 240, y: 145 },
+  "Genua":              { x: 255, y: 148 },
+  "Pisa (Livorno)":     { x: 265, y: 162 },
+  "Rom":                { x: 285, y: 185 },
+  "Neapel":             { x: 300, y: 198 },
+  "Santorin":           { x: 400, y: 230 },
+  "Athen":              { x: 390, y: 210 },
+  "Dubrovnik":          { x: 340, y: 175 },
+  "Split":              { x: 325, y: 162 },
+  "Venedig":            { x: 295, y: 145 },
+};
+
+function RouteMap({ segments, activeSegmentId, onSelectSegment }: {
+  segments: Segment[];
+  activeSegmentId: number | null;
+  onSelectSegment: (id: number) => void;
+}) {
+  const allPorts = Array.from(new Set(segments.flatMap((s) => [s.from, s.to])));
+
+  return (
+    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 mb-6">
+      <div className="flex items-center justify-between mb-3">
+        <h2 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#0A2342" }}>
+          🗺️ Mittelmeer Route
+        </h2>
+        <span className="text-xs text-gray-400">Klicke auf ein Segment zum Filtern</span>
+      </div>
+      <svg viewBox="0 0 520 280" className="w-full" style={{ height: 220 }}>
+        {/* Ocean background */}
+        <rect width="520" height="280" fill="#EFF6FF" rx="12" />
+
+        {/* Decorative water lines */}
+        {[60, 120, 180, 240].map((y) => (
+          <line key={y} x1="10" y1={y} x2="510" y2={y} stroke="#BFDBFE" strokeWidth="0.5" strokeDasharray="4 8" />
+        ))}
+
+        {/* Route lines */}
+        {segments.map((seg) => {
+          const from = PORT_COORDS[seg.from];
+          const to = PORT_COORDS[seg.to];
+          if (!from || !to) return null;
+          const isActive = activeSegmentId === seg.id;
+          return (
+            <g key={seg.id} onClick={() => onSelectSegment(seg.id)} className="cursor-pointer">
+              <line
+                x1={from.x} y1={from.y} x2={to.x} y2={to.y}
+                stroke={isActive ? "#0EA5E9" : "#93C5FD"}
+                strokeWidth={isActive ? 3 : 1.5}
+                strokeDasharray={isActive ? "none" : "5 4"}
+              />
+              {/* Midpoint label */}
+              <text
+                x={(from.x + to.x) / 2}
+                y={(from.y + to.y) / 2 - 6}
+                textAnchor="middle"
+                fontSize="7"
+                fill={isActive ? "#0EA5E9" : "#94A3B8"}
+                fontWeight={isActive ? "bold" : "normal"}
+              >
+                {seg.leg}
+              </text>
+            </g>
+          );
+        })}
+
+        {/* Port dots */}
+        {allPorts.map((port) => {
+          const coords = PORT_COORDS[port];
+          if (!coords) return null;
+          const isActive = activeSegmentId !== null &&
+            segments.find((s) => s.id === activeSegmentId && (s.from === port || s.to === port));
+          return (
+            <g key={port}>
+              <circle cx={coords.x} cy={coords.y} r={isActive ? 7 : 5}
+                fill={isActive ? "#0EA5E9" : "#1E40AF"}
+                stroke="white" strokeWidth="2" />
+              <text x={coords.x} y={coords.y + 16} textAnchor="middle"
+                fontSize="8" fill="#1E3A5F" fontWeight="500">
+                {port.split(" ")[0]}
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+
+      {/* Segment pills */}
+      <div className="flex flex-wrap gap-2 mt-3">
+        {segments.map((seg) => (
+          <button
+            key={seg.id}
+            onClick={() => onSelectSegment(activeSegmentId === seg.id ? 0 : seg.id)}
+            className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-all ${
+              activeSegmentId === seg.id
+                ? "border-[#0EA5E9] bg-[#0EA5E9] text-white"
+                : "border-gray-200 text-gray-600 hover:border-[#0EA5E9] hover:text-[#0EA5E9]"
+            }`}
+          >
+            {seg.from} → {seg.to}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 const CABIN_TYPES: Cabin[] = ["Innenkabine", "Außenkabine", "Balkonkabine"];
 const REEDEREIEN = ["MSC Cruises", "Costa Cruises", "Norwegian Cruise Line"];
@@ -167,6 +193,7 @@ function SegmenteContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [accessDenied, setAccessDenied] = useState(false);
+  const [activeSegmentId, setActiveSegmentId] = useState<number | null>(null);
 
   useEffect(() => {
     if (searchParams.get("access") === "denied") {
@@ -195,21 +222,25 @@ function SegmenteContent() {
     setSelectedReederei((prev) => { const next = new Set(prev); next.has(r) ? next.delete(r) : next.add(r); return next; });
   };
 
-  const results = searched
-    ? ALL_SEGMENTS.filter((s) => {
-        if (from !== "Alle" && s.from !== from) return false;
-        if (to !== "Alle" && s.to !== to) return false;
-        if (selectedDuration !== "Alle") {
-          if (selectedDuration === "5+ Tage") { if (s.days < 5) return false; }
-          else if (s.days !== parseInt(selectedDuration)) return false;
-        }
-        const activeCabin = selectedCabins[s.id];
-        if (s.cabins[activeCabin] > priceMax) return false;
-        if (selectedCabinFilters.size > 0 && !selectedCabinFilters.has(activeCabin)) return false;
-        if (selectedReederei.size > 0 && !selectedReederei.has(s.airline)) return false;
-        return true;
-      })
-    : [];
+  function handleSelectSegment(id: number) {
+    setActiveSegmentId((prev) => (prev === id ? null : id));
+  }
+
+  const results = ALL_SEGMENTS.filter((s) => {
+    if (activeSegmentId && s.id !== activeSegmentId) return false;
+    if (!searched) return false;
+    if (from !== "Alle" && s.from !== from) return false;
+    if (to !== "Alle" && s.to !== to) return false;
+    if (selectedDuration !== "Alle") {
+      if (selectedDuration === "5+ Tage") { if (s.days < 5) return false; }
+      else if (s.days !== parseInt(selectedDuration)) return false;
+    }
+    const activeCabin = selectedCabins[s.id];
+    if (s.cabins[activeCabin] > priceMax) return false;
+    if (selectedCabinFilters.size > 0 && !selectedCabinFilters.has(activeCabin)) return false;
+    if (selectedReederei.size > 0 && !selectedReederei.has(s.airline)) return false;
+    return true;
+  });
 
   return (
     <div className="flex flex-col min-h-full font-sans bg-gray-50">
@@ -224,7 +255,6 @@ function SegmenteContent() {
         </div>
       )}
 
-      {/* Search Bar */}
       <div style={{ backgroundColor: "#0A2342" }} className="px-8 py-8">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-2xl font-bold text-white mb-6">Kreuzfahrt-Segmente suchen</h1>
@@ -268,9 +298,7 @@ function SegmenteContent() {
         </div>
       </div>
 
-      {/* Content */}
       <div className="max-w-6xl mx-auto w-full px-8 py-8 flex gap-6 flex-1">
-        {/* Filter Sidebar */}
         <aside className="w-56 shrink-0 flex flex-col gap-6">
           <div className="bg-white rounded-2xl shadow-sm p-5">
             <h3 className="text-sm font-bold mb-4 uppercase tracking-wider" style={{ color: "#0A2342" }}>Preis</h3>
@@ -305,10 +333,18 @@ function SegmenteContent() {
           </div>
         </aside>
 
-        {/* Results */}
         <div className="flex-1 flex flex-col gap-4">
+          <RouteMap
+            segments={ALL_SEGMENTS}
+            activeSegmentId={activeSegmentId}
+            onSelectSegment={handleSelectSegment}
+          />
+
           <div className="flex items-center justify-between">
-            <p className="text-sm text-gray-500">{results.length} Segment{results.length !== 1 ? "e" : ""} gefunden</p>
+            <p className="text-sm text-gray-500">
+              {results.length} Segment{results.length !== 1 ? "e" : ""} gefunden
+              {activeSegmentId && <button onClick={() => setActiveSegmentId(null)} className="ml-2 text-[#0EA5E9] underline text-xs">Alle anzeigen</button>}
+            </p>
             <select className="text-sm border border-gray-200 rounded-xl px-3 py-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white">
               <option>Günstigste zuerst</option>
               <option>Schnellste zuerst</option>
@@ -325,30 +361,19 @@ function SegmenteContent() {
           )}
 
           {results.map((segment) => (
-            <div key={segment.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
-              {/* Harbour Image */}
+            <div key={segment.id} className={`bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow ${activeSegmentId === segment.id ? "border-[#0EA5E9]" : "border-gray-100"}`}>
               <div className="relative h-40 w-full overflow-hidden">
-                <img
-                  src={segment.image}
-                  alt={`${segment.from} nach ${segment.to}`}
-                  className="w-full h-full object-cover"
-                />
+                <img src={segment.image} alt={`${segment.from} nach ${segment.to}`} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                <div className="absolute bottom-3 left-4 flex gap-2">
+                <div className="absolute bottom-3 left-4 flex gap-2 flex-wrap">
                   {segment.highlights.map((h) => (
-                    <span key={h} className="text-xs bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full border border-white/30">
-                      {h}
-                    </span>
+                    <span key={h} className="text-xs bg-white/20 backdrop-blur-sm text-white px-2 py-1 rounded-full border border-white/30">{h}</span>
                   ))}
                 </div>
                 <div className="absolute top-3 right-3">
-                  <span className="text-xs bg-white text-gray-700 font-semibold px-3 py-1 rounded-full shadow">
-                    {segment.days} Tage
-                  </span>
+                  <span className="text-xs bg-white text-gray-700 font-semibold px-3 py-1 rounded-full shadow">{segment.days} Tage</span>
                 </div>
               </div>
-
-              {/* Card Content */}
               <div className="p-5 flex flex-col gap-4">
                 <div className="flex items-start gap-4">
                   <AirlineBadge name={segment.airline} />
