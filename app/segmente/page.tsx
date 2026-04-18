@@ -42,117 +42,6 @@ const ALL_SEGMENTS: Segment[] = [
   { id: 12, leg: "Leg 12", from: "Nizza", to: "Pisa (Livorno)", departure: "10:00", arrival: "18:30", date: "20. Jun 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 }, image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=800&q=80", highlights: ["Promenade des Anglais", "Monaco", "Schiefer Turm"] },
 ];
 
-// Approximate Mediterranean coordinates mapped to SVG canvas (800x400)
-const PORT_COORDS: Record<string, { x: number; y: number }> = {
-  "Barcelona":          { x: 130, y: 160 },
-  "Palma de Mallorca":  { x: 175, y: 185 },
-  "Valencia":           { x: 145, y: 195 },
-  "Marseille":          { x: 215, y: 148 },
-  "Nizza":              { x: 240, y: 145 },
-  "Genua":              { x: 255, y: 148 },
-  "Pisa (Livorno)":     { x: 265, y: 162 },
-  "Rom":                { x: 285, y: 185 },
-  "Neapel":             { x: 300, y: 198 },
-  "Santorin":           { x: 400, y: 230 },
-  "Athen":              { x: 390, y: 210 },
-  "Dubrovnik":          { x: 340, y: 175 },
-  "Split":              { x: 325, y: 162 },
-  "Venedig":            { x: 295, y: 145 },
-};
-
-function RouteMap({ segments, activeSegmentId, onSelectSegment }: {
-  segments: Segment[];
-  activeSegmentId: number | null;
-  onSelectSegment: (id: number) => void;
-}) {
-  const allPorts = Array.from(new Set(segments.flatMap((s) => [s.from, s.to])));
-
-  return (
-    <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 mb-6">
-      <div className="flex items-center justify-between mb-3">
-        <h2 className="text-sm font-bold uppercase tracking-wider" style={{ color: "#0A2342" }}>
-          🗺️ Mittelmeer Route
-        </h2>
-        <span className="text-xs text-gray-400">Klicke auf ein Segment zum Filtern</span>
-      </div>
-      <svg viewBox="0 0 520 280" className="w-full" style={{ height: 220 }}>
-        {/* Ocean background */}
-        <rect width="520" height="280" fill="#EFF6FF" rx="12" />
-
-        {/* Decorative water lines */}
-        {[60, 120, 180, 240].map((y) => (
-          <line key={y} x1="10" y1={y} x2="510" y2={y} stroke="#BFDBFE" strokeWidth="0.5" strokeDasharray="4 8" />
-        ))}
-
-        {/* Route lines */}
-        {segments.map((seg) => {
-          const from = PORT_COORDS[seg.from];
-          const to = PORT_COORDS[seg.to];
-          if (!from || !to) return null;
-          const isActive = activeSegmentId === seg.id;
-          return (
-            <g key={seg.id} onClick={() => onSelectSegment(seg.id)} className="cursor-pointer">
-              <line
-                x1={from.x} y1={from.y} x2={to.x} y2={to.y}
-                stroke={isActive ? "#0EA5E9" : "#93C5FD"}
-                strokeWidth={isActive ? 3 : 1.5}
-                strokeDasharray={isActive ? "none" : "5 4"}
-              />
-              {/* Midpoint label */}
-              <text
-                x={(from.x + to.x) / 2}
-                y={(from.y + to.y) / 2 - 6}
-                textAnchor="middle"
-                fontSize="7"
-                fill={isActive ? "#0EA5E9" : "#94A3B8"}
-                fontWeight={isActive ? "bold" : "normal"}
-              >
-                {seg.leg}
-              </text>
-            </g>
-          );
-        })}
-
-        {/* Port dots */}
-        {allPorts.map((port) => {
-          const coords = PORT_COORDS[port];
-          if (!coords) return null;
-          const isActive = activeSegmentId !== null &&
-            segments.find((s) => s.id === activeSegmentId && (s.from === port || s.to === port));
-          return (
-            <g key={port}>
-              <circle cx={coords.x} cy={coords.y} r={isActive ? 7 : 5}
-                fill={isActive ? "#0EA5E9" : "#1E40AF"}
-                stroke="white" strokeWidth="2" />
-              <text x={coords.x} y={coords.y + 16} textAnchor="middle"
-                fontSize="8" fill="#1E3A5F" fontWeight="500">
-                {port.split(" ")[0]}
-              </text>
-            </g>
-          );
-        })}
-      </svg>
-
-      {/* Segment pills */}
-      <div className="flex flex-wrap gap-2 mt-3">
-        {segments.map((seg) => (
-          <button
-            key={seg.id}
-            onClick={() => onSelectSegment(activeSegmentId === seg.id ? 0 : seg.id)}
-            className={`text-xs px-3 py-1.5 rounded-full border font-medium transition-all ${
-              activeSegmentId === seg.id
-                ? "border-[#0EA5E9] bg-[#0EA5E9] text-white"
-                : "border-gray-200 text-gray-600 hover:border-[#0EA5E9] hover:text-[#0EA5E9]"
-            }`}
-          >
-            {seg.from} → {seg.to}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 const CABIN_TYPES: Cabin[] = ["Innenkabine", "Außenkabine", "Balkonkabine"];
 const REEDEREIEN = ["MSC Cruises", "Costa Cruises", "Norwegian Cruise Line"];
 const DURATION_OPTIONS = ["Alle", "2 Tage", "3 Tage", "5+ Tage"];
@@ -193,7 +82,6 @@ function SegmenteContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [accessDenied, setAccessDenied] = useState(false);
-  const [activeSegmentId, setActiveSegmentId] = useState<number | null>(null);
 
   useEffect(() => {
     if (searchParams.get("access") === "denied") {
@@ -222,13 +110,7 @@ function SegmenteContent() {
     setSelectedReederei((prev) => { const next = new Set(prev); next.has(r) ? next.delete(r) : next.add(r); return next; });
   };
 
-  function handleSelectSegment(id: number) {
-    setActiveSegmentId((prev) => (prev === id ? null : id));
-  }
-
-  const results = ALL_SEGMENTS.filter((s) => {
-    if (activeSegmentId && s.id !== activeSegmentId) return false;
-    if (!searched) return false;
+  const results = searched ? ALL_SEGMENTS.filter((s) => {
     if (from !== "Alle" && s.from !== from) return false;
     if (to !== "Alle" && s.to !== to) return false;
     if (selectedDuration !== "Alle") {
@@ -240,7 +122,7 @@ function SegmenteContent() {
     if (selectedCabinFilters.size > 0 && !selectedCabinFilters.has(activeCabin)) return false;
     if (selectedReederei.size > 0 && !selectedReederei.has(s.airline)) return false;
     return true;
-  });
+  }) : [];
 
   return (
     <div className="flex flex-col min-h-full font-sans bg-gray-50">
@@ -257,42 +139,36 @@ function SegmenteContent() {
 
       <div style={{ backgroundColor: "#0A2342" }} className="px-8 py-8">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl font-bold text-white mb-6">Kreuzfahrt-Segmente suchen</h1>
+          <h1 className="text-2xl font-bold text-white mb-2">Kreuzfahrt-Segmente buchen</h1>
+          <p className="text-blue-200 text-sm mb-6">Wähle dein Wunschsegment und buche direkt. Routen entdecken? <a href="/routen" className="text-white underline">Zur Routenübersicht →</a></p>
           <div className="bg-white rounded-2xl p-4 flex flex-wrap gap-3 items-end shadow-lg">
             <div className="flex flex-col gap-1 min-w-[140px] flex-1">
               <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Von</label>
-              <select value={from} onChange={(e) => setFrom(e.target.value)}
-                className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50">
+              <select value={from} onChange={(e) => setFrom(e.target.value)} className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50">
                 <option value="Alle">Alle Häfen</option>
                 {PORTS.map((p) => <option key={p}>{p}</option>)}
               </select>
             </div>
-            <button onClick={() => { const tmp = from; setFrom(to); setTo(tmp); }}
-              className="mb-0.5 p-2 rounded-full border border-gray-200 text-gray-400 hover:border-[#0EA5E9] hover:text-[#0EA5E9] transition-colors">⇄</button>
+            <button onClick={() => { const tmp = from; setFrom(to); setTo(tmp); }} className="mb-0.5 p-2 rounded-full border border-gray-200 text-gray-400 hover:border-[#0EA5E9] hover:text-[#0EA5E9] transition-colors">⇄</button>
             <div className="flex flex-col gap-1 min-w-[140px] flex-1">
               <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Nach</label>
-              <select value={to} onChange={(e) => setTo(e.target.value)}
-                className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50">
+              <select value={to} onChange={(e) => setTo(e.target.value)} className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50">
                 <option value="Alle">Alle Häfen</option>
                 {PORTS.map((p) => <option key={p}>{p}</option>)}
               </select>
             </div>
             <div className="flex flex-col gap-1 min-w-[160px]">
               <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Datum</label>
-              <input type="date" value={date} onChange={(e) => setDate(e.target.value)}
-                className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50" />
+              <input type="date" value={date} onChange={(e) => setDate(e.target.value)} className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50" />
             </div>
             <div className="flex flex-col gap-1 min-w-[120px]">
               <label className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Personen</label>
-              <select value={persons} onChange={(e) => setPersons(Number(e.target.value))}
-                className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50">
+              <select value={persons} onChange={(e) => setPersons(Number(e.target.value))} className="border border-gray-200 rounded-xl px-3 py-2.5 text-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-gray-50">
                 {[1, 2, 3, 4].map((n) => <option key={n} value={n}>{n} {n === 1 ? "Person" : "Personen"}</option>)}
               </select>
             </div>
-            <button onClick={() => setSearched(true)}
-              className="px-7 py-2.5 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90 whitespace-nowrap"
-              style={{ backgroundColor: "#0EA5E9" }}>
-              Segmente suchen
+            <button onClick={() => setSearched(true)} className="px-7 py-2.5 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90 whitespace-nowrap" style={{ backgroundColor: "#0EA5E9" }}>
+              Suchen
             </button>
           </div>
         </div>
@@ -334,17 +210,8 @@ function SegmenteContent() {
         </aside>
 
         <div className="flex-1 flex flex-col gap-4">
-          <RouteMap
-            segments={ALL_SEGMENTS}
-            activeSegmentId={activeSegmentId}
-            onSelectSegment={handleSelectSegment}
-          />
-
           <div className="flex items-center justify-between">
-            <p className="text-sm text-gray-500">
-              {results.length} Segment{results.length !== 1 ? "e" : ""} gefunden
-              {activeSegmentId && <button onClick={() => setActiveSegmentId(null)} className="ml-2 text-[#0EA5E9] underline text-xs">Alle anzeigen</button>}
-            </p>
+            <p className="text-sm text-gray-500">{results.length} Segment{results.length !== 1 ? "e" : ""} gefunden</p>
             <select className="text-sm border border-gray-200 rounded-xl px-3 py-2 text-gray-600 focus:outline-none focus:ring-2 focus:ring-[#0EA5E9] bg-white">
               <option>Günstigste zuerst</option>
               <option>Schnellste zuerst</option>
@@ -361,7 +228,7 @@ function SegmenteContent() {
           )}
 
           {results.map((segment) => (
-            <div key={segment.id} className={`bg-white rounded-2xl shadow-sm border overflow-hidden hover:shadow-md transition-shadow ${activeSegmentId === segment.id ? "border-[#0EA5E9]" : "border-gray-100"}`}>
+            <div key={segment.id} className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-md transition-shadow">
               <div className="relative h-40 w-full overflow-hidden">
                 <img src={segment.image} alt={`${segment.from} nach ${segment.to}`} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
