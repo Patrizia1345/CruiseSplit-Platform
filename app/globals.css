@@ -22,3 +22,13 @@ input, textarea, select {
   color: #171717 !important;
   background-color: #ffffff !important;
 }
+
+input {
+  color: #171717 !important;
+  -webkit-text-fill-color: #171717 !important;
+}
+
+input::placeholder {
+  color: #9ca3af !important;
+  -webkit-text-fill-color: #9ca3af !important;
+}
