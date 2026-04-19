@@ -37,7 +37,7 @@ const CABIN_DESC: Record<Cabin, string> = {
 
 const SEGMENTS: Segment[] = [
   {
-    id: 1,
+    id: 101,
     leg: "Leg 1",
     from: "Amsterdam",
     to: "Kinderdijk",
@@ -51,7 +51,7 @@ const SEGMENTS: Segment[] = [
     description: "Starte in der Weltstadt Amsterdam und entdecke die ikonischen Windmühlen von Kinderdijk.",
   },
   {
-    id: 2,
+    id: 102,
     leg: "Leg 2",
     from: "Kinderdijk",
     to: "Köln",
@@ -65,7 +65,7 @@ const SEGMENTS: Segment[] = [
     description: "Vorbei an malerischen Rheinlandschaften in die Domstadt Köln – das Herz von NRW.",
   },
   {
-    id: 3,
+    id: 103,
     leg: "Leg 3",
     from: "Köln",
     to: "Koblenz",
@@ -79,7 +79,7 @@ const SEGMENTS: Segment[] = [
     description: "Das romantischste Stück des Rheins – vorbei an mittelalterlichen Burgen bis zum Deutschen Eck.",
   },
   {
-    id: 4,
+    id: 104,
     leg: "Leg 4",
     from: "Koblenz",
     to: "Rüdesheim",
@@ -93,7 +93,7 @@ const SEGMENTS: Segment[] = [
     description: "Die Weinregion Rheingau – Riesling verkosten an der berühmten Drosselgasse in Rüdesheim.",
   },
   {
-    id: 5,
+    id: 105,
     leg: "Leg 5",
     from: "Rüdesheim",
     to: "Speyer",
@@ -107,7 +107,7 @@ const SEGMENTS: Segment[] = [
     description: "Von der Weinlandschaft ins kulturelle Herz der Pfalz – Heidelberg und der romanische Dom zu Speyer.",
   },
   {
-    id: 6,
+    id: 106,
     leg: "Leg 6",
     from: "Speyer",
     to: "Straßburg",
@@ -121,7 +121,7 @@ const SEGMENTS: Segment[] = [
     description: "Über die Grenze ins Elsass – Straßburg verbindet deutsch-französische Kultur und Weltküche.",
   },
   {
-    id: 7,
+    id: 107,
     leg: "Leg 7",
     from: "Straßburg",
     to: "Breisach",
@@ -135,7 +135,7 @@ const SEGMENTS: Segment[] = [
     description: "Durch das Elsass nach Breisach – Tor zum Schwarzwald und zum charmanten Colmar.",
   },
   {
-    id: 8,
+    id: 108,
     leg: "Leg 8",
     from: "Breisach",
     to: "Basel",

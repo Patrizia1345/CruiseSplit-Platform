@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
-type Cabin = "Innenkabine" | "Außenkabine" | "Balkonkabine";
+type Cabin = "Innenkabine" | "Außenkabine" | "Balkonkabine" | "Standardkabine" | "Veranda-Kabine" | "Suite";
 
 interface Segment {
   id: number;
@@ -17,21 +17,47 @@ interface Segment {
   date: string;
   days: number;
   airline: string;
-  cabins: Record<Cabin, number>;
+  cabins: Record<string, number>;
 }
 
 const ALL_SEGMENTS: Segment[] = [
+  // Mittelmeer
   { id: 1, leg: "Leg 1", from: "Barcelona", to: "Marseille", departure: "08:00", arrival: "18:00", date: "12. Mai 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 269, Außenkabine: 329, Balkonkabine: 419 } },
   { id: 2, leg: "Leg 2", from: "Marseille", to: "Genua", departure: "09:30", arrival: "20:00", date: "14. Mai 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 } },
   { id: 3, leg: "Leg 3", from: "Genua", to: "Rom", departure: "07:00", arrival: "19:30", date: "16. Mai 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 279, Außenkabine: 349, Balkonkabine: 439 } },
   { id: 4, leg: "Leg 4", from: "Rom", to: "Santorin", departure: "10:00", arrival: "16:00", date: "18. Mai 2025", days: 3, airline: "Norwegian Cruise Line", cabins: { Innenkabine: 419, Außenkabine: 519, Balkonkabine: 649 } },
   { id: 5, leg: "Leg 5", from: "Santorin", to: "Athen", departure: "11:00", arrival: "20:00", date: "21. Mai 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 269, Außenkabine: 329, Balkonkabine: 419 } },
+  // Viking Rhine
+  { id: 101, leg: "Leg 1", from: "Amsterdam", to: "Kinderdijk", departure: "09:00", arrival: "14:00", date: "12. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 499, Außenkabine: 699, Balkonkabine: 1099 } },
+  { id: 102, leg: "Leg 2", from: "Kinderdijk", to: "Köln", departure: "08:00", arrival: "19:00", date: "14. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 449, Außenkabine: 649, Balkonkabine: 999 } },
+  { id: 103, leg: "Leg 3", from: "Köln", to: "Koblenz", departure: "09:00", arrival: "17:00", date: "16. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 429, Außenkabine: 629, Balkonkabine: 979 } },
+  { id: 104, leg: "Leg 4", from: "Koblenz", to: "Rüdesheim", departure: "08:30", arrival: "15:00", date: "18. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 399, Außenkabine: 599, Balkonkabine: 949 } },
+  { id: 105, leg: "Leg 5", from: "Rüdesheim", to: "Speyer", departure: "09:00", arrival: "18:00", date: "20. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 419, Außenkabine: 619, Balkonkabine: 969 } },
+  { id: 106, leg: "Leg 6", from: "Speyer", to: "Straßburg", departure: "08:00", arrival: "16:00", date: "22. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 449, Außenkabine: 649, Balkonkabine: 999 } },
+  { id: 107, leg: "Leg 7", from: "Straßburg", to: "Breisach", departure: "09:00", arrival: "13:00", date: "24. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 379, Außenkabine: 579, Balkonkabine: 899 } },
+  { id: 108, leg: "Leg 8", from: "Breisach", to: "Basel", departure: "10:00", arrival: "16:00", date: "26. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 399, Außenkabine: 599, Balkonkabine: 929 } },
 ];
 
-const CABIN_TYPES: Cabin[] = ["Innenkabine", "Außenkabine", "Balkonkabine"];
-const CABIN_ICONS: Record<Cabin, string> = { Innenkabine: "🛏️", Außenkabine: "🪟", Balkonkabine: "🌊" };
-const CABIN_DESC: Record<Cabin, string> = { Innenkabine: "Komfortabel, kein Fenster", Außenkabine: "Natürliches Licht, Meerblick", Balkonkabine: "Privater Balkon, Panoramablick" };
 const STEPS = ["Segment", "Reisende", "Zahlung"];
+
+function CabinSelector({ cabins, selected, onSelect }: {
+  cabins: Record<string, number>;
+  selected: string;
+  onSelect: (c: string) => void;
+}) {
+  return (
+    <div className="grid grid-cols-3 gap-3">
+      {Object.entries(cabins).map(([cabin, price]) => (
+        <button key={cabin} onClick={() => onSelect(cabin)}
+          className={`flex flex-col items-start p-4 rounded-xl border-2 transition-all text-left ${cabin === selected ? "border-[#0EA5E9] bg-sky-50" : "border-gray-200 hover:border-gray-300"}`}>
+          <span className={`font-bold text-sm ${cabin === selected ? "text-[#0EA5E9]" : "text-gray-800"}`}>{cabin}</span>
+          <span className={`text-lg font-bold mt-2 ${cabin === selected ? "text-[#0EA5E9]" : "text-gray-900"}`}>€{price}</span>
+          <span className="text-xs text-gray-400">pro Person</span>
+        </button>
+      ))}
+    </div>
+  );
+}
 
 function StepIndicator({ current }: { current: number }) {
   return (
@@ -65,13 +91,13 @@ function BookingContent() {
   const router = useRouter();
 
   const segmentId = Number(searchParams.get("segment") ?? 1);
-  const initialCabin = (searchParams.get("cabin") as Cabin) ?? "Innenkabine";
+  const initialCabin = searchParams.get("cabin") ?? "Innenkabine";
   const initialPersons = Number(searchParams.get("persons") ?? 2);
 
   const segment = ALL_SEGMENTS.find((s) => s.id === segmentId) ?? ALL_SEGMENTS[0];
 
   const [step, setStep] = useState(0);
-  const [cabin, setCabin] = useState<Cabin>(initialCabin);
+  const [cabin, setCabin] = useState<string>(initialCabin);
   const [persons, setPersons] = useState(initialPersons);
   const [travellers, setTravellers] = useState(
     Array.from({ length: initialPersons }, () => ({ firstName: "", lastName: "", birthDate: "", passportNumber: "" }))
@@ -91,7 +117,7 @@ function BookingContent() {
     );
   }, [persons]);
 
-  const pricePerPerson = segment.cabins[cabin];
+  const pricePerPerson = segment.cabins[cabin] ?? 0;
   const totalPrice = pricePerPerson * persons;
   const serviceFee = Math.round(totalPrice * 0.05);
   const grandTotal = totalPrice + serviceFee;
@@ -181,18 +207,7 @@ function BookingContent() {
                 </div>
                 <div className="mb-6">
                   <label className="text-sm font-semibold text-gray-700 mb-3 block">Kabinenkategorie</label>
-                  <div className="grid grid-cols-3 gap-3">
-                    {CABIN_TYPES.map((c) => (
-                      <button key={c} onClick={() => setCabin(c)}
-                        className={`flex flex-col items-start p-4 rounded-xl border-2 transition-all text-left ${cabin === c ? "border-[#0EA5E9] bg-sky-50" : "border-gray-200 hover:border-gray-300"}`}>
-                        <span className="text-2xl mb-2">{CABIN_ICONS[c]}</span>
-                        <span className={`font-bold text-sm ${cabin === c ? "text-[#0EA5E9]" : "text-gray-800"}`}>{c}</span>
-                        <span className="text-xs text-gray-400 mt-0.5">{CABIN_DESC[c]}</span>
-                        <span className={`text-lg font-bold mt-2 ${cabin === c ? "text-[#0EA5E9]" : "text-gray-900"}`}>€{segment.cabins[c]}</span>
-                        <span className="text-xs text-gray-400">pro Person</span>
-                      </button>
-                    ))}
-                  </div>
+                  <CabinSelector cabins={segment.cabins} selected={cabin} onSelect={setCabin} />
                 </div>
                 <div className="mb-8">
                   <label className="text-sm font-semibold text-gray-700 mb-3 block">Anzahl Reisende</label>
