@@ -185,7 +185,7 @@ export default function RoutenPage() {
                 {/* Hero Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src="https://images.unsplash.com/photo-1467573736999-4a0f80dc0c25?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1558618047-3b8e7e4dd4f4?w=800&q=80"
                     alt={route.name}
                     className="w-full h-full object-cover"
                   />
