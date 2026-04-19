@@ -46,7 +46,7 @@ const SEGMENTS: Segment[] = [
     date: "12. Mai 2026",
     days: 2,
     cabins: { "Standardkabine": 499, "Veranda-Kabine": 699, "Suite": 1099 },
-    image: "https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=800&q=80",
+    image: "/kinderdijk.jpg",
     highlights: ["Grachten & Museen", "Rijksmuseum", "UNESCO Windmühlen"],
     description: "Starte in der Weltstadt Amsterdam und entdecke die ikonischen Windmühlen von Kinderdijk.",
   },
