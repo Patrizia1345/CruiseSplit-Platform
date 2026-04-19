@@ -60,7 +60,7 @@ const SEGMENTS: Segment[] = [
     date: "14. Mai 2026",
     days: 2,
     cabins: { "Standardkabine": 449, "Veranda-Kabine": 649, "Suite": 999 },
-    image: "https://images.unsplash.com/photo-1513029158935-de3c4dd9a3e4?w=800&q=80",
+    image: "/ko_ln.jpg",
     highlights: ["Kölner Dom", "Brauhaus Kultur", "Rheinufer"],
     description: "Vorbei an malerischen Rheinlandschaften in die Domstadt Köln – das Herz von NRW.",
   },
