@@ -282,34 +282,6 @@ export default function VikingPage() {
         </div>
       </div>
 
-      {/* Business Case Banner */}
-      <div style={{ backgroundColor: "#0A2342" }} className="px-8 py-4">
-        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
-          <div className="flex gap-8">
-            <div>
-              <p className="text-white/50 text-xs">Kapazität pro Abfahrt</p>
-              <p className="text-white font-bold text-lg">190 Gäste</p>
-            </div>
-            <div>
-              <p className="text-white/50 text-xs">Aktuelle Auslastung</p>
-              <p className="font-bold text-lg" style={{ color: "#B22222" }}>~85%</p>
-            </div>
-            <div>
-              <p className="text-white/50 text-xs">Leere Kabinen/Abfahrt</p>
-              <p className="font-bold text-lg" style={{ color: "#F59E0B" }}>~28</p>
-            </div>
-            <div>
-              <p className="text-white/50 text-xs">Entgangener Umsatz/Jahr</p>
-              <p className="font-bold text-lg" style={{ color: "#10B981" }}>~€2,5 Mio.</p>
-            </div>
-          </div>
-          <div className="text-right">
-            <p className="text-white/50 text-xs">CruiseSplit Potenzial</p>
-            <p className="text-white font-bold text-xl">+32% Umsatz-Uplift</p>
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-8 py-8 flex gap-6">
 
