@@ -179,66 +179,65 @@ export default function RoutenPage() {
             <p className="text-sm text-gray-400">Flusskreuzfahrt und mehr – segmentweise buchbar</p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {RIVER_ROUTES.map((route) => (
               <div key={route.id} className="bg-white rounded-2xl shadow-sm border-2 overflow-hidden hover:shadow-md transition-shadow" style={{ borderColor: route.partnerColor }}>
-                <div className="flex">
-                  {/* Image */}
-                  <div className="relative w-72 shrink-0 overflow-hidden">
-                    <img src={route.image} alt={route.name} className="w-full h-full object-cover" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20" />
-                    <div className="absolute top-3 left-3">
-                      <span className="text-xs font-semibold px-3 py-1 rounded-full text-white" style={{ backgroundColor: route.partnerColor }}>
-                        {route.tag}
-                      </span>
-                    </div>
-                    <div className="absolute bottom-3 left-3 flex items-center gap-2 bg-white/90 rounded-full px-3 py-1.5">
-                      <div className="w-5 h-5 rounded-full flex items-center justify-center text-white text-xs font-bold" style={{ backgroundColor: route.partnerColor }}>V</div>
-                      <span className="text-xs font-semibold text-gray-700">{route.partner}</span>
-                    </div>
+                {/* Hero Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1467573736999-4a0f80dc0c25?w=800&q=80"
+                    alt={route.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full text-white" style={{ backgroundColor: route.partnerColor }}>
+                      {route.tag}
+                    </span>
                   </div>
-
-                  {/* Content */}
-                  <div className="flex-1 p-6 flex flex-col gap-4">
-                    <div>
-                      <h3 className="text-xl font-bold mb-1" style={{ color: "#0A2342" }}>{route.name}</h3>
-                      <p className="text-sm text-gray-500 mb-1">{route.from} → {route.to}</p>
-                      <p className="text-sm text-gray-500">{route.description}</p>
+                  <div className="absolute bottom-3 left-4 right-4">
+                    <div className="flex items-center gap-2 mb-1">
+                      <div className="w-5 h-5 rounded-full flex items-center justify-center text-white text-xs font-bold" style={{ backgroundColor: route.partnerColor }}>V</div>
+                      <span className="text-white/80 text-xs">{route.partner}</span>
                     </div>
-
-                    <div className="flex-1">
-                      <RiverRouteMap ports={route.ports} coords={route.coords} color={route.partnerColor} />
-                    </div>
-
-                    <div className="flex items-end justify-between">
-                      <div className="flex gap-4">
-                        <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2">
-                          <span className="text-lg font-bold" style={{ color: "#0A2342" }}>{route.days}</span>
-                          <span className="text-xs text-gray-400">Tage</span>
-                        </div>
-                        <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2">
-                          <span className="text-lg font-bold" style={{ color: "#0A2342" }}>{route.segments}</span>
-                          <span className="text-xs text-gray-400">Segmente</span>
-                        </div>
-                        <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2">
-                          <span className="text-lg font-bold" style={{ color: route.partnerColor }}>ab €{route.priceFrom}</span>
-                          <span className="text-xs text-gray-400">pro Person</span>
-                        </div>
-                      </div>
-                      <Link href={route.href}
-                        className="px-6 py-3 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90"
-                        style={{ backgroundColor: route.partnerColor }}>
-                        Segmente entdecken →
-                      </Link>
-                    </div>
+                    <h3 className="text-xl font-bold text-white">{route.name}</h3>
+                    <p className="text-sm text-white/80">{route.from} → {route.to}</p>
                   </div>
                 </div>
 
-                {/* Highlights */}
-                <div className="px-6 py-3 border-t flex flex-wrap gap-2" style={{ borderColor: "#FCA5A5", backgroundColor: "#FFF5F5" }}>
-                  {route.highlights.map((h) => (
-                    <span key={h} className="text-xs px-2 py-1 rounded-full font-medium" style={{ backgroundColor: "#FEE2E2", color: route.partnerColor }}>{h}</span>
-                  ))}
+                {/* Map */}
+                <div className="px-4 pt-4">
+                  <RiverRouteMap ports={route.ports} coords={route.coords} color={route.partnerColor} />
+                </div>
+
+                {/* Details */}
+                <div className="p-4">
+                  <p className="text-sm text-gray-500 mb-4">{route.description}</p>
+                  <div className="flex gap-3 mb-4">
+                    <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2 flex-1">
+                      <span className="text-lg font-bold" style={{ color: "#0A2342" }}>{route.days}</span>
+                      <span className="text-xs text-gray-400">Tage gesamt</span>
+                    </div>
+                    <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2 flex-1">
+                      <span className="text-lg font-bold" style={{ color: "#0A2342" }}>{route.segments}</span>
+                      <span className="text-xs text-gray-400">Segmente</span>
+                    </div>
+                    <div className="flex flex-col items-center bg-gray-50 rounded-xl px-4 py-2 flex-1">
+                      <span className="text-lg font-bold" style={{ color: route.partnerColor }}>ab €{route.priceFrom}</span>
+                      <span className="text-xs text-gray-400">pro Person</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {route.highlights.map((h) => (
+                      <span key={h} className="text-xs px-2 py-1 rounded-full font-medium" style={{ backgroundColor: "#FEE2E2", color: route.partnerColor }}>{h}</span>
+                    ))}
+                  </div>
+                  <Link
+                    href={route.href}
+                    className="block w-full text-center py-3 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90"
+                    style={{ backgroundColor: route.partnerColor }}>
+                    Segmente entdecken →
+                  </Link>
                 </div>
               </div>
             ))}
