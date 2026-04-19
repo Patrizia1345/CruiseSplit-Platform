@@ -257,7 +257,7 @@ export default function VikingPage() {
       {/* Hero */}
       <div className="relative h-64 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?w=1600&q=85"
+          src="/rhine-cruise.jpg"
           alt="Viking Rhein"
           className="w-full h-full object-cover"
         />
