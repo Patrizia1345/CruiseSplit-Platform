@@ -171,13 +171,12 @@ export default function RoutenPage() {
 
         {/* ── Flusskreuzfahrten ── */}
         <section>
-          <div className="flex items-center gap-3 mb-6">
-            <div className="w-8 h-8 rounded-lg flex items-center justify-center text-white text-sm" style={{ backgroundColor: "#B22222" }}>🌊</div>
-            <div>
+          <div className="mb-6">
+            <div className="flex items-center gap-3 mb-1">
               <h2 className="text-xl font-bold" style={{ color: "#0A2342" }}>Flusskreuzfahrten</h2>
-              <p className="text-sm text-gray-400">Romantische Flussrouten durch Europa</p>
+              <span className="text-xs px-2 py-1 rounded-full text-white font-semibold" style={{ backgroundColor: "#B22222" }}>NEU</span>
             </div>
-            <span className="ml-2 text-xs px-2 py-1 rounded-full text-white font-semibold" style={{ backgroundColor: "#B22222" }}>NEU</span>
+            <p className="text-sm text-gray-400">Flusskreuzfahrt und mehr – segmentweise buchbar</p>
           </div>
 
           <div className="grid grid-cols-1 gap-6">
