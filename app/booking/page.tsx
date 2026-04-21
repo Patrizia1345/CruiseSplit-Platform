@@ -337,18 +337,22 @@ function BookingContent() {
                     </div>
                   </div>
                 </div>
-                <label className="flex items-start gap-3 mb-6 cursor-pointer">
-                  <input type="checkbox" checked={payment.acceptTerms}
+                <div className="flex items-start gap-3 mb-6">
+                  <input
+                    id="acceptTerms"
+                    type="checkbox"
+                    checked={payment.acceptTerms}
                     onChange={(e) => setPayment((p) => ({ ...p, acceptTerms: e.target.checked }))}
-                    className="mt-0.5 accent-[#0EA5E9]" />
-                  <span className="text-xs text-gray-500">
+                    className="mt-0.5 accent-[#0EA5E9] cursor-pointer"
+                  />
+                  <label htmlFor="acceptTerms" className="text-xs text-gray-500 cursor-pointer">
                     Ich akzeptiere die{" "}
-                    <a href="/agb" target="_blank" className="text-[#0EA5E9] underline">AGB</a>{" "}
+                    <a href="/agb" target="_blank" className="text-[#0EA5E9] underline" onClick={(e) => e.stopPropagation()}>AGB</a>{" "}
                     und{" "}
-                    <a href="/datenschutz" target="_blank" className="text-[#0EA5E9] underline">Datenschutzerklärung</a>{" "}
+                    <a href="/datenschutz" target="_blank" className="text-[#0EA5E9] underline" onClick={(e) => e.stopPropagation()}>Datenschutzerklärung</a>{" "}
                     von CruiseSplit.
-                  </span>
-                </label>
+                  </label>
+                </div>
                 {errors.acceptTerms && <p className="text-xs text-red-400 -mt-4 mb-4">{errors.acceptTerms}</p>}
                 <div className="flex gap-3">
                   <button onClick={() => setStep(1)}
