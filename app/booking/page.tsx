@@ -342,7 +342,11 @@ function BookingContent() {
                     onChange={(e) => setPayment((p) => ({ ...p, acceptTerms: e.target.checked }))}
                     className="mt-0.5 accent-[#0EA5E9]" />
                   <span className="text-xs text-gray-500">
-                    Ich akzeptiere die <span className="text-[#0EA5E9] underline cursor-pointer">AGB</span> und <span className="text-[#0EA5E9] underline cursor-pointer">Datenschutzerklärung</span> von CruiseSplit.
+                    Ich akzeptiere die{" "}
+                    <a href="/agb" target="_blank" className="text-[#0EA5E9] underline">AGB</a>{" "}
+                    und{" "}
+                    <a href="/datenschutz" target="_blank" className="text-[#0EA5E9] underline">Datenschutzerklärung</a>{" "}
+                    von CruiseSplit.
                   </span>
                 </label>
                 {errors.acceptTerms && <p className="text-xs text-red-400 -mt-4 mb-4">{errors.acceptTerms}</p>}

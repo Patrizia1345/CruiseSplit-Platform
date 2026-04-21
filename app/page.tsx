@@ -123,6 +123,17 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      {/* Footer */}
+      <footer className="bg-gray-100 border-t border-gray-200 py-6 px-8">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4 text-xs text-gray-400">
+          <span>© 2026 CruiseSplit · Patrizia Kröger · Köln</span>
+          <div className="flex gap-6">
+            <Link href="/impressum" className="hover:text-gray-600 transition-colors">Impressum</Link>
+            <Link href="/datenschutz" className="hover:text-gray-600 transition-colors">Datenschutz</Link>
+            <Link href="/agb" className="hover:text-gray-600 transition-colors">AGB</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
