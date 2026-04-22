@@ -283,10 +283,10 @@ export default function VikingPage() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-8 py-8 flex gap-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 py-6 flex flex-col lg:flex-row gap-6">
 
         {/* Left: Map + Info */}
-        <div className="w-72 shrink-0 flex flex-col gap-4">
+        <div className="w-full lg:w-72 shrink-0 flex flex-col gap-4">
           <RhineMap activeSegment={activeSegment} />
 
           {/* Personen */}
