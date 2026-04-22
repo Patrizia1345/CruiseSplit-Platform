@@ -338,20 +338,32 @@ function BookingContent() {
                   </div>
                 </div>
                 <div className="flex items-start gap-3 mb-6">
-                  <input
-                    id="acceptTerms"
-                    type="checkbox"
-                    checked={payment.acceptTerms}
-                    onChange={(e) => setPayment((p) => ({ ...p, acceptTerms: e.target.checked }))}
-                    className="mt-0.5 accent-[#0EA5E9] cursor-pointer"
-                  />
-                  <label htmlFor="acceptTerms" className="text-xs text-gray-500 cursor-pointer">
+                  <button
+                    type="button"
+                    onClick={() => setPayment((p) => ({ ...p, acceptTerms: !p.acceptTerms }))}
+                    className="mt-0.5 shrink-0 w-4 h-4 rounded border-2 flex items-center justify-center transition-colors"
+                    style={{
+                      borderColor: payment.acceptTerms ? "#0EA5E9" : "#d1d5db",
+                      backgroundColor: payment.acceptTerms ? "#0EA5E9" : "#ffffff",
+                      cursor: "pointer",
+                    }}
+                  >
+                    {payment.acceptTerms && (
+                      <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                        <path d="M1 4L3.5 6.5L9 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
+                  </button>
+                  <span
+                    className="text-xs text-gray-500 cursor-pointer"
+                    onClick={() => setPayment((p) => ({ ...p, acceptTerms: !p.acceptTerms }))}
+                  >
                     Ich akzeptiere die{" "}
                     <a href="/agb" target="_blank" className="text-[#0EA5E9] underline" onClick={(e) => e.stopPropagation()}>AGB</a>{" "}
                     und{" "}
                     <a href="/datenschutz" target="_blank" className="text-[#0EA5E9] underline" onClick={(e) => e.stopPropagation()}>Datenschutzerklärung</a>{" "}
                     von CruiseSplit.
-                  </label>
+                  </span>
                 </div>
                 {errors.acceptTerms && <p className="text-xs text-red-400 -mt-4 mb-4">{errors.acceptTerms}</p>}
                 <div className="flex gap-3">
