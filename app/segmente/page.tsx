@@ -174,8 +174,8 @@ function SegmenteContent() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto w-full px-8 py-8 flex gap-6 flex-1">
-        <aside className="w-56 shrink-0 flex flex-col gap-6">
+      <div className="max-w-6xl mx-auto w-full px-4 sm:px-8 py-6 flex gap-6 flex-1">
+        <aside className="hidden lg:flex w-56 shrink-0 flex-col gap-6">
           <div className="bg-white rounded-2xl shadow-sm p-5">
             <h3 className="text-sm font-bold mb-4 uppercase tracking-wider" style={{ color: "#0A2342" }}>Preis</h3>
             <div className="flex flex-col gap-2">
