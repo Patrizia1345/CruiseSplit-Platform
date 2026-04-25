@@ -6,24 +6,34 @@ export default function UeberUns() {
     <div className="flex flex-col min-h-full font-sans">
       <Navbar />
 
-      {/* ── Hero ── */}
-      <section
-        className="px-8 py-28 text-center"
-        style={{ backgroundColor: "#0A2342" }}
-      >
-        <p
-          className="text-xs font-bold uppercase tracking-widest mb-4"
-          style={{ color: "#0EA5E9" }}
+      {/* ── Hero mit Video ── */}
+      <section className="relative flex items-center justify-center text-center px-8 py-28 min-h-[60vh]">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
         >
-          Über CruiseSplit
-        </p>
-        <h1 className="text-4xl sm:text-5xl font-bold text-white mb-5 max-w-3xl mx-auto leading-tight">
-          Wir revolutionieren die Kreuzfahrtindustrie
-        </h1>
-        <p className="text-gray-400 text-lg max-w-xl mx-auto">
-          CruiseSplit macht Kreuzfahrten flexibel, erschwinglich und spontan
-          buchbar
-        </p>
+          <source src="/ueber-uns-hero.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/55" />
+
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center gap-4 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-blue-400/40 bg-blue-400/10" style={{ color: "#0EA5E9" }}>
+            Über CruiseSplit
+          </p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+            Wir revolutionieren die Kreuzfahrtindustrie
+          </h1>
+          <p className="text-gray-300 text-lg max-w-xl">
+            CruiseSplit macht Kreuzfahrten flexibel, erschwinglich und spontan buchbar
+          </p>
+        </div>
       </section>
 
       {/* ── Mission ── */}
