@@ -120,59 +120,6 @@ export default function UeberUns() {
         </div>
       </section>
 
-      {/* ── Zahlen ── */}
-      <section className="bg-white px-8 py-20">
-        <div className="max-w-5xl mx-auto">
-          <h2
-            className="text-2xl font-bold text-center mb-12"
-            style={{ color: "#0A2342" }}
-          >
-            Der Markt
-          </h2>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {[
-              {
-                value: "€45 Mrd.",
-                label: "Marktgröße",
-                sub: "Globaler Kreuzfahrtmarkt 2024",
-                icon: "🌍",
-              },
-              {
-                value: "34,6 Mio.",
-                label: "Passagiere weltweit",
-                sub: "Buchungen pro Jahr",
-                icon: "👥",
-              },
-              {
-                value: "Bis zu 50%",
-                label: "Rabatt möglich",
-                sub: "Bei Last-Minute & unverkauften Kabinen",
-                icon: "💡",
-              },
-            ].map((card) => (
-              <div
-                key={card.label}
-                className="rounded-2xl border border-gray-100 shadow-sm p-8 text-center"
-              >
-                <div className="text-4xl mb-4">{card.icon}</div>
-                <div
-                  className="text-3xl font-bold mb-1"
-                  style={{ color: "#0EA5E9" }}
-                >
-                  {card.value}
-                </div>
-                <div
-                  className="text-base font-semibold mb-1"
-                  style={{ color: "#0A2342" }}
-                >
-                  {card.label}
-                </div>
-                <div className="text-xs text-gray-400">{card.sub}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Team ── */}
       <section className="bg-gray-50 px-8 py-20">
