@@ -117,7 +117,9 @@ function BookingContent() {
     );
   }, [persons]);
 
-  const pricePerPerson = segment.cabins[cabin] ?? 0;
+  const pricePerPerson = segment.cabins[cabin as keyof typeof segment.cabins]
+    ?? Object.values(segment.cabins)[0]
+    ?? 0;
   const totalPrice = pricePerPerson * persons;
   const serviceFee = Math.round(totalPrice * 0.05);
   const grandTotal = totalPrice + serviceFee;
