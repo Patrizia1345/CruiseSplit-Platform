@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import { useCart } from "@/context/CartContext";
 
 type Cabin = "Standardkabine" | "Veranda-Kabine" | "Suite";
 
@@ -244,6 +245,7 @@ function CabinSelector({ cabins, selected, onSelect }: { cabins: Record<Cabin, n
 
 export default function VikingPage() {
   const router = useRouter();
+  const { addItem } = useCart();
   const [selectedCabins, setSelectedCabins] = useState<Record<number, Cabin>>(
     Object.fromEntries(SEGMENTS.map((s) => [s.id, "Veranda-Kabine"]))
   );
@@ -367,12 +369,31 @@ export default function VikingPage() {
                       €{segment.cabins[selectedCabins[segment.id]]}
                     </span>
                     <span className="text-xs text-gray-400">pro Person</span>
-                    <button
-                      onClick={() => router.push(`/booking?segment=${segment.id}&cabin=${selectedCabins[segment.id]}&persons=${persons}`)}
-                      className="px-5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#B22222" }}>
-                      Buchen →
-                    </button>
+                    <div className="flex flex-col gap-2">
+                      <button
+                        onClick={() => router.push(`/booking?segment=${segment.id}&cabin=${selectedCabins[segment.id]}&persons=${persons}`)}
+                        className="px-5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: "#B22222" }}>
+                        Direkt buchen →
+                      </button>
+                      <button
+                        onClick={() => addItem({
+                          id: segment.id,
+                          leg: segment.leg,
+                          from: segment.from,
+                          to: segment.to,
+                          date: segment.date,
+                          days: segment.days,
+                          cabin: selectedCabins[segment.id],
+                          price: segment.cabins[selectedCabins[segment.id]],
+                          persons: persons,
+                          airline: "Viking River Cruises",
+                          image: segment.image,
+                        })}
+                        className="px-5 py-2 rounded-xl text-sm font-semibold border text-[#B22222] border-[#B22222] transition-colors hover:bg-red-50">
+                        + Warenkorb
+                      </button>
+                    </div>
                   </div>
                 </div>
 

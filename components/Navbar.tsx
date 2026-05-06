@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import CartDrawer from "@/components/CartDrawer";
 
 const NAV_LINKS = [
   { label: "Routen", href: "/routen" },
@@ -34,6 +35,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <CartDrawer />
           {isPartner ? (
             <Link href="/" className="text-sm font-medium text-gray-500 hover:text-gray-900">
               Zurück
@@ -69,6 +71,9 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
+          <div className="flex justify-center">
+            <CartDrawer />
+          </div>
           <Link href="/auth/login"
             onClick={() => setMenuOpen(false)}
             className="text-base font-semibold py-2 px-3 rounded-xl text-white text-center transition-opacity hover:opacity-90"

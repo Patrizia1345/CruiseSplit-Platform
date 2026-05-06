@@ -3,6 +3,7 @@
 import { Suspense, useState, useEffect } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
+import { useCart } from "@/context/CartContext";
 
 const PORTS = [
   "Barcelona", "Marseille", "Genua", "Rom", "Neapel",
@@ -81,6 +82,7 @@ function FilterCheckbox({ label, checked, onChange }: { label: string; checked: 
 function SegmenteContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
+  const { addItem } = useCart();
   const [accessDenied, setAccessDenied] = useState(false);
 
   useEffect(() => {
@@ -267,12 +269,31 @@ function SegmenteContent() {
                       €{segment.cabins[selectedCabins[segment.id]]}
                     </span>
                     <span className="text-xs text-gray-400">pro Person</span>
-                    <button
-                      onClick={() => router.push(`/booking?segment=${segment.id}&cabin=${selectedCabins[segment.id]}&persons=${persons}`)}
-                      className="px-5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
-                      style={{ backgroundColor: "#0EA5E9" }}>
-                      Auswählen →
-                    </button>
+                    <div className="flex flex-col gap-2">
+                      <button
+                        onClick={() => router.push(`/booking?segment=${segment.id}&cabin=${selectedCabins[segment.id]}&persons=${persons}`)}
+                        className="px-5 py-2 rounded-xl text-sm font-semibold text-white transition-opacity hover:opacity-90"
+                        style={{ backgroundColor: "#0EA5E9" }}>
+                        Direkt buchen →
+                      </button>
+                      <button
+                        onClick={() => addItem({
+                          id: segment.id,
+                          leg: segment.leg,
+                          from: segment.from,
+                          to: segment.to,
+                          date: segment.date,
+                          days: segment.days,
+                          cabin: selectedCabins[segment.id],
+                          price: segment.cabins[selectedCabins[segment.id]],
+                          persons: persons,
+                          airline: segment.airline,
+                          image: segment.image,
+                        })}
+                        className="px-5 py-2 rounded-xl text-sm font-semibold border border-[#0EA5E9] text-[#0EA5E9] transition-colors hover:bg-sky-50">
+                        + Warenkorb
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-gray-100">
