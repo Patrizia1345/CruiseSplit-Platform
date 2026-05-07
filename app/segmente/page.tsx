@@ -9,6 +9,8 @@ const PORTS = [
   "Barcelona", "Marseille", "Genua", "Rom", "Neapel",
   "Santorin", "Athen", "Dubrovnik", "Split", "Venedig",
   "Palma de Mallorca", "Valencia", "Nizza", "Pisa (Livorno)",
+  "Amsterdam", "Kinderdijk", "Köln", "Koblenz", "Rüdesheim",
+  "Speyer", "Straßburg", "Breisach", "Basel",
 ];
 
 type Cabin = "Innenkabine" | "Außenkabine" | "Balkonkabine";
@@ -41,10 +43,19 @@ const ALL_SEGMENTS: Segment[] = [
   { id: 10, leg: "Leg 10", from: "Barcelona", to: "Palma de Mallorca", departure: "09:00", arrival: "14:00", date: "15. Jun 2025", days: 2, airline: "Costa Cruises", cabins: { Innenkabine: 199, Außenkabine: 249, Balkonkabine: 329 }, image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80", highlights: ["Kathedrale La Seu", "Strand Es Trenc", "Soller Tal"] },
   { id: 11, leg: "Leg 11", from: "Palma de Mallorca", to: "Valencia", departure: "11:00", arrival: "19:00", date: "17. Jun 2025", days: 2, airline: "Norwegian Cruise Line", cabins: { Innenkabine: 229, Außenkabine: 289, Balkonkabine: 369 }, image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80", highlights: ["Stadt der Künste", "Paella-Heimat", "Ibiza Stopp"] },
   { id: 12, leg: "Leg 12", from: "Nizza", to: "Pisa (Livorno)", departure: "10:00", arrival: "18:30", date: "20. Jun 2025", days: 2, airline: "MSC Cruises", cabins: { Innenkabine: 249, Außenkabine: 309, Balkonkabine: 399 }, image: "https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=800&q=80", highlights: ["Promenade des Anglais", "Monaco", "Schiefer Turm"] },
+  // Viking Rhine Getaway
+  { id: 101, leg: "Leg 1", from: "Amsterdam", to: "Kinderdijk", departure: "09:00", arrival: "14:00", date: "12. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 499, Außenkabine: 699, Balkonkabine: 1099 }, image: "/kinderdijk.jpg", highlights: ["UNESCO Windmühlen", "Grachten", "Holländische Kultur"] },
+  { id: 102, leg: "Leg 2", from: "Kinderdijk", to: "Köln", departure: "08:00", arrival: "19:00", date: "14. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 449, Außenkabine: 649, Balkonkabine: 999 }, image: "/ko_ln.jpg", highlights: ["Kölner Dom", "Brauhaus Kultur", "Rheinufer"] },
+  { id: 103, leg: "Leg 3", from: "Köln", to: "Koblenz", departure: "09:00", arrival: "17:00", date: "16. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 429, Außenkabine: 629, Balkonkabine: 979 }, image: "/koblenz.jpg", highlights: ["Festung Ehrenbreitstein", "Deutsches Eck", "Mittelrhein"] },
+  { id: 104, leg: "Leg 4", from: "Koblenz", to: "Rüdesheim", departure: "08:30", arrival: "15:00", date: "18. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 399, Außenkabine: 599, Balkonkabine: 949 }, image: "/ruedesheim.jpg", highlights: ["Niederwalddenkmal", "Rheingau Weine", "Loreley"] },
+  { id: 105, leg: "Leg 5", from: "Rüdesheim", to: "Speyer", departure: "09:00", arrival: "18:00", date: "20. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 419, Außenkabine: 619, Balkonkabine: 969 }, image: "/speyer.jpg", highlights: ["Speyerer Dom", "Heidelberg", "Pfalz"] },
+  { id: 106, leg: "Leg 6", from: "Speyer", to: "Straßburg", departure: "08:00", arrival: "16:00", date: "22. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 449, Außenkabine: 649, Balkonkabine: 999 }, image: "/strassburg.jpg", highlights: ["Straßburger Münster", "Petite France", "Elsässische Küche"] },
+  { id: 107, leg: "Leg 7", from: "Straßburg", to: "Breisach", departure: "09:00", arrival: "13:00", date: "24. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 379, Außenkabine: 579, Balkonkabine: 899 }, image: "/breisach.jpg", highlights: ["Schwarzwald", "Colmar", "Badische Weine"] },
+  { id: 108, leg: "Leg 8", from: "Breisach", to: "Basel", departure: "10:00", arrival: "16:00", date: "26. Mai 2026", days: 2, airline: "Viking River Cruises", cabins: { Innenkabine: 399, Außenkabine: 599, Balkonkabine: 929 }, image: "/basel.jpg", highlights: ["Drei-Länder-Eck", "Art Basel", "Altstadt Basel"] },
 ];
 
 const CABIN_TYPES: Cabin[] = ["Innenkabine", "Außenkabine", "Balkonkabine"];
-const REEDEREIEN = ["MSC Cruises", "Costa Cruises", "Norwegian Cruise Line"];
+const REEDEREIEN = ["MSC Cruises", "Costa Cruises", "Norwegian Cruise Line", "Viking River Cruises"];
 const DURATION_OPTIONS = ["Alle", "2 Tage", "3 Tage", "5+ Tage"];
 
 function AirlineBadge({ name }: { name: string }) {
