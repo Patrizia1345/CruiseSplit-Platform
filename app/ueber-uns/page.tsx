@@ -43,11 +43,11 @@ export default function UeberUns() {
             Unsere Mission
           </h2>
           <p className="text-gray-500 text-lg leading-relaxed">
-            Die Kreuzfahrtindustrie verkauft seit Jahrzehnten nur Komplettrouten
-            von 7–14 Tagen. Wir ändern das. CruiseSplit ist die erste Plattform,
-            die einzelne Kreuzfahrt-Segmente buchbar macht — für Reisende, die
-            flexibel bleiben wollen, und für Reedereien, die unverkaufte Kabinen
-            monetarisieren möchten.
+            Kreuzfahrten sind ein einzigartiges Erlebnis — doch das volle Potenzial
+            wird noch nicht ausgeschöpft. CruiseSplit ergänzt das bestehende Angebot
+            der Reedereien: Wir machen einzelne Segmente buchbar und erschließen
+            gemeinsam neue Zielgruppen. Eine Win-Win-Partnerschaft — mehr Reichweite
+            für Reedereien, mehr Flexibilität für Reisende.
           </p>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function UeberUns() {
                 "Hohe Einstiegspreise ab €1.500 schrecken ab",
                 "Spontanreisen kaum möglich",
                 "Unverkaufte Kabinen verursachen Verluste",
-                "Junge Reisende & Berufstätige werden ausgeschlossen",
+                "Für spontane, flexible Reisende kaum attraktiv",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-sm text-gray-600">
                   <span className="mt-0.5 w-5 h-5 rounded-full bg-red-50 text-red-400 flex items-center justify-center text-xs font-bold shrink-0">
