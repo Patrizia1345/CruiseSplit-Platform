@@ -18,12 +18,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* ── Dark Mode komplett deaktivieren ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #171717 !important;
+  }
+}
+
+/* ── Input Felder immer lesbar ── */
 input,
 input:focus,
 input:active,
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
+input:hover,
+textarea,
+select {
   color: #171717 !important;
   -webkit-text-fill-color: #171717 !important;
   background-color: #ffffff !important;
@@ -31,8 +45,19 @@ input:-webkit-autofill:focus {
   caret-color: #171717 !important;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
   color: #9ca3af !important;
   -webkit-text-fill-color: #9ca3af !important;
   opacity: 1 !important;
+}
+
+/* Autofill Fix */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #171717 !important;
+  caret-color: #171717 !important;
 }
