@@ -8,6 +8,7 @@ import CartDrawer from "@/components/CartDrawer";
 const NAV_LINKS = [
   { label: "Routen", href: "/routen" },
   { label: "Segmente", href: "/segmente" },
+  { label: "Reedereien", href: "/reedereien" },
   { label: "Über uns", href: "/ueber-uns" },
 ];
 
