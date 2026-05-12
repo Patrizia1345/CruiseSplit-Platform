@@ -1,22 +1,23 @@
 "use client";
 
 import { useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { motion, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import type { Airline } from "@/lib/reedereien/types";
 
 interface Props {
   airline: Airline;
 }
 
-const STATS = [
-  { value: "8", label: "Buchbare Segmente" },
-  { value: "ab 1 Tag", label: "Mindestbuchung" },
-  { value: "€249", label: "Ab Preis / Person" },
-  { value: "75%", label: "Revenue für Viking" },
-];
-
 export default function CTASection({ airline }: Props) {
+  const t = useTranslations("reedereien.cta");
+  const STATS = [
+    { value: "8", label: t("stats.segmentsLabel") },
+    { value: t("stats.minBookingValue"), label: t("stats.minBookingLabel") },
+    { value: "€249", label: t("stats.priceLabel") },
+    { value: "75%", label: t("stats.revenueLabel") },
+  ];
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -60,7 +61,7 @@ export default function CTASection({ airline }: Props) {
               className="text-xs uppercase tracking-[0.25em] mb-5"
               style={{ color: airline.accentColor }}
             >
-              Jetzt buchen
+              {t("badge")}
             </p>
             <h2
               className="mb-5 leading-none"
@@ -71,16 +72,13 @@ export default function CTASection({ airline }: Props) {
                 color: "white",
               }}
             >
-              Dein Rhein-Segment
-              <br />
-              <span style={{ color: "rgba(255,255,255,0.3)" }}>wartet auf dich.</span>
+              {t("heading")}
             </h2>
             <p
               className="max-w-md text-sm leading-relaxed"
               style={{ color: "rgba(255,255,255,0.4)" }}
             >
-              8 Segmente auf der Rhine Getaway Route – einzeln buchbar ab 1 Tag.
-              Flexible Reisen, neue Zielgruppen, gemeinsames Wachstum.
+              {t("description")}
             </p>
           </motion.div>
 
@@ -96,7 +94,7 @@ export default function CTASection({ airline }: Props) {
               className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-full font-semibold text-sm uppercase tracking-widest overflow-hidden transition-all duration-300 hover:scale-105"
               style={{ backgroundColor: airline.accentColor, color: "white" }}
             >
-              <span>Segmente entdecken</span>
+              <span>{t("discoverButton")}</span>
               <motion.span
                 animate={{ x: [0, 4, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
@@ -113,7 +111,7 @@ export default function CTASection({ airline }: Props) {
                 border: "1px solid rgba(255,255,255,0.1)",
               }}
             >
-              Alle Routen ansehen
+              {t("routesButton")}
             </Link>
           </motion.div>
         </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import type { Airline } from "@/lib/reedereien/types";
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function AirlineSelector({ airlines, active, onSelect }: Props) {
+  const t = useTranslations("reedereien.airlineSelector");
   return (
     <div
       className="sticky top-16 z-40 flex items-center gap-3 px-8 md:px-20 py-3 overflow-x-auto"
@@ -70,7 +72,7 @@ export default function AirlineSelector({ airlines, active, onSelect }: Props) {
         }}
       >
         <span style={{ fontSize: "10px" }}>+</span>
-        Weitere folgen
+        {t("comingSoon")}
       </div>
     </div>
   );

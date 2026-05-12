@@ -1,7 +1,8 @@
 "use client";
 
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
+import { Link } from "@/i18n/navigation";
 
 const STORAGE_KEY = "cs-cookie-consent-v1";
 
@@ -37,6 +38,7 @@ function saveConsent(consent: Omit<Consent, "necessary" | "timestamp">) {
 }
 
 export default function CookieBanner() {
+  const t = useTranslations("cookieBanner");
   const [visible, setVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [statistics, setStatistics] = useState(false);
@@ -92,26 +94,23 @@ export default function CookieBanner() {
           id="cookie-banner-title"
           className="font-[var(--font-playfair)] text-lg font-semibold text-[#0A2342] sm:text-xl"
         >
-          Cookies & Datenschutz
+          {t("heading")}
         </h2>
         <p id="cookie-banner-desc" className="mt-2 text-sm leading-relaxed text-slate-700">
-          Wir verwenden Cookies, um unsere Website bereitzustellen, Inhalte zu personalisieren und
-          die Nutzung zu analysieren. Notwendige Cookies sind für den Betrieb erforderlich. Andere
-          Cookies setzen wir nur mit deiner Einwilligung. Du kannst deine Auswahl jederzeit ändern.
-          Weitere Informationen findest du in unserer{" "}
+          {t("description")}
           <Link href="/datenschutz" className="underline underline-offset-2 hover:text-[#0A2342]">
-            Datenschutzerklärung
+            {t("privacyLink")}
           </Link>
-          .
+          {t("descriptionSuffix")}
         </p>
 
         {showSettings && (
           <div className="mt-4 space-y-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
             <label className="flex items-start justify-between gap-4 opacity-70">
               <span>
-                <span className="block text-sm font-medium text-slate-900">Notwendig</span>
+                <span className="block text-sm font-medium text-slate-900">{t("categories.necessary.label")}</span>
                 <span className="block text-xs text-slate-600">
-                  Für den Betrieb der Website erforderlich (z. B. Warenkorb, Login). Immer aktiv.
+                  {t("categories.necessary.description")}
                 </span>
               </span>
               <input type="checkbox" checked disabled className="mt-1 h-4 w-4 accent-[#0A2342]" />
@@ -119,9 +118,9 @@ export default function CookieBanner() {
 
             <label className="flex items-start justify-between gap-4">
               <span>
-                <span className="block text-sm font-medium text-slate-900">Statistik</span>
+                <span className="block text-sm font-medium text-slate-900">{t("categories.statistics.label")}</span>
                 <span className="block text-xs text-slate-600">
-                  Hilft uns, die Nutzung der Website anonymisiert zu verstehen und zu verbessern.
+                  {t("categories.statistics.description")}
                 </span>
               </span>
               <input
@@ -134,9 +133,9 @@ export default function CookieBanner() {
 
             <label className="flex items-start justify-between gap-4">
               <span>
-                <span className="block text-sm font-medium text-slate-900">Marketing</span>
+                <span className="block text-sm font-medium text-slate-900">{t("categories.marketing.label")}</span>
                 <span className="block text-xs text-slate-600">
-                  Ermöglicht personalisierte Inhalte und Werbung auf Drittseiten.
+                  {t("categories.marketing.description")}
                 </span>
               </span>
               <input
@@ -156,7 +155,7 @@ export default function CookieBanner() {
               onClick={() => setShowSettings(true)}
               className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
             >
-              Einstellungen
+              {t("buttons.settings")}
             </button>
           )}
           <button
@@ -164,7 +163,7 @@ export default function CookieBanner() {
             onClick={rejectAll}
             className="rounded-full border border-slate-300 px-4 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50"
           >
-            Nur notwendige
+            {t("buttons.rejectAll")}
           </button>
           {showSettings && (
             <button
@@ -172,7 +171,7 @@ export default function CookieBanner() {
               onClick={saveSelection}
               className="rounded-full border border-[#0A2342] px-4 py-2 text-sm font-medium text-[#0A2342] hover:bg-slate-50"
             >
-              Auswahl speichern
+              {t("buttons.saveSelection")}
             </button>
           )}
           <button
@@ -180,7 +179,7 @@ export default function CookieBanner() {
             onClick={acceptAll}
             className="rounded-full bg-[#0A2342] px-4 py-2 text-sm font-medium text-white hover:bg-[#0a2342e6]"
           >
-            Alle akzeptieren
+            {t("buttons.acceptAll")}
           </button>
         </div>
       </div>

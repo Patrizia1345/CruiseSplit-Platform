@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "title": "CruiseSplit – Book cruise segments",
+    "description": "Book individual cruise segments from €249. Flexible, affordable and spontaneous."
+  },
+  "navbar": {
+    "logo": "CruiseSplit",
+    "routes": "Routes",
+    "segments": "Segments",
+    "airlines": "Cruise lines",
+    "about": "About us",
+    "login": "Log in",
+    "back": "Back",
+    "menuAriaLabel": "Open menu"
+  },
+  "footer": {
+    "copyright": "© 2026 CruiseSplit · Patrizia Kröger · Cologne",
+    "impressum": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "cookieBanner": {
+    "heading": "Cookies & Privacy",
+    "description": "We use cookies to deliver our website, personalise content and analyse usage. Necessary cookies are required for operation. Other cookies are only set with your consent. You can change your selection at any time. More information is available in our ",
+    "privacyLink": "Privacy Policy",
+    "descriptionSuffix": ".",
+    "categories": {
+      "necessary": {
+        "label": "Necessary",
+        "description": "Required for the website to function (e.g. cart, login). Always active."
+      },
+      "statistics": {
+        "label": "Statistics",
+        "description": "Helps us understand and improve usage of the website anonymously."
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Enables personalised content and advertising on third-party sites."
+      }
+    },
+    "buttons": {
+      "settings": "Settings",
+      "rejectAll": "Necessary only",
+      "saveSelection": "Save selection",
+      "acceptAll": "Accept all"
+    }
+  },
+  "cart": {
+    "heading": "Cart",
+    "items": "{count, plural, one {# segment} other {# segments}}",
+    "persons": "{count, plural, one {# person} other {# people}}",
+    "days": "{count, plural, one {# day} other {# days}}",
+    "empty": {
+      "title": "Your cart is empty",
+      "description": "Add segments from the Segments or Viking page"
+    },
+    "total": "Total",
+    "checkout": "Book now →",
+    "clear": "Clear cart"
+  },
+  "home": {
+    "badge": "The first segment-booking platform",
+    "title": "Cruising, reimagined",
+    "subtitle": "Book individual cruise segments from €249 for 2 days – flexible, affordable and spontaneous.",
+    "ctaDiscover": "Discover segments",
+    "ctaRoutes": "Browse routes",
+    "stats": {
+      "segments": "Segments",
+      "routes": "Routes",
+      "perPerson": "per person"
+    },
+    "features": {
+      "flex": {
+        "title": "Travel flexibly",
+        "text": "Pick only the legs that fit your schedule – no need to book an entire cruise."
+      },
+      "affordable": {
+        "title": "Start small",
+        "text": "Experience cruising at a fraction of the price – perfect for first-timers and short breaks."
+      },
+      "audience": {
+        "title": "New audiences",
+        "text": "CruiseSplit opens cruising to young travellers, professionals and anyone who values flexibility."
+      }
+    },
+    "partnerCta": {
+      "heading": "Are you a cruise line?",
+      "text": "Monetise unsold cabins with no extra operational effort. 75% revenue share, no fixed costs.",
+      "button": "Request a partnership →"
+    }
+  },
+  "about": {
+    "badge": "About CruiseSplit",
+    "title": "We're reinventing the cruise industry",
+    "subtitle": "CruiseSplit makes cruises flexible, affordable and spontaneously bookable",
+    "mission": {
+      "heading": "Our mission",
+      "text": "Cruises are a unique experience — but their full potential is still untapped. CruiseSplit complements cruise lines' existing offerings: we make individual segments bookable and together open up new audiences. A win-win partnership — more reach for cruise lines, more flexibility for travellers."
+    },
+    "problem": {
+      "heading": "The problem",
+      "items": [
+        "Only full 7–14 day routes are bookable",
+        "High entry prices from €1,500 are a deterrent",
+        "Spontaneous trips are hardly possible",
+        "Unsold cabins cause losses",
+        "Barely attractive for spontaneous, flexible travellers"
+      ]
+    },
+    "solution": {
+      "heading": "The solution",
+      "items": [
+        "Segment bookings from 2 days",
+        "Entry prices from €249 per person",
+        "Spontaneous & flexible — last-minute bookable",
+        "Revenue-share model for cruise lines",
+        "New audiences: ages 18–35 & business travellers"
+      ]
+    },
+    "team": {
+      "heading": "The team",
+      "subtitle": "Experienced minds from travel tech, shipping and startups",
+      "ceoRole": "CEO",
+      "ctoRole": "CTO",
+      "cooRole": "COO",
+      "patriziaName": "Patrizia Kröger",
+      "patriziaTitle": "CEO & Co-Founder",
+      "ctoName": "Coming Soon",
+      "ctoTitle": "CTO & Co-Founder",
+      "cooName": "Coming Soon",
+      "cooTitle": "COO & Co-Founder"
+    },
+    "partnership": {
+      "badge": "Partnership",
+      "heading": "Interested in a partnership?",
+      "text": "Cruise line, travel agency or investor — we'd love to talk. Write to us and we'll get back within 24 hours.",
+      "button": "Book a call"
+    }
+  },
+  "routes": {
+    "heading": "Discover routes",
+    "subtitle": "Pick your route and book individual segments – as flexible as you want.",
+    "riverHeading": "River cruises",
+    "riverSubtitle": "River cruises and more – bookable by segment",
+    "newBadge": "NEW",
+    "oceanDivider": "Ocean cruises",
+    "daysTotal": "Total days",
+    "segments": "Segments",
+    "perPerson": "per person",
+    "discoverButton": "Discover segments →",
+    "bookButton": "Book segments →",
+    "items": {
+      "classic": {
+        "name": "Mediterranean Classic",
+        "description": "The most popular route – from Barcelona to Athens along Europe's most beautiful coasts.",
+        "tag": "Popular"
+      },
+      "adriatic": {
+        "name": "Adriatic & Croatia",
+        "description": "Discover the Dalmatian coast – from Athens via Dubrovnik to Venice.",
+        "tag": "New"
+      },
+      "western": {
+        "name": "Western Mediterranean",
+        "description": "Balearic Islands, Valencia and back – relaxed along the Spanish coast.",
+        "tag": "Short trip"
+      },
+      "riviera": {
+        "name": "Riviera & Tuscany",
+        "description": "From the Côte d'Azur through Liguria to Tuscany.",
+        "tag": "Romance"
+      },
+      "rhine": {
+        "name": "Rhine Getaway",
+        "description": "The classic Rhine route – from Amsterdam through Germany and France to Basel. 4 countries, 8 segments, unforgettable culture.",
+        "tag": "NEW · River"
+      }
+    }
+  },
+  "segments": {
+    "heading": "Book cruise segments",
+    "subtitlePrefix": "Pick your segment and book directly. Want to discover routes? ",
+    "routesLink": "Go to route overview →",
+    "search": {
+      "from": "From",
+      "to": "To",
+      "date": "Date",
+      "persons": "People",
+      "allPorts": "All ports",
+      "personSingular": "{count} person",
+      "personPlural": "{count} people",
+      "button": "Search"
+    },
+    "filter": {
+      "priceHeading": "Price",
+      "priceLabel": "Max. €{max} per person",
+      "durationHeading": "Duration",
+      "durationAll": "All",
+      "duration2": "2 days",
+      "duration3": "3 days",
+      "duration5": "5+ days",
+      "cabinHeading": "Cabin type",
+      "shippingHeading": "Cruise line"
+    },
+    "result": {
+      "countOne": "{count} segment found",
+      "countOther": "{count} segments found"
+    },
+    "sort": {
+      "cheapest": "Cheapest first",
+      "fastest": "Fastest first",
+      "recommended": "Recommended"
+    },
+    "empty": {
+      "title": "No segments found",
+      "description": "Adjust the filters or start a new search."
+    },
+    "accessDenied": "No access — This area is only for partners.",
+    "card": {
+      "directBook": "Book directly →",
+      "addToCart": "+ Cart"
+    }
+  },
+  "booking": {
+    "steps": {
+      "segment": "Segment",
+      "travellers": "Travellers",
+      "payment": "Payment"
+    },
+    "cabin": {
+      "interior": "Inside cabin",
+      "ocean": "Ocean-view cabin",
+      "balcony": "Balcony cabin",
+      "perPerson": "per person"
+    },
+    "backToSegments": "← Back to segments",
+    "step1": {
+      "heading": "Your segment",
+      "subtitle": "Pick your cabin category and number of guests",
+      "cabinCategory": "Cabin category",
+      "numberOfTravellers": "Number of travellers",
+      "personOne": "{count} person",
+      "personOther": "{count} people",
+      "next": "Continue to traveller details →"
+    },
+    "step2": {
+      "heading": "Travellers",
+      "subtitleOne": "Please enter the person's details",
+      "subtitleOther": "Please enter details for all {count} travellers",
+      "traveller": "Traveller {n}",
+      "mainContact": "(main contact)",
+      "firstName": "First name *",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Last name *",
+      "lastNamePlaceholder": "Mustermann",
+      "birthDate": "Date of birth *",
+      "passport": "Passport no. (optional)",
+      "passportPlaceholder": "C01X00T47",
+      "errorRequired": "Required field",
+      "back": "← Back",
+      "next": "Continue to payment →"
+    },
+    "step3": {
+      "heading": "Payment",
+      "subtitle": "Secure payment with SSL encryption 🔒",
+      "email": "Email for booking confirmation *",
+      "emailPlaceholder": "max@example.com",
+      "cardData": "Card details",
+      "cardName": "Name on card *",
+      "cardNamePlaceholder": "Max Mustermann",
+      "cardNumber": "Card number *",
+      "cardNumberPlaceholder": "1234 5678 9012 3456",
+      "expiry": "Expiry date *",
+      "expiryPlaceholder": "MM/YY",
+      "cvv": "CVV *",
+      "cvvPlaceholder": "123",
+      "errorEmail": "Valid email required",
+      "errorCard": "Valid card number required",
+      "errorTerms": "Please accept the Terms",
+      "terms": "I accept CruiseSplit's Terms and Privacy Policy.",
+      "processing": "Processing…",
+      "submit": "🔒 Pay €{total} now"
+    },
+    "summary": {
+      "heading": "Your booking",
+      "serviceFee": "Service fee (5%)",
+      "total": "Total",
+      "security": "SSL-encrypted payment",
+      "cancellation": "Free cancellation up to 48h before",
+      "confirmation": "Instant booking confirmation"
+    },
+    "loading": "Loading…"
+  },
+  "confirmation": {
+    "heading": "Booking confirmed!",
+    "subtitle": "Your booking confirmation has been sent by email.",
+    "bookingNumber": "Booking number",
+    "date": "Date",
+    "airline": "Cruise line",
+    "cabin": "Cabin",
+    "persons": "Travellers",
+    "personOne": "{count} person",
+    "personOther": "{count} people",
+    "total": "Total amount",
+    "nextStepsHeading": "Next steps",
+    "step1Title": "Booking confirmation",
+    "step1Desc": "Check your email inbox for the confirmation.",
+    "step2Title": "Digital boarding",
+    "step2Desc": "Your boarding pass will be emailed 48h before departure.",
+    "step3Title": "Check in",
+    "step3Desc": "Check-in opens 2 hours before departure at the port.",
+    "bookMore": "Book more segments",
+    "home": "Go to home page",
+    "loading": "Loading…"
+  },
+  "viking": {
+    "airline": "Viking River Cruises",
+    "demo": "× CruiseSplit Demo",
+    "heading": "Rhine Getaway",
+    "subtitle": "Amsterdam → Basel · 8 segments · From €379 per person",
+    "tags": {
+      "duration": "16 days total route",
+      "countries": "4 countries",
+      "segments": "8 bookable segments",
+      "excursion": "Shore excursion included"
+    },
+    "map": {
+      "heading": "🗺️ Rhine Getaway route",
+      "subtitle": "Amsterdam → Basel · 8 segments · 16 days"
+    },
+    "sidebar": {
+      "personsHeading": "Travellers",
+      "personOne": "{count} person",
+      "personOther": "{count} people",
+      "infoHeading": "🚢 Viking Longship",
+      "infoText": "All cabins with panoramic windows, heated floors & Aquavit Terrace. Included: shore excursion, breakfast & dinner."
+    },
+    "segmentsHeading": "8 bookable segments",
+    "segmentsSubtitle": "Choose one or several segments",
+    "cabin": {
+      "standard": "Standard cabin",
+      "veranda": "Veranda cabin",
+      "suite": "Suite",
+      "standardDesc": "Elegant, 135 sq ft, heated floor",
+      "verandaDesc": "Private balcony, 205 sq ft, panoramic view",
+      "suiteDesc": "Living room, 270+ sq ft, butler service"
+    },
+    "segmentCard": {
+      "perPerson": "per person",
+      "directBook": "Book directly →",
+      "addToCart": "+ Cart"
+    },
+    "footer": {
+      "heading": "Interested in a partnership?",
+      "text": "Cruise lines earn a 75% revenue share – with no extra operational effort.",
+      "button": "Book a call →"
+    }
+  },
+  "reedereien": {
+    "videoHero": {
+      "badge": "CruiseSplit Partner",
+      "headingPart1": "VIKING",
+      "headingPart2": "RIVER CRUISES",
+      "stats": {
+        "founded": "Founded",
+        "ships": "Longships",
+        "routes": "Routes"
+      },
+      "scroll": "Scroll"
+    },
+    "airlineSelector": {
+      "comingSoon": "More to follow"
+    },
+    "feature": {
+      "badge": "Amenities & highlights",
+      "heading": "What makes Viking special?"
+    },
+    "cta": {
+      "badge": "Book now",
+      "heading": "Your Rhine segment is waiting for you.",
+      "description": "8 segments on the Rhine Getaway route – bookable individually from 1 day. Flexible travel, new audiences, shared growth.",
+      "discoverButton": "Discover segments",
+      "routesButton": "View all routes",
+      "stats": {
+        "segmentsLabel": "Bookable segments",
+        "minBookingValue": "from 1 day",
+        "minBookingLabel": "Minimum booking",
+        "priceLabel": "From price / person",
+        "revenueLabel": "Revenue for Viking"
+      }
+    }
+  },
+  "dashboard": {
+    "brand": "CruiseSplit",
+    "subtitle": "Partner Portal",
+    "loading": "Loading…",
+    "nav": {
+      "overview": "Overview",
+      "bookings": "Bookings",
+      "segments": "Segments",
+      "inventory": "Inventory",
+      "settings": "Settings"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "cancelled": "Cancelled"
+    },
+    "kpi": {
+      "bookingsToday": "Bookings today",
+      "bookingsTodayTrend": "+3 vs. yesterday",
+      "occupancy": "Occupancy",
+      "occupancyTrend": "+5% vs. last week",
+      "revenueToday": "Revenue today",
+      "revenueTodayTrend": "+€480 vs. yesterday",
+      "openCabins": "Open cabins",
+      "openCabinsTrend": "−4 vs. yesterday"
+    },
+    "bookings": {
+      "recentHeading": "Recent bookings",
+      "live": "Live",
+      "tableId": "No.",
+      "tableSegment": "Segment",
+      "tablePassenger": "Passenger",
+      "tablePrice": "Price",
+      "tableStatus": "Status",
+      "weeklyHeading": "Bookings this week",
+      "weeklySubtitle": "Total bookings per day",
+      "today": "Today",
+      "previousDays": "Previous days",
+      "summaryTotal": "Total",
+      "summaryConfirmed": "Confirmed",
+      "summaryPending": "Pending",
+      "summaryCancelled": "Cancelled",
+      "summaryRevenue": "Revenue",
+      "searchPlaceholder": "Search booking no., passenger or segment…",
+      "filterAll": "All",
+      "empty": "No bookings found",
+      "detailsHeading": "Booking details",
+      "detailsBookingNumber": "Booking no.",
+      "detailsSegment": "Segment",
+      "detailsPassenger": "Passenger",
+      "detailsCabin": "Cabin",
+      "detailsDate": "Date",
+      "detailsPersons": "Travellers",
+      "detailsPricePerPerson": "Price/person",
+      "detailsTotal": "Total",
+      "changeStatus": "Change status",
+      "confirm": "Confirm",
+      "cancel": "Cancel"
+    },
+    "comingSoon": {
+      "title": "In development",
+      "description": "This section will be available soon."
+    }
+  },
+  "partnerPending": {
+    "status": "Review pending",
+    "heading": "Your partner account is under review",
+    "description": "Thank you for registering as a CruiseSplit partner. Our team is reviewing your details and will activate your access within 24–48 hours.",
+    "step1": "Registration complete",
+    "step2": "Details under review",
+    "step3": "Access being activated",
+    "supportHeading": "Questions? We're happy to help.",
+    "supportEmail": "partner@cruisesplit.com",
+    "backToHome": "← Back to home page"
+  },
+  "register": {
+    "successHeading": "Confirmation email sent",
+    "successText": "Please check your inbox and click the confirmation link.",
+    "successLink": "Go to log in →",
+    "heading": "Create account",
+    "loginLink": "Already registered? Log in",
+    "firstName": "First name",
+    "firstNamePlaceholder": "Anna",
+    "lastName": "Last name",
+    "lastNamePlaceholder": "Müller",
+    "email": "Email",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "At least 8 characters",
+    "accountType": "Account type",
+    "private": "Individual",
+    "partner": "Partner",
+    "partnerSubtitle": "Travel agency / cruise line",
+    "company": "Company name",
+    "companyPlaceholder": "MSC Cruises GmbH",
+    "loading": "Creating…",
+    "submit": "Create account"
+  },
+  "login": {
+    "heading": "Welcome back",
+    "registerLink": "No account yet? Register now",
+    "email": "Email",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "forgot": "Forgot?",
+    "loading": "Checking…",
+    "submit": "Log in",
+    "partnerLink": "Partner access? Register as a partner"
+  },
+  "impressum": {
+    "heading": "Imprint",
+    "tmgHeading": "Information according to § 5 TMG",
+    "tmgBody": "CruiseSplit\nrepresented by Patrizia Kröger\nCologne, Germany",
+    "contactHeading": "Contact",
+    "contactEmail": "patrizia.kroeger@gmx.com",
+    "disputeHeading": "EU Commission platform for online dispute resolution",
+    "disputeBody": "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr. Our email address can be found at the top of this imprint.",
+    "liabilityHeading": "Liability for content",
+    "liabilityBody": "As a service provider, we are responsible under § 7 (1) TMG for our own content on these pages in accordance with general law. According to §§ 8 to 10 TMG, however, as a service provider we are not obliged to monitor transmitted or stored third-party information or to investigate circumstances that indicate unlawful activity.",
+    "linksHeading": "Liability for links",
+    "linksBody": "Our service contains links to external third-party websites whose content we cannot influence. We therefore cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for their content.",
+    "copyrightHeading": "Copyright",
+    "copyrightBody": "The content and works created by the site operator on these pages are subject to German copyright law. Duplication, processing, distribution and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.",
+    "lastUpdated": "As of April 2026",
+    "backToHome": "← Back to home page"
+  },
+  "agb": {
+    "heading": "General Terms and Conditions",
+    "s1Heading": "Section 1 Scope",
+    "s1Body": "These General Terms and Conditions apply to all bookings made through the CruiseSplit platform (cruisesplit.de), operated by Patrizia Kröger, Cologne. By booking a segment, the user accepts these terms.",
+    "s2Heading": "Section 2 Description of services",
+    "s2Body": "CruiseSplit is a booking platform for individual cruise segments. CruiseSplit brokers bookings between travellers and cruise lines. CruiseSplit is not itself a tour operator within the meaning of travel-contract law, but acts as an intermediary.",
+    "s3Heading": "Section 3 Booking and contract conclusion",
+    "s3Body": "By submitting a booking, the user makes a binding offer. The contract is concluded once the booking confirmation is received by email. During the beta phase, bookings are confirmed manually. The user is informed by email about the status of their booking.",
+    "s4Heading": "Section 4 Prices and payment",
+    "s4Body": "All prices shown are final prices per person in Euros incl. statutory VAT. Payment is due at the time of booking. In the current beta phase, payment details are communicated by email after a booking is received.",
+    "s5Heading": "Section 5 Cancellation and withdrawal",
+    "s5Body": "Free cancellation is possible up to 48 hours before departure. For cancellations less than 48 hours before departure, a cancellation fee of 50% of the booking price applies. Cancellations should be sent by email to patrizia.kroeger@gmx.com.",
+    "s6Heading": "Section 6 Liability",
+    "s6Body": "CruiseSplit is not liable for services provided by cruise lines, delays, cancellations or any other circumstances outside CruiseSplit's sphere of influence. Liability is limited to intent and gross negligence.",
+    "s7Heading": "Section 7 Data protection",
+    "s7Body": "Personal data is processed in accordance with our Privacy Policy.",
+    "s8Heading": "Section 8 Applicable law",
+    "s8Body": "The law of the Federal Republic of Germany applies. Place of jurisdiction is Cologne.",
+    "lastUpdated": "As of April 2026",
+    "backToHome": "← Back to home page"
+  },
+  "privacy": {
+    "heading": "Privacy Policy",
+    "s1Heading": "1. Privacy at a glance",
+    "s1Sub": "General notes",
+    "s1Body": "The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data is any data that can be used to personally identify you.",
+    "s2Heading": "2. Controller",
+    "s2Body": "CruiseSplit, represented by Patrizia Kröger\nCologne, Germany\nEmail: patrizia.kroeger@gmx.com",
+    "s3Heading": "3. Data collection on this website",
+    "s3CookiesSub": "Cookies",
+    "s3CookiesBody": "Our website uses cookies. These are small text files that your web browser stores on your device. Cookies help us make our service more user-friendly, effective and secure.",
+    "s3LogsSub": "Server log files",
+    "s3LogsBody": "The provider of these pages automatically collects and stores information in so-called server log files, which your browser transmits to us automatically. These are: browser type and version, operating system used, referrer URL, hostname of the accessing computer, time of server request and IP address.",
+    "s3BookingSub": "Booking data",
+    "s3BookingBody": "When you make a booking, we collect the data you enter (name, date of birth, email address, passport number) in order to process the booking. This data is used exclusively to process your booking and is not passed on to third parties, except to the respective cruise line in order to carry out the trip.",
+    "s4Heading": "4. Your rights",
+    "s4Body": "You have the right at any time to free information about your stored personal data, its origin and recipients and the purpose of data processing, as well as the right to correction or deletion of this data. For this and for further questions on the subject of personal data, you can contact us at any time at the address given in the imprint.",
+    "s5Heading": "5. Hosting",
+    "s5Body": "This website is hosted by Vercel Inc., 340 Pine Street Suite 701, San Francisco, California 94104, USA. Further information can be found in Vercel's Privacy Policy: https://vercel.com/legal/privacy-policy",
+    "s6Heading": "6. Right of withdrawal",
+    "s6Body": "Bookings can be cancelled free of charge up to 48 hours before departure. To exercise the right of withdrawal, please contact: patrizia.kroeger@gmx.com",
+    "lastUpdated": "As of April 2026",
+    "backToHome": "← Back to home page"
+  },
+  "languageSwitcher": {
+    "label": "Choose language",
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "nl": "Nederlands"
+  }
+}

@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "title": "CruiseSplit – Kreuzfahrt-Segmente buchen",
+    "description": "Buche einzelne Kreuzfahrt-Segmente ab €249. Flexibel, günstig und spontan."
+  },
+  "navbar": {
+    "logo": "CruiseSplit",
+    "routes": "Routen",
+    "segments": "Segmente",
+    "airlines": "Reedereien",
+    "about": "Über uns",
+    "login": "Login",
+    "back": "Zurück",
+    "menuAriaLabel": "Menü öffnen"
+  },
+  "footer": {
+    "copyright": "© 2026 CruiseSplit · Patrizia Kröger · Köln",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB"
+  },
+  "cookieBanner": {
+    "heading": "Cookies & Datenschutz",
+    "description": "Wir verwenden Cookies, um unsere Website bereitzustellen, Inhalte zu personalisieren und die Nutzung zu analysieren. Notwendige Cookies sind für den Betrieb erforderlich. Andere Cookies setzen wir nur mit deiner Einwilligung. Du kannst deine Auswahl jederzeit ändern. Weitere Informationen findest du in unserer ",
+    "privacyLink": "Datenschutzerklärung",
+    "descriptionSuffix": ".",
+    "categories": {
+      "necessary": {
+        "label": "Notwendig",
+        "description": "Für den Betrieb der Website erforderlich (z. B. Warenkorb, Login). Immer aktiv."
+      },
+      "statistics": {
+        "label": "Statistik",
+        "description": "Hilft uns, die Nutzung der Website anonymisiert zu verstehen und zu verbessern."
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Ermöglicht personalisierte Inhalte und Werbung auf Drittseiten."
+      }
+    },
+    "buttons": {
+      "settings": "Einstellungen",
+      "rejectAll": "Nur notwendige",
+      "saveSelection": "Auswahl speichern",
+      "acceptAll": "Alle akzeptieren"
+    }
+  },
+  "cart": {
+    "heading": "Warenkorb",
+    "items": "{count, plural, one {# Segment} other {# Segmente}}",
+    "persons": "{count, plural, one {# Person} other {# Personen}}",
+    "days": "{count, plural, one {# Tag} other {# Tage}}",
+    "empty": {
+      "title": "Dein Warenkorb ist leer",
+      "description": "Füge Segmente von der Segmente- oder Viking-Seite hinzu"
+    },
+    "total": "Gesamt",
+    "checkout": "Jetzt buchen →",
+    "clear": "Warenkorb leeren"
+  },
+  "home": {
+    "badge": "Die erste Segment-Buchungsplattform",
+    "title": "Kreuzfahrt neu gedacht",
+    "subtitle": "Buche einzelne Kreuzfahrt-Segmente ab €249 für 2 Tage – flexibel, günstig und spontan.",
+    "ctaDiscover": "Segmente entdecken",
+    "ctaRoutes": "Routen ansehen",
+    "stats": {
+      "segments": "Segmente",
+      "routes": "Routen",
+      "perPerson": "pro Person"
+    },
+    "features": {
+      "flex": {
+        "title": "Flexibel reisen",
+        "text": "Wähle nur die Abschnitte, die zu deinem Zeitplan passen – ohne eine komplette Reise buchen zu müssen."
+      },
+      "affordable": {
+        "title": "Günstig einsteigen",
+        "text": "Erlebe Kreuzfahrten zu einem Bruchteil des Preises – perfekt für Erstbucher und Kurzurlauber."
+      },
+      "audience": {
+        "title": "Neue Zielgruppen",
+        "text": "CruiseSplit öffnet die Kreuzfahrtwelt für junge Reisende, Berufstätige und alle, die Flexibilität schätzen."
+      }
+    },
+    "partnerCta": {
+      "heading": "Bist du eine Reederei?",
+      "text": "Monetarisiere unverkaufte Kabinen ohne operativen Mehraufwand. 75% Revenue Share, keine Fixkosten.",
+      "button": "Partnerschaft anfragen →"
+    }
+  },
+  "about": {
+    "badge": "Über CruiseSplit",
+    "title": "Wir revolutionieren die Kreuzfahrtindustrie",
+    "subtitle": "CruiseSplit macht Kreuzfahrten flexibel, erschwinglich und spontan buchbar",
+    "mission": {
+      "heading": "Unsere Mission",
+      "text": "Kreuzfahrten sind ein einzigartiges Erlebnis — doch das volle Potenzial wird noch nicht ausgeschöpft. CruiseSplit ergänzt das bestehende Angebot der Reedereien: Wir machen einzelne Segmente buchbar und erschließen gemeinsam neue Zielgruppen. Eine Win-Win-Partnerschaft — mehr Reichweite für Reedereien, mehr Flexibilität für Reisende."
+    },
+    "problem": {
+      "heading": "Das Problem",
+      "items": [
+        "Nur Komplettrouten von 7–14 Tagen buchbar",
+        "Hohe Einstiegspreise ab €1.500 schrecken ab",
+        "Spontanreisen kaum möglich",
+        "Unverkaufte Kabinen verursachen Verluste",
+        "Für spontane, flexible Reisende kaum attraktiv"
+      ]
+    },
+    "solution": {
+      "heading": "Die Lösung",
+      "items": [
+        "Segment-Buchungen ab 2 Tagen",
+        "Einstiegspreise ab €249 pro Person",
+        "Spontan & flexibel — Last-Minute buchbar",
+        "Revenue-Share-Modell für Reedereien",
+        "Neue Zielgruppen: 18–35 Jahre & Geschäftsreisende"
+      ]
+    },
+    "team": {
+      "heading": "Das Team",
+      "subtitle": "Erfahrene Köpfe aus Travel-Tech, Schifffahrt und Start-ups",
+      "ceoRole": "CEO",
+      "ctoRole": "CTO",
+      "cooRole": "COO",
+      "patriziaName": "Patrizia Kröger",
+      "patriziaTitle": "CEO & Co-Founder",
+      "ctoName": "Coming Soon",
+      "ctoTitle": "CTO & Co-Founder",
+      "cooName": "Coming Soon",
+      "cooTitle": "COO & Co-Founder"
+    },
+    "partnership": {
+      "badge": "Partnerschaft",
+      "heading": "Interesse an einer Partnerschaft?",
+      "text": "Ob Reederei, Reisebüro oder Investor — wir freuen uns auf das Gespräch. Schreib uns und wir melden uns innerhalb von 24 Stunden.",
+      "button": "Gespräch vereinbaren"
+    }
+  },
+  "routes": {
+    "heading": "Routen entdecken",
+    "subtitle": "Wähle deine Route und buche einzelne Segmente – so flexibel wie du es willst.",
+    "riverHeading": "Flusskreuzfahrten",
+    "riverSubtitle": "Flusskreuzfahrt und mehr – segmentweise buchbar",
+    "newBadge": "NEU",
+    "oceanDivider": "Hochseekreuzfahrten",
+    "daysTotal": "Tage gesamt",
+    "segments": "Segmente",
+    "perPerson": "pro Person",
+    "discoverButton": "Segmente entdecken →",
+    "bookButton": "Segmente buchen →",
+    "items": {
+      "classic": {
+        "name": "Mittelmeer Klassik",
+        "description": "Die beliebteste Route – von Barcelona bis Athen entlang der schönsten Küsten Europas.",
+        "tag": "Beliebt"
+      },
+      "adriatic": {
+        "name": "Adria & Kroatien",
+        "description": "Entdecke die dalmatinische Küste – von Athen über Dubrovnik bis Venedig.",
+        "tag": "Neu"
+      },
+      "western": {
+        "name": "Westliches Mittelmeer",
+        "description": "Balearen, Valencia und zurück – entspannt entlang der spanischen Küste.",
+        "tag": "Kurztrip"
+      },
+      "riviera": {
+        "name": "Riviera & Toskana",
+        "description": "Von der Côte d'Azur durch Ligurien bis zur Toskana.",
+        "tag": "Romantik"
+      },
+      "rhine": {
+        "name": "Rhine Getaway",
+        "description": "Die klassische Rheinroute – von Amsterdam durch Deutschland und Frankreich bis Basel. 4 Länder, 8 Segmente, unvergessliche Kultur.",
+        "tag": "NEU · Fluss"
+      }
+    }
+  },
+  "segments": {
+    "heading": "Kreuzfahrt-Segmente buchen",
+    "subtitlePrefix": "Wähle dein Wunschsegment und buche direkt. Routen entdecken? ",
+    "routesLink": "Zur Routenübersicht →",
+    "search": {
+      "from": "Von",
+      "to": "Nach",
+      "date": "Datum",
+      "persons": "Personen",
+      "allPorts": "Alle Häfen",
+      "personSingular": "{count} Person",
+      "personPlural": "{count} Personen",
+      "button": "Suchen"
+    },
+    "filter": {
+      "priceHeading": "Preis",
+      "priceLabel": "Max. €{max} pro Person",
+      "durationHeading": "Dauer",
+      "durationAll": "Alle",
+      "duration2": "2 Tage",
+      "duration3": "3 Tage",
+      "duration5": "5+ Tage",
+      "cabinHeading": "Kabinen-Typ",
+      "shippingHeading": "Reederei"
+    },
+    "result": {
+      "countOne": "{count} Segment gefunden",
+      "countOther": "{count} Segmente gefunden"
+    },
+    "sort": {
+      "cheapest": "Günstigste zuerst",
+      "fastest": "Schnellste zuerst",
+      "recommended": "Empfohlen"
+    },
+    "empty": {
+      "title": "Keine Segmente gefunden",
+      "description": "Passe die Filter an oder starte eine neue Suche."
+    },
+    "accessDenied": "Kein Zugriff — Dieser Bereich ist nur für Partner zugänglich.",
+    "card": {
+      "directBook": "Direkt buchen →",
+      "addToCart": "+ Warenkorb"
+    }
+  },
+  "booking": {
+    "steps": {
+      "segment": "Segment",
+      "travellers": "Reisende",
+      "payment": "Zahlung"
+    },
+    "cabin": {
+      "interior": "Innenkabine",
+      "ocean": "Außenkabine",
+      "balcony": "Balkonkabine",
+      "perPerson": "pro Person"
+    },
+    "backToSegments": "← Zurück zu den Segmenten",
+    "step1": {
+      "heading": "Dein Segment",
+      "subtitle": "Wähle deine Kabinenkategorie und Personenzahl",
+      "cabinCategory": "Kabinenkategorie",
+      "numberOfTravellers": "Anzahl Reisende",
+      "personOne": "{count} Person",
+      "personOther": "{count} Personen",
+      "next": "Weiter zu den Reisedaten →"
+    },
+    "step2": {
+      "heading": "Reisende",
+      "subtitleOne": "Bitte gib die Daten der Person ein",
+      "subtitleOther": "Bitte gib die Daten aller {count} Personen ein",
+      "traveller": "Reisende {n}",
+      "mainContact": "(Hauptkontakt)",
+      "firstName": "Vorname *",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Nachname *",
+      "lastNamePlaceholder": "Mustermann",
+      "birthDate": "Geburtsdatum *",
+      "passport": "Reisepass-Nr. (optional)",
+      "passportPlaceholder": "C01X00T47",
+      "errorRequired": "Pflichtfeld",
+      "back": "← Zurück",
+      "next": "Weiter zur Zahlung →"
+    },
+    "step3": {
+      "heading": "Zahlung",
+      "subtitle": "Sichere Zahlung mit SSL-Verschlüsselung 🔒",
+      "email": "E-Mail für Buchungsbestätigung *",
+      "emailPlaceholder": "max@beispiel.de",
+      "cardData": "Kartendaten",
+      "cardName": "Name auf der Karte *",
+      "cardNamePlaceholder": "Max Mustermann",
+      "cardNumber": "Kartennummer *",
+      "cardNumberPlaceholder": "1234 5678 9012 3456",
+      "expiry": "Ablaufdatum *",
+      "expiryPlaceholder": "MM/JJ",
+      "cvv": "CVV *",
+      "cvvPlaceholder": "123",
+      "errorEmail": "Gültige E-Mail erforderlich",
+      "errorCard": "Gültige Kartennummer erforderlich",
+      "errorTerms": "Bitte akzeptiere die AGB",
+      "terms": "Ich akzeptiere die AGB und Datenschutzerklärung von CruiseSplit.",
+      "processing": "Wird verarbeitet…",
+      "submit": "🔒 Jetzt €{total} bezahlen"
+    },
+    "summary": {
+      "heading": "Deine Buchung",
+      "serviceFee": "Service-Gebühr (5%)",
+      "total": "Gesamt",
+      "security": "SSL-verschlüsselte Zahlung",
+      "cancellation": "Kostenlose Stornierung bis 48h vorher",
+      "confirmation": "Sofortige Buchungsbestätigung"
+    },
+    "loading": "Laden…"
+  },
+  "confirmation": {
+    "heading": "Buchung bestätigt!",
+    "subtitle": "Deine Buchungsbestätigung wurde per E-Mail versendet.",
+    "bookingNumber": "Buchungsnummer",
+    "date": "Datum",
+    "airline": "Reederei",
+    "cabin": "Kabine",
+    "persons": "Reisende",
+    "personOne": "{count} Person",
+    "personOther": "{count} Personen",
+    "total": "Gesamtbetrag",
+    "nextStepsHeading": "Nächste Schritte",
+    "step1Title": "Buchungsbestätigung",
+    "step1Desc": "Schau in deinem E-Mail-Postfach nach der Bestätigung.",
+    "step2Title": "Digitales Boarding",
+    "step2Desc": "Dein Boarding Pass wird 48h vor Abfahrt per E-Mail zugeschickt.",
+    "step3Title": "Einchecken",
+    "step3Desc": "Check-in ist 2 Stunden vor Abfahrt im Hafen möglich.",
+    "bookMore": "Weitere Segmente buchen",
+    "home": "Zur Startseite",
+    "loading": "Laden…"
+  },
+  "viking": {
+    "airline": "Viking River Cruises",
+    "demo": "× CruiseSplit Demo",
+    "heading": "Rhine Getaway",
+    "subtitle": "Amsterdam → Basel · 8 Segmente · Ab €379 pro Person",
+    "tags": {
+      "duration": "16 Tage Gesamtroute",
+      "countries": "4 Länder",
+      "segments": "8 buchbare Segmente",
+      "excursion": "Inklusive Landausflug"
+    },
+    "map": {
+      "heading": "🗺️ Rhine Getaway Route",
+      "subtitle": "Amsterdam → Basel · 8 Segmente · 16 Tage"
+    },
+    "sidebar": {
+      "personsHeading": "Reisende",
+      "personOne": "{count} Person",
+      "personOther": "{count} Personen",
+      "infoHeading": "🚢 Viking Longship",
+      "infoText": "Alle Kabinen mit Panoramafenstern, beheiztem Boden & Aquavit Terrace. Inklusive: Landausflug, Frühstück & Abendessen."
+    },
+    "segmentsHeading": "8 buchbare Segmente",
+    "segmentsSubtitle": "Wähle ein oder mehrere Segmente",
+    "cabin": {
+      "standard": "Standardkabine",
+      "veranda": "Veranda-Kabine",
+      "suite": "Suite",
+      "standardDesc": "Elegant, 135 qm, beheizter Boden",
+      "verandaDesc": "Privater Balkon, 205 qm, Panoramablick",
+      "suiteDesc": "Wohnzimmer, 270+ qm, Butler-Service"
+    },
+    "segmentCard": {
+      "perPerson": "pro Person",
+      "directBook": "Direkt buchen →",
+      "addToCart": "+ Warenkorb"
+    },
+    "footer": {
+      "heading": "Interesse an einer Partnerschaft?",
+      "text": "Reedereien verdienen 75% Revenue Share – ohne operativen Mehraufwand.",
+      "button": "Gespräch vereinbaren →"
+    }
+  },
+  "reedereien": {
+    "videoHero": {
+      "badge": "CruiseSplit Partner",
+      "headingPart1": "VIKING",
+      "headingPart2": "RIVER CRUISES",
+      "stats": {
+        "founded": "Gegründet",
+        "ships": "Longships",
+        "routes": "Routen"
+      },
+      "scroll": "Scrollen"
+    },
+    "airlineSelector": {
+      "comingSoon": "Weitere folgen"
+    },
+    "feature": {
+      "badge": "Ausstattung & Highlights",
+      "heading": "Was macht Viking besonders?"
+    },
+    "cta": {
+      "badge": "Jetzt buchen",
+      "heading": "Dein Rhein-Segment wartet auf dich.",
+      "description": "8 Segmente auf der Rhine Getaway Route – einzeln buchbar ab 1 Tag. Flexible Reisen, neue Zielgruppen, gemeinsames Wachstum.",
+      "discoverButton": "Segmente entdecken",
+      "routesButton": "Alle Routen ansehen",
+      "stats": {
+        "segmentsLabel": "Buchbare Segmente",
+        "minBookingValue": "ab 1 Tag",
+        "minBookingLabel": "Mindestbuchung",
+        "priceLabel": "Ab Preis / Person",
+        "revenueLabel": "Revenue für Viking"
+      }
+    }
+  },
+  "dashboard": {
+    "brand": "CruiseSplit",
+    "subtitle": "Partner Portal",
+    "loading": "Wird geladen…",
+    "nav": {
+      "overview": "Übersicht",
+      "bookings": "Buchungen",
+      "segments": "Segmente",
+      "inventory": "Inventar",
+      "settings": "Einstellungen"
+    },
+    "status": {
+      "confirmed": "Bestätigt",
+      "pending": "Ausstehend",
+      "cancelled": "Storniert"
+    },
+    "kpi": {
+      "bookingsToday": "Buchungen heute",
+      "bookingsTodayTrend": "+3 vs. gestern",
+      "occupancy": "Auslastung",
+      "occupancyTrend": "+5% vs. Vorwoche",
+      "revenueToday": "Revenue heute",
+      "revenueTodayTrend": "+€480 vs. gestern",
+      "openCabins": "Offene Kabinen",
+      "openCabinsTrend": "−4 vs. gestern"
+    },
+    "bookings": {
+      "recentHeading": "Aktuelle Buchungen",
+      "live": "Live",
+      "tableId": "Nr.",
+      "tableSegment": "Segment",
+      "tablePassenger": "Passagier",
+      "tablePrice": "Preis",
+      "tableStatus": "Status",
+      "weeklyHeading": "Buchungen diese Woche",
+      "weeklySubtitle": "Gesamtbuchungen pro Tag",
+      "today": "Heute",
+      "previousDays": "Vorherige Tage",
+      "summaryTotal": "Gesamt",
+      "summaryConfirmed": "Bestätigt",
+      "summaryPending": "Ausstehend",
+      "summaryCancelled": "Storniert",
+      "summaryRevenue": "Revenue",
+      "searchPlaceholder": "Buchungs-Nr., Passagier oder Segment suchen…",
+      "filterAll": "Alle",
+      "empty": "Keine Buchungen gefunden",
+      "detailsHeading": "Buchungsdetails",
+      "detailsBookingNumber": "Buchungs-Nr.",
+      "detailsSegment": "Segment",
+      "detailsPassenger": "Passagier",
+      "detailsCabin": "Kabine",
+      "detailsDate": "Datum",
+      "detailsPersons": "Personen",
+      "detailsPricePerPerson": "Preis/Person",
+      "detailsTotal": "Gesamt",
+      "changeStatus": "Status ändern",
+      "confirm": "Bestätigen",
+      "cancel": "Stornieren"
+    },
+    "comingSoon": {
+      "title": "In Entwicklung",
+      "description": "Dieser Bereich wird bald verfügbar sein."
+    }
+  },
+  "partnerPending": {
+    "status": "Prüfung ausstehend",
+    "heading": "Ihr Partner-Account wird geprüft",
+    "description": "Vielen Dank für Ihre Registrierung als CruiseSplit-Partner. Unser Team prüft Ihre Angaben und schaltet Ihren Zugang innerhalb von 24–48 Stunden frei.",
+    "step1": "Registrierung abgeschlossen",
+    "step2": "Daten werden geprüft",
+    "step3": "Zugang wird freigeschaltet",
+    "supportHeading": "Fragen? Wir helfen gerne.",
+    "supportEmail": "partner@cruisesplit.com",
+    "backToHome": "← Zurück zur Startseite"
+  },
+  "register": {
+    "successHeading": "Bestätigungs-E-Mail gesendet",
+    "successText": "Bitte prüfe dein Postfach und klicke den Bestätigungslink.",
+    "successLink": "Zum Login →",
+    "heading": "Konto erstellen",
+    "loginLink": "Bereits registriert? Einloggen",
+    "firstName": "Vorname",
+    "firstNamePlaceholder": "Anna",
+    "lastName": "Nachname",
+    "lastNamePlaceholder": "Müller",
+    "email": "E-Mail",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Passwort",
+    "passwordPlaceholder": "Mindestens 8 Zeichen",
+    "accountType": "Kontotyp",
+    "private": "Privatkunde",
+    "partner": "Partner",
+    "partnerSubtitle": "Reisebüro / Reederei",
+    "company": "Firmenname",
+    "companyPlaceholder": "MSC Cruises GmbH",
+    "loading": "Wird erstellt…",
+    "submit": "Konto erstellen"
+  },
+  "login": {
+    "heading": "Willkommen zurück",
+    "registerLink": "Noch kein Konto? Jetzt registrieren",
+    "email": "E-Mail",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Passwort",
+    "passwordPlaceholder": "••••••••",
+    "forgot": "Vergessen?",
+    "loading": "Wird geprüft…",
+    "submit": "Einloggen",
+    "partnerLink": "Partner-Zugang? Als Partner registrieren"
+  },
+  "impressum": {
+    "heading": "Impressum",
+    "tmgHeading": "Angaben gemäß § 5 TMG",
+    "tmgBody": "CruiseSplit\nvertreten durch Patrizia Kröger\nKöln, Deutschland",
+    "contactHeading": "Kontakt",
+    "contactEmail": "patrizia.kroeger@gmx.com",
+    "disputeHeading": "Plattform der EU-Kommission zur Online-Streitbeilegung",
+    "disputeBody": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr. Unsere E-Mail-Adresse finden Sie oben im Impressum.",
+    "liabilityHeading": "Haftung für Inhalte",
+    "liabilityBody": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "linksHeading": "Haftung für Links",
+    "linksBody": "Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+    "copyrightHeading": "Urheberrecht",
+    "copyrightBody": "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+    "lastUpdated": "Stand: April 2026",
+    "backToHome": "← Zurück zur Startseite"
+  },
+  "agb": {
+    "heading": "Allgemeine Geschäftsbedingungen (AGB)",
+    "s1Heading": "§ 1 Geltungsbereich",
+    "s1Body": "Diese Allgemeinen Geschäftsbedingungen gelten für alle Buchungen über die Plattform CruiseSplit (cruisesplit.de), betrieben durch Patrizia Kröger, Köln. Mit der Buchung eines Segments akzeptiert der Nutzer diese AGB.",
+    "s2Heading": "§ 2 Leistungsbeschreibung",
+    "s2Body": "CruiseSplit ist eine Buchungsplattform für einzelne Kreuzfahrt-Segmente. CruiseSplit vermittelt Buchungen zwischen Reisenden und Reedereien. CruiseSplit ist selbst kein Reiseveranstalter im Sinne des Reisevertragsrechts, sondern agiert als Vermittler.",
+    "s3Heading": "§ 3 Buchung und Vertragsschluss",
+    "s3Body": "Mit dem Absenden einer Buchung gibt der Nutzer ein verbindliches Angebot ab. Der Vertrag kommt mit Zugang der Buchungsbestätigung per E-Mail zustande. In der Beta-Phase werden Buchungen manuell bestätigt. Der Nutzer wird per E-Mail über den Status seiner Buchung informiert.",
+    "s4Heading": "§ 4 Preise und Zahlung",
+    "s4Body": "Alle angezeigten Preise sind Endpreise pro Person in Euro inkl. gesetzlicher MwSt. Die Zahlung erfolgt zum Zeitpunkt der Buchung. In der aktuellen Beta-Phase werden Zahlungsdetails nach Buchungseingang per E-Mail kommuniziert.",
+    "s5Heading": "§ 5 Stornierung und Widerruf",
+    "s5Body": "Kostenlose Stornierung ist bis 48 Stunden vor Abfahrt möglich. Bei Stornierung weniger als 48 Stunden vor Abfahrt wird eine Stornogebühr von 50% des Buchungspreises erhoben. Stornierungen sind per E-Mail an patrizia.kroeger@gmx.com zu richten.",
+    "s6Heading": "§ 6 Haftung",
+    "s6Body": "CruiseSplit haftet nicht für Leistungen der Reedereien, Verspätungen, Ausfälle oder sonstige Umstände, die außerhalb des Einflussbereichs von CruiseSplit liegen. Die Haftung ist auf Vorsatz und grobe Fahrlässigkeit beschränkt.",
+    "s7Heading": "§ 7 Datenschutz",
+    "s7Body": "Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer Datenschutzerklärung.",
+    "s8Heading": "§ 8 Anwendbares Recht",
+    "s8Body": "Es gilt das Recht der Bundesrepublik Deutschland. Gerichtsstand ist Köln.",
+    "lastUpdated": "Stand: April 2026",
+    "backToHome": "← Zurück zur Startseite"
+  },
+  "privacy": {
+    "heading": "Datenschutzerklärung",
+    "s1Heading": "1. Datenschutz auf einen Blick",
+    "s1Sub": "Allgemeine Hinweise",
+    "s1Body": "Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.",
+    "s2Heading": "2. Verantwortlicher",
+    "s2Body": "CruiseSplit, vertreten durch Patrizia Kröger\nKöln, Deutschland\nE-Mail: patrizia.kroeger@gmx.com",
+    "s3Heading": "3. Datenerfassung auf dieser Website",
+    "s3CookiesSub": "Cookies",
+    "s3CookiesBody": "Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.",
+    "s3LogsSub": "Server-Log-Dateien",
+    "s3LogsBody": "Der Provider der Seiten erhebt und speichert automatisch Informationen in so genannten Server-Log-Dateien, die Ihr Browser automatisch an uns übermittelt. Dies sind: Browsertyp und -version, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse.",
+    "s3BookingSub": "Buchungsdaten",
+    "s3BookingBody": "Wenn Sie eine Buchung durchführen, erheben wir die von Ihnen eingegebenen Daten (Name, Geburtsdatum, E-Mail-Adresse, Reisepass-Nummer) zur Durchführung der Buchung. Diese Daten werden ausschließlich zur Abwicklung Ihrer Buchung verwendet und nicht an Dritte weitergegeben, außer an die jeweilige Reederei zur Durchführung der Reise.",
+    "s4Heading": "4. Ihre Rechte",
+    "s4Body": "Sie haben jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
+    "s5Heading": "5. Hosting",
+    "s5Body": "Diese Website wird bei Vercel Inc., 340 Pine Street Suite 701, San Francisco, California 94104, USA gehostet. Weitere Informationen finden Sie in der Datenschutzerklärung von Vercel: https://vercel.com/legal/privacy-policy",
+    "s6Heading": "6. Widerrufsrecht",
+    "s6Body": "Buchungen können bis 48 Stunden vor Abfahrt kostenlos storniert werden. Zur Ausübung des Widerrufsrechts wenden Sie sich bitte an: patrizia.kroeger@gmx.com",
+    "lastUpdated": "Stand: April 2026",
+    "backToHome": "← Zurück zur Startseite"
+  },
+  "languageSwitcher": {
+    "label": "Sprache wählen",
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "nl": "Nederlands"
+  }
+}

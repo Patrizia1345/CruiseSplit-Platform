@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { useTranslations } from "next-intl";
 import type { Airline } from "@/lib/reedereien/types";
 
 interface Props {
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function FeatureSection({ airline }: Props) {
+  const t = useTranslations("reedereien.feature");
   const [activeFeature, setActiveFeature] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -51,7 +53,7 @@ export default function FeatureSection({ airline }: Props) {
               className="text-xs uppercase tracking-[0.25em] mb-4"
               style={{ color: airline.accentColor }}
             >
-              Ausstattung & Highlights
+              {t("badge")}
             </p>
             <h2
               className="leading-none"
@@ -62,9 +64,7 @@ export default function FeatureSection({ airline }: Props) {
                 color: "white",
               }}
             >
-              Was macht
-              <br />
-              <span style={{ color: "rgba(255,255,255,0.2)" }}>Viking besonders?</span>
+              {t("heading")}
             </h2>
           </div>
           <p

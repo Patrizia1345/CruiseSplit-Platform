@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "title": "CruiseSplit – Cruisesegmenten boeken",
+    "description": "Boek losse cruisesegmenten vanaf €249. Flexibel, betaalbaar en spontaan."
+  },
+  "navbar": {
+    "logo": "CruiseSplit",
+    "routes": "Routes",
+    "segments": "Segmenten",
+    "airlines": "Rederijen",
+    "about": "Over ons",
+    "login": "Inloggen",
+    "back": "Terug",
+    "menuAriaLabel": "Menu openen"
+  },
+  "footer": {
+    "copyright": "© 2026 CruiseSplit · Patrizia Kröger · Keulen",
+    "impressum": "Colofon",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden"
+  },
+  "cookieBanner": {
+    "heading": "Cookies & privacy",
+    "description": "We gebruiken cookies om onze website aan te bieden, content te personaliseren en het gebruik te analyseren. Noodzakelijke cookies zijn vereist voor de werking. Andere cookies plaatsen we alleen met jouw toestemming. Je kunt je keuze op elk moment wijzigen. Meer informatie vind je in onze ",
+    "privacyLink": "privacyverklaring",
+    "descriptionSuffix": ".",
+    "categories": {
+      "necessary": {
+        "label": "Noodzakelijk",
+        "description": "Vereist voor de werking van de website (bijv. winkelmandje, login). Altijd actief."
+      },
+      "statistics": {
+        "label": "Statistieken",
+        "description": "Helpt ons het gebruik van de website anoniem te begrijpen en te verbeteren."
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Maakt gepersonaliseerde content en advertenties op derden-sites mogelijk."
+      }
+    },
+    "buttons": {
+      "settings": "Instellingen",
+      "rejectAll": "Alleen noodzakelijk",
+      "saveSelection": "Selectie opslaan",
+      "acceptAll": "Alles accepteren"
+    }
+  },
+  "cart": {
+    "heading": "Winkelmandje",
+    "items": "{count, plural, one {# segment} other {# segmenten}}",
+    "persons": "{count, plural, one {# persoon} other {# personen}}",
+    "days": "{count, plural, one {# dag} other {# dagen}}",
+    "empty": {
+      "title": "Je winkelmandje is leeg",
+      "description": "Voeg segmenten toe vanaf de Segmenten- of Viking-pagina"
+    },
+    "total": "Totaal",
+    "checkout": "Nu boeken →",
+    "clear": "Winkelmandje leegmaken"
+  },
+  "home": {
+    "badge": "Het eerste segment-boekingsplatform",
+    "title": "Cruisen, opnieuw uitgevonden",
+    "subtitle": "Boek losse cruisesegmenten vanaf €249 voor 2 dagen – flexibel, betaalbaar en spontaan.",
+    "ctaDiscover": "Segmenten ontdekken",
+    "ctaRoutes": "Routes bekijken",
+    "stats": {
+      "segments": "Segmenten",
+      "routes": "Routes",
+      "perPerson": "per persoon"
+    },
+    "features": {
+      "flex": {
+        "title": "Flexibel reizen",
+        "text": "Kies alleen de delen die in je agenda passen – zonder een hele reis te hoeven boeken."
+      },
+      "affordable": {
+        "title": "Voordelig instappen",
+        "text": "Ervaar cruisen voor een fractie van de prijs – ideaal voor first-timers en korte trips."
+      },
+      "audience": {
+        "title": "Nieuwe doelgroepen",
+        "text": "CruiseSplit opent de cruisewereld voor jonge reizigers, professionals en iedereen die flexibiliteit waardeert."
+      }
+    },
+    "partnerCta": {
+      "heading": "Ben je een rederij?",
+      "text": "Monetariseer onverkochte hutten zonder extra operationele inzet. 75% revenue share, geen vaste kosten.",
+      "button": "Partnerschap aanvragen →"
+    }
+  },
+  "about": {
+    "badge": "Over CruiseSplit",
+    "title": "Wij vernieuwen de cruise-industrie",
+    "subtitle": "CruiseSplit maakt cruises flexibel, betaalbaar en spontaan boekbaar",
+    "mission": {
+      "heading": "Onze missie",
+      "text": "Cruises zijn een unieke ervaring — maar het volle potentieel wordt nog niet benut. CruiseSplit vult het bestaande aanbod van rederijen aan: we maken losse segmenten boekbaar en openen samen nieuwe doelgroepen. Een win-win-partnerschap — meer bereik voor rederijen, meer flexibiliteit voor reizigers."
+    },
+    "problem": {
+      "heading": "Het probleem",
+      "items": [
+        "Alleen complete routes van 7–14 dagen boekbaar",
+        "Hoge instapprijzen vanaf €1.500 schrikken af",
+        "Spontane reizen nauwelijks mogelijk",
+        "Onverkochte hutten zorgen voor verlies",
+        "Voor spontane, flexibele reizigers nauwelijks aantrekkelijk"
+      ]
+    },
+    "solution": {
+      "heading": "De oplossing",
+      "items": [
+        "Segment-boekingen vanaf 2 dagen",
+        "Instapprijzen vanaf €249 per persoon",
+        "Spontaan & flexibel — last-minute boekbaar",
+        "Revenue-share-model voor rederijen",
+        "Nieuwe doelgroepen: 18–35 jaar & zakelijke reizigers"
+      ]
+    },
+    "team": {
+      "heading": "Het team",
+      "subtitle": "Ervaren koppen uit travel-tech, scheepvaart en start-ups",
+      "ceoRole": "CEO",
+      "ctoRole": "CTO",
+      "cooRole": "COO",
+      "patriziaName": "Patrizia Kröger",
+      "patriziaTitle": "CEO & medeoprichter",
+      "ctoName": "Coming Soon",
+      "ctoTitle": "CTO & medeoprichter",
+      "cooName": "Coming Soon",
+      "cooTitle": "COO & medeoprichter"
+    },
+    "partnership": {
+      "badge": "Partnerschap",
+      "heading": "Interesse in een partnerschap?",
+      "text": "Of je nu rederij, reisbureau of investeerder bent — we praten graag met je. Schrijf ons en we reageren binnen 24 uur.",
+      "button": "Gesprek inplannen"
+    }
+  },
+  "routes": {
+    "heading": "Routes ontdekken",
+    "subtitle": "Kies je route en boek losse segmenten – zo flexibel als je wilt.",
+    "riverHeading": "Riviercruises",
+    "riverSubtitle": "Riviercruise en meer – per segment boekbaar",
+    "newBadge": "NIEUW",
+    "oceanDivider": "Zeecruises",
+    "daysTotal": "Dagen totaal",
+    "segments": "Segmenten",
+    "perPerson": "per persoon",
+    "discoverButton": "Segmenten ontdekken →",
+    "bookButton": "Segmenten boeken →",
+    "items": {
+      "classic": {
+        "name": "Mediterraan klassiek",
+        "description": "De populairste route – van Barcelona tot Athene langs de mooiste kusten van Europa.",
+        "tag": "Populair"
+      },
+      "adriatic": {
+        "name": "Adriatische Zee & Kroatië",
+        "description": "Ontdek de Dalmatische kust – van Athene via Dubrovnik naar Venetië.",
+        "tag": "Nieuw"
+      },
+      "western": {
+        "name": "Westelijke Middellandse Zee",
+        "description": "Balearen, Valencia en terug – ontspannen langs de Spaanse kust.",
+        "tag": "Korte trip"
+      },
+      "riviera": {
+        "name": "Riviera & Toscane",
+        "description": "Van de Côte d'Azur door Ligurië tot Toscane.",
+        "tag": "Romantiek"
+      },
+      "rhine": {
+        "name": "Rhine Getaway",
+        "description": "De klassieke Rijnroute – van Amsterdam via Duitsland en Frankrijk naar Bazel. 4 landen, 8 segmenten, onvergetelijke cultuur.",
+        "tag": "NIEUW · Rivier"
+      }
+    }
+  },
+  "segments": {
+    "heading": "Cruisesegmenten boeken",
+    "subtitlePrefix": "Kies je gewenste segment en boek direct. Routes ontdekken? ",
+    "routesLink": "Naar het routeoverzicht →",
+    "search": {
+      "from": "Van",
+      "to": "Naar",
+      "date": "Datum",
+      "persons": "Personen",
+      "allPorts": "Alle havens",
+      "personSingular": "{count} persoon",
+      "personPlural": "{count} personen",
+      "button": "Zoeken"
+    },
+    "filter": {
+      "priceHeading": "Prijs",
+      "priceLabel": "Max. €{max} per persoon",
+      "durationHeading": "Duur",
+      "durationAll": "Alle",
+      "duration2": "2 dagen",
+      "duration3": "3 dagen",
+      "duration5": "5+ dagen",
+      "cabinHeading": "Hut-type",
+      "shippingHeading": "Rederij"
+    },
+    "result": {
+      "countOne": "{count} segment gevonden",
+      "countOther": "{count} segmenten gevonden"
+    },
+    "sort": {
+      "cheapest": "Goedkoopste eerst",
+      "fastest": "Snelste eerst",
+      "recommended": "Aanbevolen"
+    },
+    "empty": {
+      "title": "Geen segmenten gevonden",
+      "description": "Pas de filters aan of start een nieuwe zoekopdracht."
+    },
+    "accessDenied": "Geen toegang — dit gedeelte is alleen voor partners.",
+    "card": {
+      "directBook": "Direct boeken →",
+      "addToCart": "+ Winkelmandje"
+    }
+  },
+  "booking": {
+    "steps": {
+      "segment": "Segment",
+      "travellers": "Reizigers",
+      "payment": "Betaling"
+    },
+    "cabin": {
+      "interior": "Binnenhut",
+      "ocean": "Buitenhut",
+      "balcony": "Balkonhut",
+      "perPerson": "per persoon"
+    },
+    "backToSegments": "← Terug naar de segmenten",
+    "step1": {
+      "heading": "Jouw segment",
+      "subtitle": "Kies je huttype en het aantal personen",
+      "cabinCategory": "Huttype",
+      "numberOfTravellers": "Aantal reizigers",
+      "personOne": "{count} persoon",
+      "personOther": "{count} personen",
+      "next": "Door naar reisgegevens →"
+    },
+    "step2": {
+      "heading": "Reizigers",
+      "subtitleOne": "Voer de gegevens van de persoon in",
+      "subtitleOther": "Voer de gegevens van alle {count} personen in",
+      "traveller": "Reiziger {n}",
+      "mainContact": "(hoofdcontact)",
+      "firstName": "Voornaam *",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Achternaam *",
+      "lastNamePlaceholder": "Mustermann",
+      "birthDate": "Geboortedatum *",
+      "passport": "Paspoortnr. (optioneel)",
+      "passportPlaceholder": "C01X00T47",
+      "errorRequired": "Verplicht veld",
+      "back": "← Terug",
+      "next": "Door naar betaling →"
+    },
+    "step3": {
+      "heading": "Betaling",
+      "subtitle": "Veilige betaling met SSL-versleuteling 🔒",
+      "email": "E-mail voor boekingsbevestiging *",
+      "emailPlaceholder": "max@voorbeeld.nl",
+      "cardData": "Kaartgegevens",
+      "cardName": "Naam op de kaart *",
+      "cardNamePlaceholder": "Max Mustermann",
+      "cardNumber": "Kaartnummer *",
+      "cardNumberPlaceholder": "1234 5678 9012 3456",
+      "expiry": "Vervaldatum *",
+      "expiryPlaceholder": "MM/JJ",
+      "cvv": "CVV *",
+      "cvvPlaceholder": "123",
+      "errorEmail": "Geldig e-mailadres vereist",
+      "errorCard": "Geldig kaartnummer vereist",
+      "errorTerms": "Accepteer de voorwaarden",
+      "terms": "Ik accepteer de algemene voorwaarden en de privacyverklaring van CruiseSplit.",
+      "processing": "Verwerken…",
+      "submit": "🔒 Nu €{total} betalen"
+    },
+    "summary": {
+      "heading": "Jouw boeking",
+      "serviceFee": "Servicekosten (5%)",
+      "total": "Totaal",
+      "security": "SSL-versleutelde betaling",
+      "cancellation": "Gratis annulering tot 48u voor vertrek",
+      "confirmation": "Directe boekingsbevestiging"
+    },
+    "loading": "Laden…"
+  },
+  "confirmation": {
+    "heading": "Boeking bevestigd!",
+    "subtitle": "Je boekingsbevestiging is per e-mail verstuurd.",
+    "bookingNumber": "Boekingsnummer",
+    "date": "Datum",
+    "airline": "Rederij",
+    "cabin": "Hut",
+    "persons": "Reizigers",
+    "personOne": "{count} persoon",
+    "personOther": "{count} personen",
+    "total": "Totaalbedrag",
+    "nextStepsHeading": "Volgende stappen",
+    "step1Title": "Boekingsbevestiging",
+    "step1Desc": "Check je e-mail voor de bevestiging.",
+    "step2Title": "Digitaal inschepen",
+    "step2Desc": "Je boarding pass wordt 48u voor vertrek per e-mail verstuurd.",
+    "step3Title": "Inchecken",
+    "step3Desc": "Inchecken is mogelijk vanaf 2 uur voor vertrek in de haven.",
+    "bookMore": "Meer segmenten boeken",
+    "home": "Naar de startpagina",
+    "loading": "Laden…"
+  },
+  "viking": {
+    "airline": "Viking River Cruises",
+    "demo": "× CruiseSplit Demo",
+    "heading": "Rhine Getaway",
+    "subtitle": "Amsterdam → Bazel · 8 segmenten · Vanaf €379 per persoon",
+    "tags": {
+      "duration": "16 dagen totale route",
+      "countries": "4 landen",
+      "segments": "8 boekbare segmenten",
+      "excursion": "Inclusief excursie aan wal"
+    },
+    "map": {
+      "heading": "🗺️ Rhine Getaway route",
+      "subtitle": "Amsterdam → Bazel · 8 segmenten · 16 dagen"
+    },
+    "sidebar": {
+      "personsHeading": "Reizigers",
+      "personOne": "{count} persoon",
+      "personOther": "{count} personen",
+      "infoHeading": "🚢 Viking Longship",
+      "infoText": "Alle hutten met panoramaramen, vloerverwarming & Aquavit Terrace. Inclusief: excursie aan wal, ontbijt & diner."
+    },
+    "segmentsHeading": "8 boekbare segmenten",
+    "segmentsSubtitle": "Kies één of meerdere segmenten",
+    "cabin": {
+      "standard": "Standaardhut",
+      "veranda": "Veranda-hut",
+      "suite": "Suite",
+      "standardDesc": "Elegant, 135 m², vloerverwarming",
+      "verandaDesc": "Privébalkon, 205 m², panoramisch uitzicht",
+      "suiteDesc": "Woonkamer, 270+ m², butlerservice"
+    },
+    "segmentCard": {
+      "perPerson": "per persoon",
+      "directBook": "Direct boeken →",
+      "addToCart": "+ Winkelmandje"
+    },
+    "footer": {
+      "heading": "Interesse in een partnerschap?",
+      "text": "Rederijen verdienen 75% revenue share – zonder extra operationele inzet.",
+      "button": "Gesprek inplannen →"
+    }
+  },
+  "reedereien": {
+    "videoHero": {
+      "badge": "CruiseSplit Partner",
+      "headingPart1": "VIKING",
+      "headingPart2": "RIVER CRUISES",
+      "stats": {
+        "founded": "Opgericht",
+        "ships": "Longships",
+        "routes": "Routes"
+      },
+      "scroll": "Scrollen"
+    },
+    "airlineSelector": {
+      "comingSoon": "Meer volgen"
+    },
+    "feature": {
+      "badge": "Voorzieningen & hoogtepunten",
+      "heading": "Wat maakt Viking bijzonder?"
+    },
+    "cta": {
+      "badge": "Nu boeken",
+      "heading": "Jouw Rijnsegment wacht op je.",
+      "description": "8 segmenten op de Rhine Getaway-route – afzonderlijk boekbaar vanaf 1 dag. Flexibel reizen, nieuwe doelgroepen, gezamenlijke groei.",
+      "discoverButton": "Segmenten ontdekken",
+      "routesButton": "Alle routes bekijken",
+      "stats": {
+        "segmentsLabel": "Boekbare segmenten",
+        "minBookingValue": "vanaf 1 dag",
+        "minBookingLabel": "Minimumboeking",
+        "priceLabel": "Vanaf prijs / persoon",
+        "revenueLabel": "Revenue voor Viking"
+      }
+    }
+  },
+  "dashboard": {
+    "brand": "CruiseSplit",
+    "subtitle": "Partner Portal",
+    "loading": "Laden…",
+    "nav": {
+      "overview": "Overzicht",
+      "bookings": "Boekingen",
+      "segments": "Segmenten",
+      "inventory": "Inventaris",
+      "settings": "Instellingen"
+    },
+    "status": {
+      "confirmed": "Bevestigd",
+      "pending": "In afwachting",
+      "cancelled": "Geannuleerd"
+    },
+    "kpi": {
+      "bookingsToday": "Boekingen vandaag",
+      "bookingsTodayTrend": "+3 vs gisteren",
+      "occupancy": "Bezetting",
+      "occupancyTrend": "+5% vs vorige week",
+      "revenueToday": "Omzet vandaag",
+      "revenueTodayTrend": "+€480 vs gisteren",
+      "openCabins": "Vrije hutten",
+      "openCabinsTrend": "−4 vs gisteren"
+    },
+    "bookings": {
+      "recentHeading": "Recente boekingen",
+      "live": "Live",
+      "tableId": "Nr.",
+      "tableSegment": "Segment",
+      "tablePassenger": "Passagier",
+      "tablePrice": "Prijs",
+      "tableStatus": "Status",
+      "weeklyHeading": "Boekingen deze week",
+      "weeklySubtitle": "Totale boekingen per dag",
+      "today": "Vandaag",
+      "previousDays": "Vorige dagen",
+      "summaryTotal": "Totaal",
+      "summaryConfirmed": "Bevestigd",
+      "summaryPending": "In afwachting",
+      "summaryCancelled": "Geannuleerd",
+      "summaryRevenue": "Omzet",
+      "searchPlaceholder": "Zoek op boekingsnr., passagier of segment…",
+      "filterAll": "Alle",
+      "empty": "Geen boekingen gevonden",
+      "detailsHeading": "Boekingsdetails",
+      "detailsBookingNumber": "Boekingsnr.",
+      "detailsSegment": "Segment",
+      "detailsPassenger": "Passagier",
+      "detailsCabin": "Hut",
+      "detailsDate": "Datum",
+      "detailsPersons": "Personen",
+      "detailsPricePerPerson": "Prijs/persoon",
+      "detailsTotal": "Totaal",
+      "changeStatus": "Status wijzigen",
+      "confirm": "Bevestigen",
+      "cancel": "Annuleren"
+    },
+    "comingSoon": {
+      "title": "In ontwikkeling",
+      "description": "Dit gedeelte is binnenkort beschikbaar."
+    }
+  },
+  "partnerPending": {
+    "status": "Controle in afwachting",
+    "heading": "Je partnerssccount wordt gecontroleerd",
+    "description": "Bedankt voor je registratie als CruiseSplit-partner. Ons team controleert je gegevens en activeert je toegang binnen 24–48 uur.",
+    "step1": "Registratie afgerond",
+    "step2": "Gegevens worden gecontroleerd",
+    "step3": "Toegang wordt geactiveerd",
+    "supportHeading": "Vragen? We helpen graag.",
+    "supportEmail": "partner@cruisesplit.com",
+    "backToHome": "← Terug naar de startpagina"
+  },
+  "register": {
+    "successHeading": "Bevestigingsmail verstuurd",
+    "successText": "Check je inbox en klik op de bevestigingslink.",
+    "successLink": "Naar inloggen →",
+    "heading": "Account aanmaken",
+    "loginLink": "Al geregistreerd? Inloggen",
+    "firstName": "Voornaam",
+    "firstNamePlaceholder": "Anna",
+    "lastName": "Achternaam",
+    "lastNamePlaceholder": "Müller",
+    "email": "E-mail",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Wachtwoord",
+    "passwordPlaceholder": "Minimaal 8 tekens",
+    "accountType": "Accounttype",
+    "private": "Particulier",
+    "partner": "Partner",
+    "partnerSubtitle": "Reisbureau / rederij",
+    "company": "Bedrijfsnaam",
+    "companyPlaceholder": "MSC Cruises GmbH",
+    "loading": "Bezig met aanmaken…",
+    "submit": "Account aanmaken"
+  },
+  "login": {
+    "heading": "Welkom terug",
+    "registerLink": "Nog geen account? Registreer nu",
+    "email": "E-mail",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Wachtwoord",
+    "passwordPlaceholder": "••••••••",
+    "forgot": "Vergeten?",
+    "loading": "Controleren…",
+    "submit": "Inloggen",
+    "partnerLink": "Partnertoegang? Registreren als partner"
+  },
+  "impressum": {
+    "heading": "Colofon",
+    "tmgHeading": "Gegevens conform § 5 TMG",
+    "tmgBody": "CruiseSplit\nvertegenwoordigd door Patrizia Kröger\nKeulen, Duitsland",
+    "contactHeading": "Contact",
+    "contactEmail": "patrizia.kroeger@gmx.com",
+    "disputeHeading": "Platform voor onlinegeschillenbeslechting van de Europese Commissie",
+    "disputeBody": "De Europese Commissie biedt een platform voor onlinegeschillenbeslechting (ODR): https://ec.europa.eu/consumers/odr. Ons e-mailadres vind je bovenaan dit colofon.",
+    "liabilityHeading": "Aansprakelijkheid voor inhoud",
+    "liabilityBody": "Als dienstverlener zijn wij conform § 7 lid 1 TMG verantwoordelijk voor eigen inhoud op deze pagina's volgens de algemene wetten. Conform §§ 8 tot 10 TMG zijn wij als dienstverlener echter niet verplicht doorgegeven of opgeslagen vreemde informatie te bewaken of naar omstandigheden te zoeken die op een onrechtmatige activiteit wijzen.",
+    "linksHeading": "Aansprakelijkheid voor links",
+    "linksBody": "Ons aanbod bevat links naar externe websites van derden, op de inhoud waarvan wij geen invloed hebben. Daarom kunnen wij voor deze externe inhoud ook geen aansprakelijkheid aanvaarden. Voor de inhoud van de gelinkte pagina's is altijd de respectieve aanbieder of exploitant van de pagina's verantwoordelijk.",
+    "copyrightHeading": "Auteursrecht",
+    "copyrightBody": "De door de exploitant van de site gemaakte inhoud en werken op deze pagina's vallen onder het Duitse auteursrecht. Voor vermenigvuldiging, bewerking, verspreiding en elke vorm van benutting buiten de grenzen van het auteursrecht is de schriftelijke toestemming van de respectieve auteur of maker vereist.",
+    "lastUpdated": "Stand: april 2026",
+    "backToHome": "← Terug naar de startpagina"
+  },
+  "agb": {
+    "heading": "Algemene Voorwaarden",
+    "s1Heading": "Artikel 1 Toepassingsgebied",
+    "s1Body": "Deze algemene voorwaarden gelden voor alle boekingen via het platform CruiseSplit (cruisesplit.de), geëxploiteerd door Patrizia Kröger, Keulen. Door een segment te boeken accepteert de gebruiker deze voorwaarden.",
+    "s2Heading": "Artikel 2 Beschrijving van de dienst",
+    "s2Body": "CruiseSplit is een boekingsplatform voor losse cruisesegmenten. CruiseSplit bemiddelt boekingen tussen reizigers en rederijen. CruiseSplit is zelf geen reisorganisator in de zin van het reisovereenkomstenrecht, maar treedt op als bemiddelaar.",
+    "s3Heading": "Artikel 3 Boeking en totstandkoming overeenkomst",
+    "s3Body": "Met het indienen van een boeking doet de gebruiker een bindend aanbod. De overeenkomst komt tot stand bij ontvangst van de boekingsbevestiging per e-mail. Tijdens de bètafase worden boekingen handmatig bevestigd. De gebruiker wordt per e-mail geïnformeerd over de status van zijn boeking.",
+    "s4Heading": "Artikel 4 Prijzen en betaling",
+    "s4Body": "Alle getoonde prijzen zijn eindprijzen per persoon in euro's inclusief wettelijke btw. Betaling vindt plaats op het moment van boeken. In de huidige bètafase worden betalingsgegevens per e-mail meegedeeld na ontvangst van de boeking.",
+    "s5Heading": "Artikel 5 Annulering en herroeping",
+    "s5Body": "Gratis annulering is mogelijk tot 48 uur voor vertrek. Bij annulering minder dan 48 uur voor vertrek worden annuleringskosten van 50% van de boekingsprijs in rekening gebracht. Annuleringen moeten per e-mail aan patrizia.kroeger@gmx.com worden gericht.",
+    "s6Heading": "Artikel 6 Aansprakelijkheid",
+    "s6Body": "CruiseSplit is niet aansprakelijk voor diensten van rederijen, vertragingen, uitval of overige omstandigheden buiten de invloedssfeer van CruiseSplit. De aansprakelijkheid is beperkt tot opzet en grove nalatigheid.",
+    "s7Heading": "Artikel 7 Gegevensbescherming",
+    "s7Body": "De verwerking van persoonsgegevens vindt plaats conform onze privacyverklaring.",
+    "s8Heading": "Artikel 8 Toepasselijk recht",
+    "s8Body": "Het recht van de Bondsrepubliek Duitsland is van toepassing. De bevoegde rechtbank is Keulen.",
+    "lastUpdated": "Stand: april 2026",
+    "backToHome": "← Terug naar de startpagina"
+  },
+  "privacy": {
+    "heading": "Privacyverklaring",
+    "s1Heading": "1. Privacy in het kort",
+    "s1Sub": "Algemene aanwijzingen",
+    "s1Body": "De volgende aanwijzingen geven een eenvoudig overzicht van wat er met je persoonsgegevens gebeurt wanneer je deze website bezoekt. Persoonsgegevens zijn alle gegevens waarmee je persoonlijk geïdentificeerd kunt worden.",
+    "s2Heading": "2. Verantwoordelijke",
+    "s2Body": "CruiseSplit, vertegenwoordigd door Patrizia Kröger\nKeulen, Duitsland\nE-mail: patrizia.kroeger@gmx.com",
+    "s3Heading": "3. Gegevensverzameling op deze website",
+    "s3CookiesSub": "Cookies",
+    "s3CookiesBody": "Onze website maakt gebruik van cookies. Dit zijn kleine tekstbestanden die je webbrowser op je apparaat opslaat. Cookies helpen ons om onze dienst gebruiksvriendelijker, effectiever en veiliger te maken.",
+    "s3LogsSub": "Server-logbestanden",
+    "s3LogsBody": "De aanbieder van de pagina's verzamelt en slaat automatisch informatie op in zogenaamde server-logbestanden, die je browser automatisch aan ons doorgeeft. Dit zijn: browsertype en -versie, gebruikt besturingssysteem, referrer URL, hostnaam van de toegang verkrijgende computer, tijdstip van de serveraanvraag en IP-adres.",
+    "s3BookingSub": "Boekingsgegevens",
+    "s3BookingBody": "Wanneer je een boeking maakt, verzamelen wij de door jou ingevoerde gegevens (naam, geboortedatum, e-mailadres, paspoortnummer) om de boeking te verwerken. Deze gegevens worden uitsluitend gebruikt voor de afhandeling van je boeking en niet doorgegeven aan derden, behalve aan de betreffende rederij voor de uitvoering van de reis.",
+    "s4Heading": "4. Jouw rechten",
+    "s4Body": "Je hebt te allen tijde recht op kosteloze informatie over je opgeslagen persoonsgegevens, de herkomst en de ontvangers daarvan, en het doel van de gegevensverwerking, alsmede een recht op correctie of verwijdering van deze gegevens. Hiervoor en voor andere vragen over persoonsgegevens kun je te allen tijde contact met ons opnemen via het in het colofon vermelde adres.",
+    "s5Heading": "5. Hosting",
+    "s5Body": "Deze website wordt gehost door Vercel Inc., 340 Pine Street Suite 701, San Francisco, California 94104, USA. Meer informatie vind je in de privacyverklaring van Vercel: https://vercel.com/legal/privacy-policy",
+    "s6Heading": "6. Herroepingsrecht",
+    "s6Body": "Boekingen kunnen tot 48 uur voor vertrek kosteloos worden geannuleerd. Voor het uitoefenen van het herroepingsrecht kun je contact opnemen via: patrizia.kroeger@gmx.com",
+    "lastUpdated": "Stand: april 2026",
+    "backToHome": "← Terug naar de startpagina"
+  },
+  "languageSwitcher": {
+    "label": "Taal kiezen",
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "nl": "Nederlands"
+  }
+}

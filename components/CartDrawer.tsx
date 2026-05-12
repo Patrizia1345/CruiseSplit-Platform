@@ -1,10 +1,12 @@
 "use client";
 
 import { useCart } from "@/context/CartContext";
-import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { useRouter } from "@/i18n/navigation";
 
 export default function CartDrawer() {
+  const t = useTranslations("cart");
   const { items, removeItem, clearCart, totalItems, totalPrice } = useCart();
   const [open, setOpen] = useState(false);
   const router = useRouter();
@@ -51,8 +53,8 @@ export default function CartDrawer() {
             {/* Header */}
             <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100">
               <div>
-                <h2 className="font-bold text-lg" style={{ color: "#0A2342" }}>Warenkorb</h2>
-                <p className="text-xs text-gray-400">{totalItems} {totalItems === 1 ? "Segment" : "Segmente"}</p>
+                <h2 className="font-bold text-lg" style={{ color: "#0A2342" }}>{t("heading")}</h2>
+                <p className="text-xs text-gray-400">{t("items", { count: totalItems })}</p>
               </div>
               <button onClick={() => setOpen(false)} className="text-gray-400 hover:text-gray-600 text-2xl leading-none">×</button>
             </div>
@@ -62,8 +64,8 @@ export default function CartDrawer() {
               {items.length === 0 && (
                 <div className="flex flex-col items-center justify-center h-full text-center gap-3">
                   <span className="text-5xl">🛒</span>
-                  <p className="text-gray-500 font-medium">Dein Warenkorb ist leer</p>
-                  <p className="text-gray-400 text-sm">Füge Segmente von der Segmente- oder Viking-Seite hinzu</p>
+                  <p className="text-gray-500 font-medium">{t("empty.title")}</p>
+                  <p className="text-gray-400 text-sm">{t("empty.description")}</p>
                 </div>
               )}
 
@@ -86,9 +88,9 @@ export default function CartDrawer() {
                   {/* Details */}
                   <div className="p-3">
                     <p className="font-semibold text-sm text-gray-900">{item.from} → {item.to}</p>
-                    <p className="text-xs text-gray-400 mt-0.5">{item.date} · {item.days} Tage · {item.cabin}</p>
+                    <p className="text-xs text-gray-400 mt-0.5">{item.date} · {t("days", { count: item.days })} · {item.cabin}</p>
                     <div className="flex items-center justify-between mt-2">
-                      <span className="text-xs text-gray-400">{item.persons} {item.persons === 1 ? "Person" : "Personen"}</span>
+                      <span className="text-xs text-gray-400">{t("persons", { count: item.persons })}</span>
                       <span className="font-bold text-sm" style={{ color: "#0A2342" }}>€{item.price * item.persons}</span>
                     </div>
                   </div>
@@ -108,7 +110,7 @@ export default function CartDrawer() {
                     </div>
                   ))}
                   <div className="flex justify-between font-bold text-base pt-2 border-t border-gray-100" style={{ color: "#0A2342" }}>
-                    <span>Gesamt</span>
+                    <span>{t("total")}</span>
                     <span>€{totalPrice}</span>
                   </div>
                 </div>
@@ -118,12 +120,12 @@ export default function CartDrawer() {
                   onClick={handleCheckout}
                   className="w-full py-3 rounded-xl text-white font-semibold text-sm transition-opacity hover:opacity-90"
                   style={{ backgroundColor: "#0EA5E9" }}>
-                  Jetzt buchen →
+                  {t("checkout")}
                 </button>
                 <button
                   onClick={clearCart}
                   className="w-full py-2 rounded-xl text-gray-400 text-xs hover:text-gray-600 transition-colors">
-                  Warenkorb leeren
+                  {t("clear")}
                 </button>
               </div>
             )}

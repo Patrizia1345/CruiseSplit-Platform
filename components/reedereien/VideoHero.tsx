@@ -2,20 +2,21 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from "next-intl";
 import type { Airline } from "@/lib/reedereien/types";
 
 interface Props {
   airline: Airline;
 }
 
-const STATS = (a: Airline) => [
-  { label: "Gegründet", value: a.founded },
-  { label: "Longships", value: a.ships },
-  { label: "Routen", value: a.routes },
-  { label: "Ab Preis", value: `€${a.priceFrom}` },
-];
-
 export default function VideoHero({ airline }: Props) {
+  const t = useTranslations("reedereien.videoHero");
+  const STATS = [
+    { label: t("stats.founded"), value: airline.founded },
+    { label: t("stats.ships"), value: airline.ships },
+    { label: t("stats.routes"), value: airline.routes },
+    { label: "Ab Preis", value: `€${airline.priceFrom}` },
+  ];
   const heroRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [videoReady, setVideoReady] = useState(false);
@@ -111,7 +112,7 @@ export default function VideoHero({ airline }: Props) {
               className="text-xs uppercase tracking-[0.25em]"
               style={{ color: "rgba(255,255,255,0.4)" }}
             >
-              CruiseSplit Partner
+              {t("badge")}
             </p>
             <p className="text-sm text-white font-medium">{airline.name}</p>
           </div>
@@ -129,7 +130,7 @@ export default function VideoHero({ airline }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="text-white block">VIKING</span>
+          <span className="text-white block">{t("headingPart1")}</span>
           <span
             className="block"
             style={{
@@ -137,7 +138,7 @@ export default function VideoHero({ airline }: Props) {
               WebkitTextStroke: "1px " + airline.accentColor,
             }}
           >
-            RIVER CRUISES
+            {t("headingPart2")}
           </span>
         </motion.h1>
 
@@ -162,7 +163,7 @@ export default function VideoHero({ airline }: Props) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.8 }}
         >
-          {STATS(airline).map((stat) => (
+          {STATS.map((stat) => (
             <div key={stat.label} className="flex flex-col">
               <span
                 className="text-xs uppercase tracking-[0.2em] mb-1"
@@ -203,7 +204,7 @@ export default function VideoHero({ airline }: Props) {
             className="text-xs uppercase tracking-[0.25em]"
             style={{ color: "rgba(255,255,255,0.25)" }}
           >
-            Scrollen
+            {t("scroll")}
           </span>
         </motion.div>
       </motion.div>

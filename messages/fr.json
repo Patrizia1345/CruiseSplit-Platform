@@ -1,0 +1,571 @@
+{
+  "metadata": {
+    "title": "CruiseSplit – Réserver des segments de croisière",
+    "description": "Réservez des segments de croisière à partir de 249 €. Flexible, abordable et spontané."
+  },
+  "navbar": {
+    "logo": "CruiseSplit",
+    "routes": "Itinéraires",
+    "segments": "Segments",
+    "airlines": "Compagnies",
+    "about": "À propos",
+    "login": "Connexion",
+    "back": "Retour",
+    "menuAriaLabel": "Ouvrir le menu"
+  },
+  "footer": {
+    "copyright": "© 2026 CruiseSplit · Patrizia Kröger · Cologne",
+    "impressum": "Mentions légales",
+    "privacy": "Confidentialité",
+    "terms": "CGV"
+  },
+  "cookieBanner": {
+    "heading": "Cookies & confidentialité",
+    "description": "Nous utilisons des cookies pour fournir notre site, personnaliser le contenu et analyser l'utilisation. Les cookies nécessaires sont indispensables au fonctionnement. Les autres cookies ne sont utilisés qu'avec votre consentement. Vous pouvez modifier votre choix à tout moment. Plus d'informations dans notre ",
+    "privacyLink": "politique de confidentialité",
+    "descriptionSuffix": ".",
+    "categories": {
+      "necessary": {
+        "label": "Nécessaires",
+        "description": "Indispensables au fonctionnement du site (panier, connexion). Toujours actifs."
+      },
+      "statistics": {
+        "label": "Statistiques",
+        "description": "Nous aident à comprendre et améliorer l'utilisation du site de façon anonyme."
+      },
+      "marketing": {
+        "label": "Marketing",
+        "description": "Permettent des contenus et publicités personnalisés sur des sites tiers."
+      }
+    },
+    "buttons": {
+      "settings": "Paramètres",
+      "rejectAll": "Uniquement nécessaires",
+      "saveSelection": "Enregistrer la sélection",
+      "acceptAll": "Tout accepter"
+    }
+  },
+  "cart": {
+    "heading": "Panier",
+    "items": "{count, plural, one {# segment} other {# segments}}",
+    "persons": "{count, plural, one {# personne} other {# personnes}}",
+    "days": "{count, plural, one {# jour} other {# jours}}",
+    "empty": {
+      "title": "Votre panier est vide",
+      "description": "Ajoutez des segments depuis la page Segments ou Viking"
+    },
+    "total": "Total",
+    "checkout": "Réserver maintenant →",
+    "clear": "Vider le panier"
+  },
+  "home": {
+    "badge": "La première plateforme de réservation par segment",
+    "title": "La croisière, réinventée",
+    "subtitle": "Réservez des segments de croisière à partir de 249 € pour 2 jours – flexible, abordable et spontané.",
+    "ctaDiscover": "Découvrir les segments",
+    "ctaRoutes": "Voir les itinéraires",
+    "stats": {
+      "segments": "Segments",
+      "routes": "Itinéraires",
+      "perPerson": "par personne"
+    },
+    "features": {
+      "flex": {
+        "title": "Voyager en flexibilité",
+        "text": "Choisissez uniquement les segments qui correspondent à votre agenda – sans avoir à réserver tout le voyage."
+      },
+      "affordable": {
+        "title": "Démarrer à petit prix",
+        "text": "Vivez la croisière à une fraction du prix – idéal pour les premiers voyages et les courts séjours."
+      },
+      "audience": {
+        "title": "Nouveaux publics",
+        "text": "CruiseSplit ouvre la croisière aux jeunes voyageurs, aux actifs et à tous ceux qui apprécient la flexibilité."
+      }
+    },
+    "partnerCta": {
+      "heading": "Vous êtes une compagnie de croisière ?",
+      "text": "Monétisez les cabines invendues sans surcoût opérationnel. 75 % de partage de revenus, zéro coût fixe.",
+      "button": "Demander un partenariat →"
+    }
+  },
+  "about": {
+    "badge": "À propos de CruiseSplit",
+    "title": "Nous révolutionnons l'industrie de la croisière",
+    "subtitle": "CruiseSplit rend les croisières flexibles, abordables et réservables à la dernière minute",
+    "mission": {
+      "heading": "Notre mission",
+      "text": "Les croisières sont une expérience unique — mais leur plein potentiel reste inexploité. CruiseSplit complète l'offre existante des compagnies : nous rendons chaque segment réservable et ouvrons ensemble la croisière à de nouveaux publics. Un partenariat gagnant-gagnant — plus de portée pour les compagnies, plus de flexibilité pour les voyageurs."
+    },
+    "problem": {
+      "heading": "Le problème",
+      "items": [
+        "Seuls les itinéraires complets de 7 à 14 jours sont réservables",
+        "Des prix d'entrée élevés à partir de 1 500 € dissuadent",
+        "Les départs spontanés sont quasi impossibles",
+        "Les cabines invendues génèrent des pertes",
+        "Peu attractif pour les voyageurs spontanés et flexibles"
+      ]
+    },
+    "solution": {
+      "heading": "La solution",
+      "items": [
+        "Réservations par segment à partir de 2 jours",
+        "Prix d'entrée à partir de 249 € par personne",
+        "Spontané & flexible — réservable en dernière minute",
+        "Modèle de partage de revenus pour les compagnies",
+        "Nouveaux publics : 18–35 ans & voyageurs d'affaires"
+      ]
+    },
+    "team": {
+      "heading": "L'équipe",
+      "subtitle": "Des talents issus de la travel tech, du maritime et des start-ups",
+      "ceoRole": "CEO",
+      "ctoRole": "CTO",
+      "cooRole": "COO",
+      "patriziaName": "Patrizia Kröger",
+      "patriziaTitle": "CEO & co-fondatrice",
+      "ctoName": "Coming Soon",
+      "ctoTitle": "CTO & co-fondateur·trice",
+      "cooName": "Coming Soon",
+      "cooTitle": "COO & co-fondateur·trice"
+    },
+    "partnership": {
+      "badge": "Partenariat",
+      "heading": "Envie d'un partenariat ?",
+      "text": "Compagnie, agence de voyage ou investisseur — nous serons ravis d'échanger. Écrivez-nous et nous répondrons sous 24 heures.",
+      "button": "Réserver un échange"
+    }
+  },
+  "routes": {
+    "heading": "Découvrir les itinéraires",
+    "subtitle": "Choisissez votre itinéraire et réservez segment par segment – aussi flexible que vous le souhaitez.",
+    "riverHeading": "Croisières fluviales",
+    "riverSubtitle": "Croisière fluviale et plus encore – réservable par segment",
+    "newBadge": "NOUVEAU",
+    "oceanDivider": "Croisières maritimes",
+    "daysTotal": "Jours au total",
+    "segments": "Segments",
+    "perPerson": "par personne",
+    "discoverButton": "Découvrir les segments →",
+    "bookButton": "Réserver les segments →",
+    "items": {
+      "classic": {
+        "name": "Méditerranée classique",
+        "description": "L'itinéraire le plus populaire – de Barcelone à Athènes le long des plus belles côtes d'Europe.",
+        "tag": "Populaire"
+      },
+      "adriatic": {
+        "name": "Adriatique & Croatie",
+        "description": "Découvrez la côte dalmate – d'Athènes à Venise via Dubrovnik.",
+        "tag": "Nouveau"
+      },
+      "western": {
+        "name": "Méditerranée occidentale",
+        "description": "Baléares, Valence et retour – tranquillement le long de la côte espagnole.",
+        "tag": "Court séjour"
+      },
+      "riviera": {
+        "name": "Riviera & Toscane",
+        "description": "De la Côte d'Azur à la Toscane en passant par la Ligurie.",
+        "tag": "Romantique"
+      },
+      "rhine": {
+        "name": "Rhine Getaway",
+        "description": "L'itinéraire classique du Rhin – d'Amsterdam à Bâle en passant par l'Allemagne et la France. 4 pays, 8 segments, une culture inoubliable.",
+        "tag": "NOUVEAU · Fluvial"
+      }
+    }
+  },
+  "segments": {
+    "heading": "Réserver des segments de croisière",
+    "subtitlePrefix": "Choisissez votre segment et réservez directement. Envie de découvrir les itinéraires ? ",
+    "routesLink": "Voir l'aperçu des itinéraires →",
+    "search": {
+      "from": "De",
+      "to": "À",
+      "date": "Date",
+      "persons": "Personnes",
+      "allPorts": "Tous les ports",
+      "personSingular": "{count} personne",
+      "personPlural": "{count} personnes",
+      "button": "Rechercher"
+    },
+    "filter": {
+      "priceHeading": "Prix",
+      "priceLabel": "Max. {max} € par personne",
+      "durationHeading": "Durée",
+      "durationAll": "Tous",
+      "duration2": "2 jours",
+      "duration3": "3 jours",
+      "duration5": "5+ jours",
+      "cabinHeading": "Type de cabine",
+      "shippingHeading": "Compagnie"
+    },
+    "result": {
+      "countOne": "{count} segment trouvé",
+      "countOther": "{count} segments trouvés"
+    },
+    "sort": {
+      "cheapest": "Les moins chers d'abord",
+      "fastest": "Les plus rapides d'abord",
+      "recommended": "Recommandés"
+    },
+    "empty": {
+      "title": "Aucun segment trouvé",
+      "description": "Ajustez les filtres ou lancez une nouvelle recherche."
+    },
+    "accessDenied": "Accès refusé — cet espace est réservé aux partenaires.",
+    "card": {
+      "directBook": "Réserver directement →",
+      "addToCart": "+ Panier"
+    }
+  },
+  "booking": {
+    "steps": {
+      "segment": "Segment",
+      "travellers": "Voyageurs",
+      "payment": "Paiement"
+    },
+    "cabin": {
+      "interior": "Cabine intérieure",
+      "ocean": "Cabine extérieure",
+      "balcony": "Cabine avec balcon",
+      "perPerson": "par personne"
+    },
+    "backToSegments": "← Retour aux segments",
+    "step1": {
+      "heading": "Votre segment",
+      "subtitle": "Choisissez votre catégorie de cabine et le nombre de voyageurs",
+      "cabinCategory": "Catégorie de cabine",
+      "numberOfTravellers": "Nombre de voyageurs",
+      "personOne": "{count} personne",
+      "personOther": "{count} personnes",
+      "next": "Continuer vers les voyageurs →"
+    },
+    "step2": {
+      "heading": "Voyageurs",
+      "subtitleOne": "Veuillez saisir les informations de la personne",
+      "subtitleOther": "Veuillez saisir les informations des {count} voyageurs",
+      "traveller": "Voyageur {n}",
+      "mainContact": "(contact principal)",
+      "firstName": "Prénom *",
+      "firstNamePlaceholder": "Max",
+      "lastName": "Nom *",
+      "lastNamePlaceholder": "Mustermann",
+      "birthDate": "Date de naissance *",
+      "passport": "N° de passeport (optionnel)",
+      "passportPlaceholder": "C01X00T47",
+      "errorRequired": "Champ obligatoire",
+      "back": "← Retour",
+      "next": "Continuer vers le paiement →"
+    },
+    "step3": {
+      "heading": "Paiement",
+      "subtitle": "Paiement sécurisé avec chiffrement SSL 🔒",
+      "email": "E-mail pour la confirmation de réservation *",
+      "emailPlaceholder": "max@exemple.fr",
+      "cardData": "Données de carte",
+      "cardName": "Nom sur la carte *",
+      "cardNamePlaceholder": "Max Mustermann",
+      "cardNumber": "Numéro de carte *",
+      "cardNumberPlaceholder": "1234 5678 9012 3456",
+      "expiry": "Date d'expiration *",
+      "expiryPlaceholder": "MM/AA",
+      "cvv": "CVV *",
+      "cvvPlaceholder": "123",
+      "errorEmail": "E-mail valide requis",
+      "errorCard": "Numéro de carte valide requis",
+      "errorTerms": "Veuillez accepter les CGV",
+      "terms": "J'accepte les CGV et la politique de confidentialité de CruiseSplit.",
+      "processing": "Traitement en cours…",
+      "submit": "🔒 Payer {total} € maintenant"
+    },
+    "summary": {
+      "heading": "Votre réservation",
+      "serviceFee": "Frais de service (5 %)",
+      "total": "Total",
+      "security": "Paiement chiffré SSL",
+      "cancellation": "Annulation gratuite jusqu'à 48 h avant",
+      "confirmation": "Confirmation de réservation immédiate"
+    },
+    "loading": "Chargement…"
+  },
+  "confirmation": {
+    "heading": "Réservation confirmée !",
+    "subtitle": "Votre confirmation de réservation a été envoyée par e-mail.",
+    "bookingNumber": "Numéro de réservation",
+    "date": "Date",
+    "airline": "Compagnie",
+    "cabin": "Cabine",
+    "persons": "Voyageurs",
+    "personOne": "{count} personne",
+    "personOther": "{count} personnes",
+    "total": "Montant total",
+    "nextStepsHeading": "Prochaines étapes",
+    "step1Title": "Confirmation de réservation",
+    "step1Desc": "Vérifiez votre boîte mail pour la confirmation.",
+    "step2Title": "Embarquement numérique",
+    "step2Desc": "Votre carte d'embarquement sera envoyée par e-mail 48 h avant le départ.",
+    "step3Title": "Enregistrement",
+    "step3Desc": "L'enregistrement ouvre 2 heures avant le départ au port.",
+    "bookMore": "Réserver d'autres segments",
+    "home": "Aller à l'accueil",
+    "loading": "Chargement…"
+  },
+  "viking": {
+    "airline": "Viking River Cruises",
+    "demo": "× CruiseSplit Demo",
+    "heading": "Rhine Getaway",
+    "subtitle": "Amsterdam → Bâle · 8 segments · À partir de 379 € par personne",
+    "tags": {
+      "duration": "16 jours d'itinéraire complet",
+      "countries": "4 pays",
+      "segments": "8 segments réservables",
+      "excursion": "Excursion à terre incluse"
+    },
+    "map": {
+      "heading": "🗺️ Itinéraire Rhine Getaway",
+      "subtitle": "Amsterdam → Bâle · 8 segments · 16 jours"
+    },
+    "sidebar": {
+      "personsHeading": "Voyageurs",
+      "personOne": "{count} personne",
+      "personOther": "{count} personnes",
+      "infoHeading": "🚢 Viking Longship",
+      "infoText": "Toutes les cabines avec fenêtres panoramiques, sol chauffé et Aquavit Terrace. Inclus : excursion à terre, petit-déjeuner et dîner."
+    },
+    "segmentsHeading": "8 segments réservables",
+    "segmentsSubtitle": "Choisissez un ou plusieurs segments",
+    "cabin": {
+      "standard": "Cabine standard",
+      "veranda": "Cabine Veranda",
+      "suite": "Suite",
+      "standardDesc": "Élégante, 135 m², sol chauffé",
+      "verandaDesc": "Balcon privé, 205 m², vue panoramique",
+      "suiteDesc": "Salon, 270+ m², service de majordome"
+    },
+    "segmentCard": {
+      "perPerson": "par personne",
+      "directBook": "Réserver directement →",
+      "addToCart": "+ Panier"
+    },
+    "footer": {
+      "heading": "Envie d'un partenariat ?",
+      "text": "Les compagnies perçoivent 75 % de partage de revenus – sans surcoût opérationnel.",
+      "button": "Réserver un échange →"
+    }
+  },
+  "reedereien": {
+    "videoHero": {
+      "badge": "CruiseSplit Partner",
+      "headingPart1": "VIKING",
+      "headingPart2": "RIVER CRUISES",
+      "stats": {
+        "founded": "Fondée en",
+        "ships": "Longships",
+        "routes": "Itinéraires"
+      },
+      "scroll": "Défiler"
+    },
+    "airlineSelector": {
+      "comingSoon": "Bientôt d'autres"
+    },
+    "feature": {
+      "badge": "Équipements & points forts",
+      "heading": "Ce qui rend Viking unique"
+    },
+    "cta": {
+      "badge": "Réservez maintenant",
+      "heading": "Votre segment Rhin vous attend.",
+      "description": "8 segments sur l'itinéraire Rhine Getaway – réservables individuellement à partir d'1 jour. Voyages flexibles, nouveaux publics, croissance partagée.",
+      "discoverButton": "Découvrir les segments",
+      "routesButton": "Voir tous les itinéraires",
+      "stats": {
+        "segmentsLabel": "Segments réservables",
+        "minBookingValue": "à partir d'1 jour",
+        "minBookingLabel": "Réservation minimale",
+        "priceLabel": "Prix à partir de / personne",
+        "revenueLabel": "Revenu pour Viking"
+      }
+    }
+  },
+  "dashboard": {
+    "brand": "CruiseSplit",
+    "subtitle": "Espace partenaire",
+    "loading": "Chargement…",
+    "nav": {
+      "overview": "Vue d'ensemble",
+      "bookings": "Réservations",
+      "segments": "Segments",
+      "inventory": "Inventaire",
+      "settings": "Paramètres"
+    },
+    "status": {
+      "confirmed": "Confirmée",
+      "pending": "En attente",
+      "cancelled": "Annulée"
+    },
+    "kpi": {
+      "bookingsToday": "Réservations aujourd'hui",
+      "bookingsTodayTrend": "+3 vs hier",
+      "occupancy": "Taux d'occupation",
+      "occupancyTrend": "+5 % vs semaine dernière",
+      "revenueToday": "Revenus du jour",
+      "revenueTodayTrend": "+480 € vs hier",
+      "openCabins": "Cabines disponibles",
+      "openCabinsTrend": "−4 vs hier"
+    },
+    "bookings": {
+      "recentHeading": "Réservations récentes",
+      "live": "En direct",
+      "tableId": "N°",
+      "tableSegment": "Segment",
+      "tablePassenger": "Passager",
+      "tablePrice": "Prix",
+      "tableStatus": "Statut",
+      "weeklyHeading": "Réservations cette semaine",
+      "weeklySubtitle": "Total des réservations par jour",
+      "today": "Aujourd'hui",
+      "previousDays": "Jours précédents",
+      "summaryTotal": "Total",
+      "summaryConfirmed": "Confirmées",
+      "summaryPending": "En attente",
+      "summaryCancelled": "Annulées",
+      "summaryRevenue": "Revenus",
+      "searchPlaceholder": "Rechercher n° de réservation, passager ou segment…",
+      "filterAll": "Tous",
+      "empty": "Aucune réservation trouvée",
+      "detailsHeading": "Détails de la réservation",
+      "detailsBookingNumber": "N° de réservation",
+      "detailsSegment": "Segment",
+      "detailsPassenger": "Passager",
+      "detailsCabin": "Cabine",
+      "detailsDate": "Date",
+      "detailsPersons": "Voyageurs",
+      "detailsPricePerPerson": "Prix / personne",
+      "detailsTotal": "Total",
+      "changeStatus": "Modifier le statut",
+      "confirm": "Confirmer",
+      "cancel": "Annuler"
+    },
+    "comingSoon": {
+      "title": "En développement",
+      "description": "Cette section sera bientôt disponible."
+    }
+  },
+  "partnerPending": {
+    "status": "Vérification en cours",
+    "heading": "Votre compte partenaire est en cours de vérification",
+    "description": "Merci de votre inscription en tant que partenaire CruiseSplit. Notre équipe vérifie vos informations et activera votre accès sous 24–48 heures.",
+    "step1": "Inscription terminée",
+    "step2": "Informations en cours de vérification",
+    "step3": "Accès en cours d'activation",
+    "supportHeading": "Des questions ? Nous sommes là.",
+    "supportEmail": "partner@cruisesplit.com",
+    "backToHome": "← Retour à l'accueil"
+  },
+  "register": {
+    "successHeading": "E-mail de confirmation envoyé",
+    "successText": "Veuillez vérifier votre boîte mail et cliquer sur le lien de confirmation.",
+    "successLink": "Aller à la connexion →",
+    "heading": "Créer un compte",
+    "loginLink": "Déjà inscrit·e ? Se connecter",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Anna",
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Müller",
+    "email": "E-mail",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Au moins 8 caractères",
+    "accountType": "Type de compte",
+    "private": "Particulier",
+    "partner": "Partenaire",
+    "partnerSubtitle": "Agence de voyage / compagnie",
+    "company": "Nom de la société",
+    "companyPlaceholder": "MSC Cruises GmbH",
+    "loading": "Création en cours…",
+    "submit": "Créer un compte"
+  },
+  "login": {
+    "heading": "Bon retour",
+    "registerLink": "Pas encore de compte ? S'inscrire",
+    "email": "E-mail",
+    "emailPlaceholder": "anna@example.com",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "••••••••",
+    "forgot": "Oublié ?",
+    "loading": "Vérification…",
+    "submit": "Se connecter",
+    "partnerLink": "Accès partenaire ? S'inscrire en tant que partenaire"
+  },
+  "impressum": {
+    "heading": "Mentions légales",
+    "tmgHeading": "Informations conformément au § 5 TMG",
+    "tmgBody": "CruiseSplit\nreprésenté par Patrizia Kröger\nCologne, Allemagne",
+    "contactHeading": "Contact",
+    "contactEmail": "patrizia.kroeger@gmx.com",
+    "disputeHeading": "Plateforme de règlement extrajudiciaire des litiges en ligne de la Commission européenne",
+    "disputeBody": "La Commission européenne met à disposition une plateforme de règlement extrajudiciaire des litiges en ligne (ODR) : https://ec.europa.eu/consumers/odr. Notre adresse e-mail figure ci-dessus dans les mentions légales.",
+    "liabilityHeading": "Responsabilité du contenu",
+    "liabilityBody": "En tant que prestataire de services, nous sommes responsables conformément au § 7 al. 1 TMG du contenu propre de ces pages selon les lois générales. Conformément aux §§ 8 à 10 TMG, en tant que prestataire de services, nous ne sommes toutefois pas tenus de surveiller les informations transmises ou stockées par des tiers, ni de rechercher des circonstances indiquant une activité illégale.",
+    "linksHeading": "Responsabilité des liens",
+    "linksBody": "Notre offre contient des liens vers des sites web tiers sur le contenu desquels nous n'avons aucune influence. Nous ne pouvons donc pas garantir ce contenu externe. Le contenu des pages liées relève toujours de la responsabilité du fournisseur ou de l'exploitant respectif de ces pages.",
+    "copyrightHeading": "Droit d'auteur",
+    "copyrightBody": "Les contenus et œuvres créés par l'exploitant du site sur ces pages sont soumis au droit d'auteur allemand. La reproduction, le traitement, la diffusion et toute forme d'exploitation en dehors des limites du droit d'auteur nécessitent l'accord écrit de l'auteur ou du créateur respectif.",
+    "lastUpdated": "Mis à jour : avril 2026",
+    "backToHome": "← Retour à l'accueil"
+  },
+  "agb": {
+    "heading": "Conditions générales de vente (CGV)",
+    "s1Heading": "Article 1 Champ d'application",
+    "s1Body": "Les présentes conditions générales s'appliquent à toutes les réservations effectuées via la plateforme CruiseSplit (cruisesplit.de), exploitée par Patrizia Kröger, Cologne. En réservant un segment, l'utilisateur accepte les présentes CGV.",
+    "s2Heading": "Article 2 Description des prestations",
+    "s2Body": "CruiseSplit est une plateforme de réservation de segments individuels de croisière. CruiseSplit met en relation les voyageurs et les compagnies de croisière. CruiseSplit n'est pas un voyagiste au sens du droit des contrats de voyage, mais agit en qualité d'intermédiaire.",
+    "s3Heading": "Article 3 Réservation et conclusion du contrat",
+    "s3Body": "En soumettant une réservation, l'utilisateur effectue une offre ferme. Le contrat est conclu à la réception de la confirmation de réservation par e-mail. Pendant la phase bêta, les réservations sont confirmées manuellement. L'utilisateur est informé par e-mail du statut de sa réservation.",
+    "s4Heading": "Article 4 Prix et paiement",
+    "s4Body": "Tous les prix affichés sont des prix finaux par personne en euros, TVA légale incluse. Le paiement est dû au moment de la réservation. Pendant la phase bêta actuelle, les modalités de paiement sont communiquées par e-mail après réception de la réservation.",
+    "s5Heading": "Article 5 Annulation et rétractation",
+    "s5Body": "L'annulation gratuite est possible jusqu'à 48 heures avant le départ. Pour toute annulation à moins de 48 heures du départ, des frais d'annulation de 50 % du prix de la réservation sont appliqués. Les annulations doivent être adressées par e-mail à patrizia.kroeger@gmx.com.",
+    "s6Heading": "Article 6 Responsabilité",
+    "s6Body": "CruiseSplit n'est pas responsable des prestations fournies par les compagnies de croisière, des retards, des annulations ou de toute autre circonstance échappant à sa sphère d'influence. La responsabilité est limitée à l'intention et à la faute lourde.",
+    "s7Heading": "Article 7 Protection des données",
+    "s7Body": "Le traitement des données personnelles est conforme à notre politique de confidentialité.",
+    "s8Heading": "Article 8 Droit applicable",
+    "s8Body": "Le droit de la République fédérale d'Allemagne s'applique. La juridiction compétente est Cologne.",
+    "lastUpdated": "Mis à jour : avril 2026",
+    "backToHome": "← Retour à l'accueil"
+  },
+  "privacy": {
+    "heading": "Politique de confidentialité",
+    "s1Heading": "1. Protection des données en un coup d'œil",
+    "s1Sub": "Indications générales",
+    "s1Body": "Les indications suivantes donnent un aperçu simple de ce qu'il advient de vos données personnelles lorsque vous visitez ce site. Les données personnelles sont toutes les données qui permettent de vous identifier personnellement.",
+    "s2Heading": "2. Responsable",
+    "s2Body": "CruiseSplit, représenté par Patrizia Kröger\nCologne, Allemagne\nE-mail : patrizia.kroeger@gmx.com",
+    "s3Heading": "3. Collecte de données sur ce site",
+    "s3CookiesSub": "Cookies",
+    "s3CookiesBody": "Notre site utilise des cookies. Il s'agit de petits fichiers texte que votre navigateur web enregistre sur votre appareil. Les cookies nous aident à rendre notre offre plus conviviale, plus efficace et plus sûre.",
+    "s3LogsSub": "Fichiers journaux du serveur",
+    "s3LogsBody": "Le fournisseur des pages collecte et stocke automatiquement des informations dans des fichiers journaux du serveur que votre navigateur nous transmet automatiquement. Il s'agit de : type et version du navigateur, système d'exploitation utilisé, URL de référence, nom d'hôte de l'ordinateur d'accès, heure de la requête serveur et adresse IP.",
+    "s3BookingSub": "Données de réservation",
+    "s3BookingBody": "Lorsque vous effectuez une réservation, nous collectons les données que vous saisissez (nom, date de naissance, adresse e-mail, numéro de passeport) afin de traiter la réservation. Ces données sont utilisées exclusivement pour le traitement de votre réservation et ne sont pas transmises à des tiers, à l'exception de la compagnie concernée pour la réalisation du voyage.",
+    "s4Heading": "4. Vos droits",
+    "s4Body": "Vous avez à tout moment le droit d'obtenir gratuitement des informations sur vos données personnelles enregistrées, leur origine et leurs destinataires ainsi que la finalité de leur traitement, et un droit de rectification ou de suppression de ces données. Pour cela, ainsi que pour toute autre question concernant les données personnelles, vous pouvez à tout moment nous contacter à l'adresse indiquée dans les mentions légales.",
+    "s5Heading": "5. Hébergement",
+    "s5Body": "Ce site est hébergé par Vercel Inc., 340 Pine Street Suite 701, San Francisco, California 94104, USA. Vous trouverez plus d'informations dans la politique de confidentialité de Vercel : https://vercel.com/legal/privacy-policy",
+    "s6Heading": "6. Droit de rétractation",
+    "s6Body": "Les réservations peuvent être annulées gratuitement jusqu'à 48 heures avant le départ. Pour exercer votre droit de rétractation, veuillez écrire à : patrizia.kroeger@gmx.com",
+    "lastUpdated": "Mis à jour : avril 2026",
+    "backToHome": "← Retour à l'accueil"
+  },
+  "languageSwitcher": {
+    "label": "Choisir la langue",
+    "de": "Deutsch",
+    "en": "English",
+    "fr": "Français",
+    "nl": "Nederlands"
+  }
+}
