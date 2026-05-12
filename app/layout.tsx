@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import PWA from "./pwa";
+import CookieBanner from "@/components/CookieBanner";
 import { CartProvider } from "@/context/CartContext";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <CartProvider>
           <PWA />
           {children}
+          <CookieBanner />
         </CartProvider>
       </body>
     </html>
