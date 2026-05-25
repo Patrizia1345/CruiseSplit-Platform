@@ -38,13 +38,22 @@ export default function HomeSearchBar() {
 
   return (
     <div
-      className="w-full max-w-3xl mx-auto rounded-2xl shadow-2xl overflow-hidden"
-      style={{ background: "white", border: "1px solid #F0F0F0" }}
+      className="w-full max-w-3xl mx-auto rounded-2xl overflow-hidden"
+      style={{
+        background: "rgba(255,255,255,0.95)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
+        boxShadow: "0 25px 60px rgba(0,0,0,0.35)",
+        border: "1px solid rgba(255,255,255,0.6)",
+      }}
     >
       <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
         <div
-          className="flex flex-col px-5 py-4 cursor-pointer transition-colors hover:bg-gray-50"
-          style={{ background: focused === "dest" ? "#F9F9FF" : "white" }}
+          className="flex flex-col px-5 py-4 cursor-pointer transition-colors"
+          style={{
+            background:
+              focused === "dest" ? "rgba(0,102,255,0.04)" : "transparent",
+          }}
           onClick={() => setFocused("dest")}
         >
           <label className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
@@ -67,8 +76,11 @@ export default function HomeSearchBar() {
         </div>
 
         <div
-          className="flex flex-col px-5 py-4 cursor-pointer transition-colors hover:bg-gray-50"
-          style={{ background: focused === "dur" ? "#F9F9FF" : "white" }}
+          className="flex flex-col px-5 py-4 cursor-pointer transition-colors"
+          style={{
+            background:
+              focused === "dur" ? "rgba(0,102,255,0.04)" : "transparent",
+          }}
           onClick={() => setFocused("dur")}
         >
           <label className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
@@ -92,7 +104,10 @@ export default function HomeSearchBar() {
 
         <div
           className="flex flex-col px-5 py-4"
-          style={{ background: focused === "per" ? "#F9F9FF" : "white" }}
+          style={{
+            background:
+              focused === "per" ? "rgba(0,102,255,0.04)" : "transparent",
+          }}
         >
           <label className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-1">
             {t("personsLabel")}
@@ -125,7 +140,7 @@ export default function HomeSearchBar() {
           className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-white font-bold text-sm transition-all hover:opacity-90 active:scale-[0.99]"
           style={{
             background: "linear-gradient(135deg, #0066FF 0%, #0044CC 100%)",
-            boxShadow: "0 4px 15px rgba(0,102,255,0.3)",
+            boxShadow: "0 4px 15px rgba(0,102,255,0.4)",
           }}
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

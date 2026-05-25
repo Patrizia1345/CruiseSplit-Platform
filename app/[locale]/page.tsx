@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Navbar from "@/components/Navbar";
-import HomeSearchBar from "@/components/home/HomeSearchBar";
+import HomeHero from "@/components/home/HomeHero";
 import { Link } from "@/i18n/navigation";
 
 const SYNE = "var(--font-syne), 'DM Sans', system-ui, sans-serif";
@@ -20,12 +20,6 @@ export default async function Home({
     { value: t("stats.ratingValue"), label: t("stats.ratingLabel") },
     { value: t("stats.priceValue"), label: t("stats.priceLabel") },
     { value: t("stats.supportValue"), label: t("stats.supportLabel") },
-  ];
-
-  const trustItems = [
-    t("hero.trustCancellation"),
-    t("hero.trustBestPrice"),
-    t("hero.trustSecure"),
   ];
 
   const steps = [
@@ -73,124 +67,7 @@ export default async function Home({
     <div className="min-h-screen font-sans" style={{ backgroundColor: "#FAFAFA" }}>
       <Navbar />
 
-      {/* ── HERO ── */}
-      <section
-        className="relative overflow-hidden"
-        style={{
-          background:
-            "linear-gradient(160deg, #EEF5FF 0%, #F5F0FF 50%, #FFF5EE 100%)",
-          minHeight: "85vh",
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: "-10%",
-            right: "-5%",
-            width: "500px",
-            height: "500px",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(0,102,255,0.08) 0%, transparent 70%)",
-          }}
-        />
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            bottom: "-10%",
-            left: "-5%",
-            width: "400px",
-            height: "400px",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(255,100,50,0.06) 0%, transparent 70%)",
-          }}
-        />
-
-        <div
-          className="absolute top-20 right-16 text-4xl opacity-20 hidden lg:block"
-          style={{ transform: "rotate(15deg)" }}
-        >
-          🚢
-        </div>
-        <div
-          className="absolute bottom-32 right-32 text-3xl opacity-15 hidden lg:block"
-          style={{ transform: "rotate(-10deg)" }}
-        >
-          ⚓
-        </div>
-        <div
-          className="absolute top-32 left-16 text-3xl opacity-15 hidden lg:block"
-          style={{ transform: "rotate(5deg)" }}
-        >
-          🌊
-        </div>
-
-        <div className="max-w-5xl mx-auto px-6 py-20 w-full">
-          <div className="flex justify-center mb-6">
-            <div
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold"
-              style={{
-                background: "rgba(0,102,255,0.08)",
-                color: "#0066FF",
-                border: "1px solid rgba(0,102,255,0.15)",
-              }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
-              {t("hero.badge")}
-            </div>
-          </div>
-
-          <h1
-            className="text-center mb-4 leading-none"
-            style={{
-              fontFamily: SYNE,
-              fontSize: "clamp(42px, 7vw, 88px)",
-              fontWeight: 800,
-              letterSpacing: "-0.03em",
-              color: "#0A0A0A",
-            }}
-          >
-            {t("hero.titleLine1")}
-            <br />
-            <span
-              style={{
-                background:
-                  "linear-gradient(135deg, #0066FF 0%, #7C3AFF 100%)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              {t("hero.titleLine2")}
-            </span>
-          </h1>
-
-          <p
-            className="text-center mb-10 max-w-lg mx-auto"
-            style={{
-              fontSize: "clamp(16px, 2vw, 20px)",
-              color: "#666",
-              lineHeight: 1.6,
-            }}
-          >
-            {t("hero.subtitleLine1")}
-            <br />
-            {t("hero.subtitleLine2")}
-          </p>
-
-          <HomeSearchBar />
-
-          <div className="flex items-center justify-center gap-6 mt-8 flex-wrap">
-            {trustItems.map((item) => (
-              <span key={item} className="text-xs text-gray-500 font-medium">
-                {item}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HomeHero />
 
       {/* ── STATS ── */}
       <section
