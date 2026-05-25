@@ -61,11 +61,9 @@
   },
   "home": {
     "hero": {
-      "badge": "Die neue Art zu reisen",
-      "titleLine1": "Kreuzfahren.",
-      "titleLine2": "Neu gedacht.",
-      "subtitleLine1": "Deine Kreuzfahrt. Dein Tempo. Dein Preis.",
-      "subtitleLine2": "Kein Reisebüro. Keine Kompromisse.",
+      "titleLine1": "Buche dein",
+      "titleLine2": "nächstes Abenteuer.",
+      "subtitle": "Hunderte Kreuzfahrten. Beste Preise. Keine Gebühren.",
       "trustCancellation": "✓ Kostenlose Stornierung",
       "trustBestPrice": "✓ Bester Preis garantiert",
       "trustSecure": "✓ Sicher & DSGVO-konform"

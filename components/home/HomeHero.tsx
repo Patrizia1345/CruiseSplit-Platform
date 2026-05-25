@@ -70,21 +70,6 @@ export default function HomeHero() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 w-full">
-        <div className="flex justify-center mb-6">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold"
-            style={{
-              background: "rgba(255,255,255,0.12)",
-              color: "white",
-              border: "1px solid rgba(255,255,255,0.2)",
-              backdropFilter: "blur(10px)",
-            }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-            {t("badge")}
-          </div>
-        </div>
-
         <h1
           className="text-center mb-4 leading-none text-white"
           style={{
@@ -117,9 +102,8 @@ export default function HomeHero() {
             lineHeight: 1.6,
           }}
         >
-          {t("subtitleLine1")}
+          {t("subtitle")}
           <br />
-          {t("subtitleLine2")}
         </p>
 
         <HomeSearchBar />
