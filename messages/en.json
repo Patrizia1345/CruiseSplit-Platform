@@ -17,7 +17,8 @@
     "copyright": "© 2026 CruiseSplit · Patrizia Kröger · Cologne",
     "impressum": "Imprint",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "about": "Über uns"
   },
   "cookieBanner": {
     "heading": "Cookies & Privacy",
@@ -59,35 +60,98 @@
     "clear": "Clear cart"
   },
   "home": {
-    "badge": "The first segment-booking platform",
-    "title": "Cruising, reimagined",
-    "subtitle": "Book individual cruise segments from €249 for 2 days – flexible, affordable and spontaneous.",
-    "ctaDiscover": "Discover segments",
-    "ctaRoutes": "Browse routes",
-    "stats": {
-      "segments": "Segments",
-      "routes": "Routes",
-      "perPerson": "per person"
+    "hero": {
+      "badge": "Die neue Art zu reisen",
+      "titleLine1": "Kreuzfahren.",
+      "titleLine2": "Neu gedacht.",
+      "subtitleLine1": "Deine Kreuzfahrt. Dein Tempo. Dein Preis.",
+      "subtitleLine2": "Kein Reisebüro. Keine Kompromisse.",
+      "trustCancellation": "✓ Kostenlose Stornierung",
+      "trustBestPrice": "✓ Bester Preis garantiert",
+      "trustSecure": "✓ Sicher & DSGVO-konform"
     },
-    "features": {
-      "flex": {
-        "title": "Travel flexibly",
-        "text": "Pick only the legs that fit your schedule – no need to book an entire cruise."
+    "search": {
+      "destinationLabel": "Wohin?",
+      "destinationPlaceholder": "Destination wählen",
+      "durationLabel": "Wie lange?",
+      "durationPlaceholder": "Dauer wählen",
+      "personsLabel": "Personen",
+      "submit": "Kreuzfahrten suchen",
+      "popularLabel": "Beliebt:",
+      "destinations": {
+        "mediterranean": "Mittelmeer",
+        "rhine": "Rhein",
+        "danube": "Donau",
+        "caribbean": "Karibik",
+        "northSea": "Nordsee",
+        "adriatic": "Adria",
+        "baltic": "Ostsee",
+        "atlantic": "Atlantik",
+        "northCape": "Nordkap",
+        "canary": "Kanaren"
       },
-      "affordable": {
-        "title": "Start small",
-        "text": "Experience cruising at a fraction of the price – perfect for first-timers and short breaks."
+      "durations": {
+        "short": "1-3 Tage",
+        "medium": "4-7 Tage",
+        "long": "8-14 Tage",
+        "extended": "14+ Tage"
       },
-      "audience": {
-        "title": "New audiences",
-        "text": "CruiseSplit opens cruising to young travellers, professionals and anyone who values flexibility."
+      "popular": {
+        "mediterraneanCheap": "Mittelmeer günstig",
+        "rhineCruise": "Rhein Kreuzfahrt",
+        "shortTrip": "Kurzurlaub Schiff",
+        "under500": "Kreuzfahrt unter €500",
+        "adriaticCroatia": "Adria Kroatien",
+        "amsterdamBasel": "Amsterdam → Basel"
       }
     },
+    "stats": {
+      "partnersValue": "50+",
+      "partnersLabel": "Reederei-Partner\nweltweit",
+      "ratingValue": "4.8★",
+      "ratingLabel": "Bewertung von\nunseren Gästen",
+      "priceValue": "€249",
+      "priceLabel": "Günstigster\nEinstiegspreis",
+      "supportValue": "24/7",
+      "supportLabel": "Support für\ndeine Reise"
+    },
+    "howItWorks": {
+      "kicker": "So einfach geht's",
+      "heading": "Buchen in 3 Schritten",
+      "step1Title": "Destination wählen",
+      "step1Text": "Suche nach deinem Traumziel – Mittelmeer, Rhein, Karibik oder einfach das günstigste Angebot.",
+      "step2Title": "Route buchen",
+      "step2Text": "Wähle deine Route, Kabine und Datum. Alles klar und transparent – keine versteckten Kosten.",
+      "step3Title": "Einsteigen & genießen",
+      "step3Text": "Deine Buchungsbestätigung kommt sofort per E-Mail. Einfach einpacken und los."
+    },
+    "whyUs": {
+      "kicker": "Warum CruiseSplit",
+      "headingLine1": "Nicht dein Opa's",
+      "headingLine2": "Kreuzfahrtbüro.",
+      "fastTitle": "Buche in 3 Minuten",
+      "fastText": "Kein Reisebüro, kein Telefon, keine langen Formulare. Einfach suchen, wählen, buchen – fertig.",
+      "bestPriceTitle": "Bester Preis garantiert",
+      "bestPriceText": "Wir vergleichen alle verfügbaren Preise und zeigen dir immer das beste Angebot – transparent und fair.",
+      "forYouTitle": "Gemacht für dich",
+      "forYouText": "Keine Pauschalangebote für Rentner. CruiseSplit ist für alle die flexibel, spontan und jung unterwegs sind.",
+      "secureTitle": "Sicher & geschützt",
+      "secureText": "SSL-verschlüsselt, DSGVO-konform, kostenlose Stornierung. Deine Daten und dein Geld sind bei uns sicher."
+    },
     "partnerCta": {
-      "heading": "Are you a cruise line?",
-      "text": "Monetise unsold cabins with no extra operational effort. 75% revenue share, no fixed costs.",
-      "button": "Request a partnership →"
-    }
+      "heading": "Du bist eine Reederei?",
+      "text": "Erschließe eine neue junge Zielgruppe ohne Mehraufwand. CruiseSplit vermarktet deine Routen an Millennials & Gen Z – du bekommst 75% Revenue Share auf jede Buchung.",
+      "ctaPrimary": "Partnerschaft anfragen →",
+      "ctaSecondary": "Mehr erfahren"
+    },
+    "comingSoon": {
+      "badge": "Coming Soon",
+      "title": "Segment-Buchungen – bald verfügbar",
+      "subtitle": "Buche einzelne Abschnitte einer Kreuzfahrt – z.B. nur Köln → Koblenz ab €249",
+      "cta": "Warteliste beitreten →",
+      "mailtoSubject": "Warteliste Segment-Buchungen"
+    },
+    "footerCopyright": "© 2026 · Köln"
   },
   "about": {
     "badge": "About CruiseSplit",
