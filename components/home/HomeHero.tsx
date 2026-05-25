@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import HomeSearchBar from "./HomeSearchBar";
 
 const SYNE = "var(--font-syne), 'DM Sans', system-ui, sans-serif";
+const PLAYFAIR = "var(--font-playfair), Georgia, serif";
 
 export default function HomeHero() {
   const t = useTranslations("home.hero");
@@ -70,24 +71,35 @@ export default function HomeHero() {
       />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 py-24 w-full">
-        <h1
-          className="text-center mb-4 leading-none text-white"
-          style={{
-            fontFamily: SYNE,
-            fontSize: "clamp(42px, 7vw, 96px)",
-            fontWeight: 800,
-            letterSpacing: "-0.03em",
-            textShadow: "0 2px 20px rgba(0,0,0,0.3)",
-          }}
-        >
-          {t("titleLine1")}
-          <br />
+        <h1 className="text-center mb-4 leading-none text-white">
           <span
+            className="block"
             style={{
+              fontFamily: SYNE,
+              fontSize: "clamp(36px, 6vw, 80px)",
+              fontWeight: 300,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              color: "rgba(255,255,255,0.75)",
+              textShadow: "0 2px 20px rgba(0,0,0,0.3)",
+            }}
+          >
+            {t("titleLine1")}
+          </span>
+          <span
+            className="block"
+            style={{
+              fontFamily: PLAYFAIR,
+              fontSize: "clamp(48px, 8vw, 110px)",
+              fontWeight: 700,
+              fontStyle: "italic",
+              letterSpacing: "-0.02em",
+              lineHeight: 1.05,
               background:
-                "linear-gradient(135deg, #60A5FA 0%, #A78BFA 100%)",
+                "linear-gradient(135deg, #ffffff 0%, #A78BFA 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              textShadow: "none",
             }}
           >
             {t("titleLine2")}

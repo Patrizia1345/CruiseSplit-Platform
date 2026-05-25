@@ -11,7 +11,11 @@ import { routing } from "@/i18n/routing";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  style: ["normal", "italic"],
+});
 const syne = Syne({
   subsets: ["latin"],
   variable: "--font-syne",
