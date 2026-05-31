@@ -376,7 +376,7 @@ export default function HomePage() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8"
             style={{ background: "rgba(14,165,233,0.1)", border: "1px solid rgba(14,165,233,0.3)", color: "#0EA5E9" }}>
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-            Dein Platz auf dem Boot weltweit
+            Für alle die das Meer lieben
           </div>
 
           {/* Headline */}
