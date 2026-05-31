@@ -427,50 +427,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── FIND A BOAT ── */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#0EA5E9" }}>Boot finden</p>
-              <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
-                Aktuelle Törns<br />
-                <span style={{ color: "rgba(255,255,255,0.3)" }}>weltweit.</span>
-              </h2>
-            </div>
-            <Link href="/boat/search" className="text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:bg-white/10"
-              style={{ border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)" }}>
-              Alle Boote →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {FEATURED_BOATS.map(trip => <BoatCard key={trip.id} trip={trip} />)}
-          </div>
-        </div>
-      </section>
-
-      {/* ── FIND CREW ── */}
-      <section className="py-24 px-6" style={{ background: "rgba(255,255,255,0.02)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#0EA5E9" }}>Crew finden</p>
-              <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
-                Mitsegler die auf<br />
-                <span style={{ color: "rgba(255,255,255,0.3)" }}>dich warten.</span>
-              </h2>
-            </div>
-            <Link href="/crew/search" className="text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:bg-white/10"
-              style={{ border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)" }}>
-              Alle Crew →
-            </Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {FEATURED_CREW.map(p => <CrewCard key={p.id} person={p} />)}
-          </div>
-        </div>
-      </section>
-
       {/* ── HOW IT WORKS ── */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
@@ -539,6 +495,50 @@ export default function HomePage() {
                 Törn eintragen →
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── FIND A BOAT ── */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#0EA5E9" }}>Boot finden</p>
+              <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                Aktuelle Törns<br />
+                <span style={{ color: "rgba(255,255,255,0.3)" }}>weltweit.</span>
+              </h2>
+            </div>
+            <Link href="/boat/search" className="text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:bg-white/10"
+              style={{ border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)" }}>
+              Alle Boote →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {FEATURED_BOATS.map(trip => <BoatCard key={trip.id} trip={trip} />)}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FIND CREW ── */}
+      <section className="py-24 px-6" style={{ background: "rgba(255,255,255,0.02)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#0EA5E9" }}>Crew finden</p>
+              <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
+                Mitsegler die auf<br />
+                <span style={{ color: "rgba(255,255,255,0.3)" }}>dich warten.</span>
+              </h2>
+            </div>
+            <Link href="/crew/search" className="text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:bg-white/10"
+              style={{ border: "1px solid rgba(255,255,255,0.15)", color: "rgba(255,255,255,0.7)" }}>
+              Alle Crew →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {FEATURED_CREW.map(p => <CrewCard key={p.id} person={p} />)}
           </div>
         </div>
       </section>
