@@ -1,3 +1,4 @@
+// Fonts: Fraunces (variable serif) + Outfit (geometric sans) — registered in layout.tsx
 "use client";
 
 import { useState, useEffect, useRef } from "react";
@@ -82,7 +83,7 @@ function Navbar({ scrollY }: { scrollY: number }) {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/" className="text-xl font-black tracking-tight flex-shrink-0" style={{ fontFamily: "'Syne', system-ui, sans-serif" }}>
+        <Link href="/" className="flex-shrink-0" style={{ fontFamily: "var(--font-outfit), system-ui, sans-serif", fontSize: "20px", fontWeight: 700, letterSpacing: "-0.02em", color: "white", textDecoration: "none" }}>
           Cruise<span style={{ color: "#0EA5E9" }}>Split</span>
         </Link>
 
@@ -357,7 +358,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div className="min-h-screen" style={{ background: "#060D1A", color: "white", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+    <div className="min-h-screen" style={{ background: "#060D1A", color: "white", fontFamily: "var(--font-outfit), system-ui, sans-serif" }}>
       <Navbar scrollY={scrollY} />
 
       {/* ── HERO ── */}
@@ -379,9 +380,33 @@ export default function HomePage() {
           </div>
 
           {/* Headline */}
-          <h1 className="mb-6 leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(44px, 8vw, 110px)", fontWeight: 800, letterSpacing: "-0.03em" }}>
-            <span className="block text-white">Dein Platz auf</span>
-            <span className="block" style={{ fontStyle: "italic", fontFamily: "'Playfair Display', Georgia, serif", background: "linear-gradient(135deg, #0EA5E9 0%, #60A5FA 50%, #A78BFA 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+          <h1 className="mb-6" style={{ lineHeight: 1.05 }}>
+            <span
+              className="block text-white"
+              style={{
+                fontFamily: "var(--font-fraunces), Georgia, serif",
+                fontSize: "clamp(44px, 8vw, 108px)",
+                fontWeight: 300,
+                letterSpacing: "0.01em",
+                fontVariationSettings: "'opsz' 144",
+              }}
+            >
+              Dein Platz auf
+            </span>
+            <span
+              className="block"
+              style={{
+                fontFamily: "var(--font-fraunces), Georgia, serif",
+                fontSize: "clamp(44px, 8vw, 108px)",
+                fontWeight: 800,
+                fontStyle: "italic",
+                letterSpacing: "-0.02em",
+                fontVariationSettings: "'opsz' 144, 'WONK' 1",
+                background: "linear-gradient(135deg, #0EA5E9 0%, #60A5FA 50%, #A78BFA 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
               dem Boot weltweit.
             </span>
           </h1>
@@ -413,9 +438,9 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "#0EA5E9" }}>So funktioniert's</p>
-            <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
-              In 4 Schritten<br />
-              <span style={{ color: "rgba(255,255,255,0.3)" }}>auf See.</span>
+            <h2 style={{ lineHeight: 1.1 }}>
+              <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 300, letterSpacing: "0.01em", color: "white" }}>In 4 Schritten</span>
+              <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(32px, 4vw, 56px)", fontWeight: 700, fontStyle: "italic", letterSpacing: "-0.01em", color: "rgba(255,255,255,0.25)" }}>auf See.</span>
             </h2>
           </div>
 
@@ -486,9 +511,9 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#0EA5E9" }}>Boot finden</p>
-              <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
-                Aktuelle Törns<br />
-                <span style={{ color: "rgba(255,255,255,0.3)" }}>weltweit.</span>
+              <h2 style={{ lineHeight: 1.1 }}>
+                <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, letterSpacing: "0.01em", color: "white" }}>Aktuelle Törns</span>
+                <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 700, fontStyle: "italic", letterSpacing: "-0.01em", color: "rgba(255,255,255,0.25)" }}>weltweit.</span>
               </h2>
             </div>
             <Link href="/boat/search" className="text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:bg-white/10"
@@ -508,9 +533,9 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-10 flex-wrap gap-4">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "#0EA5E9" }}>Crew finden</p>
-              <h2 className="leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(26px, 4vw, 48px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
-                Mitsegler die auf<br />
-                <span style={{ color: "rgba(255,255,255,0.3)" }}>dich warten.</span>
+              <h2 style={{ lineHeight: 1.1 }}>
+                <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 300, letterSpacing: "0.01em", color: "white" }}>Mitsegler die auf</span>
+                <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(28px, 3.5vw, 48px)", fontWeight: 700, fontStyle: "italic", letterSpacing: "-0.01em", color: "rgba(255,255,255,0.25)" }}>dich warten.</span>
               </h2>
             </div>
             <Link href="/crew/search" className="text-sm font-semibold px-5 py-2.5 rounded-xl transition-all hover:bg-white/10"
@@ -532,8 +557,9 @@ export default function HomePage() {
             <div className="absolute inset-0 opacity-5"
               style={{ backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
             <div className="relative z-10">
-              <h2 className="mb-4 leading-none" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(28px, 5vw, 64px)", fontWeight: 800, letterSpacing: "-0.02em" }}>
-                Bereit zum Ablegen?
+              <h2 className="mb-4" style={{ lineHeight: 1.1 }}>
+                <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(32px, 5vw, 72px)", fontWeight: 300, letterSpacing: "0.01em", color: "white" }}>Bereit zum</span>
+                <span className="block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "clamp(32px, 5vw, 72px)", fontWeight: 700, fontStyle: "italic", letterSpacing: "-0.02em", color: "white" }}>Ablegen?</span>
               </h2>
               <p className="mb-8 max-w-md mx-auto text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
                 Registriere dich kostenlos und werde Teil der weltweit modernsten Segler-Community. Dein nächstes Abenteuer wartet.
@@ -559,7 +585,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-12">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
-              <span className="text-2xl font-black mb-3 block" style={{ fontFamily: "'Syne', system-ui, sans-serif" }}>
+              <span className="text-2xl font-black mb-3 block" style={{ fontFamily: "var(--font-fraunces), Georgia, serif" }}>
                 Cruise<span style={{ color: "#0EA5E9" }}>Split</span>
               </span>
               <p className="text-xs leading-relaxed" style={{ color: "rgba(255,255,255,0.35)" }}>
