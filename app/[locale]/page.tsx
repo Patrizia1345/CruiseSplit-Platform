@@ -408,25 +408,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── STATS ── */}
-      <section className="py-16 px-6" style={{ borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { target: 12400, suffix: "+", label: "Aktive Mitglieder" },
-            { target: 3800, suffix: "+", label: "Törns weltweit" },
-            { target: 200, suffix: "+", label: "Länder" },
-            { target: 98, suffix: "%", label: "Zufriedenheit" },
-          ].map(s => (
-            <div key={s.label}>
-              <div className="font-black mb-1" style={{ fontFamily: "'Syne', system-ui, sans-serif", fontSize: "clamp(30px, 4vw, 44px)", background: "linear-gradient(135deg, #0EA5E9, #60A5FA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                <Counter target={s.target} suffix={s.suffix} />
-              </div>
-              <div className="text-sm" style={{ color: "rgba(255,255,255,0.4)" }}>{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* ── HOW IT WORKS ── */}
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
